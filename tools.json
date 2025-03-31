@@ -1,0 +1,45 @@
+{
+  "tools": [
+    {
+      "id": "1",
+      "name": "ChatGPT",
+      "description": "Advanced AI chatbot for text generation, conversation, and assistance",
+      "category": "Chatbots",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/04/ChatGPT_logo.svg/1200px-ChatGPT_logo.svg.png",
+      "link": "https://chat.openai.com"
+    },
+    {
+      "id": "2",
+      "name": "DALL-E",
+      "description": "AI system that creates realistic images and art from natural language descriptions",
+      "category": "Image Generation",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/86/OpenAI_logo.svg/1200px-OpenAI_logo.svg.png",
+      "link": "https://openai.com/dall-e-2"
+    },
+    {
+      "id": "3",
+      "name": "GitHub Copilot",
+      "description": "AI pair programmer that helps write better code faster",
+      "category": "Code Assistance",
+      "image": "https://github.githubassets.com/images/modules/site/social/cards/copilot.png",
+      "link": "https://github.com/features/copilot"
+    },
+    {
+      "id": "4",
+      "name": "Notion AI",
+      "description": "AI-powered writing assistant integrated into Notion for enhanced productivity",
+      "category": "Productivity AI",
+      "image": "https://www.notion.so/cdn-cgi/image/format=auto,width=256,quality=100/front-static/pages/product/home-page-hero-refreshed/notion-ai.png",
+      "link": "https://www.notion.so/ai"
+    }
+  ],
+  "categories": [
+    "Chatbots",
+    "Image Generation",
+    "Code Assistance",
+    "Productivity AI",
+    "Text Generation",
+    "Audio AI",
+    "Video AI"
+  ]
+} 

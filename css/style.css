@@ -1,0 +1,133 @@
+/* Custom styles to complement Tailwind CSS */
+
+/* Tool Card Hover Effects */
+.tool-card {
+    transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+}
+
+.tool-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+}
+
+/* Category Filter Button Styles */
+.category-filter {
+    transition: all 0.2s ease-in-out;
+}
+
+.category-filter.active {
+    background-color: #3B82F6;
+    color: white;
+}
+
+/* Search Input Focus Effect */
+#searchInput:focus {
+    box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1);
+}
+
+/* Dark Mode Transitions */
+.dark .tool-card {
+    background-color: #1F2937;
+    border-color: #374151;
+}
+
+.dark .tool-card:hover {
+    background-color: #374151;
+}
+
+/* Loading Spinner Animation */
+@keyframes spin {
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+.animate-spin {
+    animation: spin 1s linear infinite;
+}
+
+/* Admin Panel Form Styles */
+.form-input:focus {
+    border-color: #3B82F6;
+    box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1);
+}
+
+/* JSON Output Styles */
+#jsonOutput {
+    font-family: 'Monaco', 'Menlo', 'Ubuntu Mono', 'Consolas', 'source-code-pro', monospace;
+    white-space: pre-wrap;
+    word-wrap: break-word;
+}
+
+/* Ad Container Styles */
+.ad-container {
+    min-height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #f8fafc;
+    border-radius: 0.5rem;
+    margin: 1rem 0;
+}
+
+.dark .ad-container {
+    background-color: #1f2937;
+}
+
+/* Responsive Ad Styles */
+@media (max-width: 640px) {
+    .ad-container {
+        min-height: 50px;
+    }
+}
+
+@media (min-width: 641px) and (max-width: 1024px) {
+    .ad-container {
+        min-height: 90px;
+    }
+}
+
+/* Responsive Adjustments */
+@media (max-width: 640px) {
+    .tool-card {
+        margin-bottom: 1rem;
+    }
+    
+    .category-filter {
+        font-size: 0.875rem;
+        padding: 0.375rem 0.75rem;
+    }
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: #f1f1f1;
+    border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #888;
+    border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #555;
+}
+
+/* Dark Mode Scrollbar */
+.dark ::-webkit-scrollbar-track {
+    background: #374151;
+}
+
+.dark ::-webkit-scrollbar-thumb {
+    background: #4B5563;
+}
+
+.dark ::-webkit-scrollbar-thumb:hover {
+    background: #6B7280;
+} 
