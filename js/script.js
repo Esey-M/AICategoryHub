@@ -6,19 +6,26 @@ let searchQuery = '';
 
 // DOM Elements
 const toolsGrid = document.getElementById('toolsGrid');
-const categoryFilters = document.getElementById('categoryFilters');
+const categoriesGrid = document.getElementById('categoriesGrid');
 const searchInput = document.getElementById('searchInput');
 const darkModeToggle = document.getElementById('darkModeToggle');
 const loadingSpinner = document.getElementById('loadingSpinner');
+const toolsSection = document.getElementById('toolsSection');
+const categoryTitle = document.getElementById('categoryTitle');
+const backToCategories = document.getElementById('backToCategories');
 
 // Initialize the application
 async function init() {
     try {
+        console.log('Initializing application...');
+        if (!loadingSpinner) {
+            console.error('Loading spinner element not found');
+            return;
+        }
         showLoading();
         await fetchTools();
         setupEventListeners();
         renderCategories();
-        renderTools();
         // Initialize AdSense ads
         if (typeof adsbygoogle !== 'undefined') {
             (adsbygoogle = window.adsbygoogle || []).push({});
@@ -34,11 +41,20 @@ async function init() {
 // Fetch tools data from tools.json
 async function fetchTools() {
     try {
+        console.log('Fetching tools data...');
         const response = await fetch('tools.json');
-        if (!response.ok) throw new Error('Failed to fetch tools');
+        if (!response.ok) {
+            console.error('Failed to fetch tools:', response.status, response.statusText);
+            throw new Error(`Failed to fetch tools: ${response.status} ${response.statusText}`);
+        }
         const data = await response.json();
+        if (!data.tools || !Array.isArray(data.tools)) {
+            console.error('Invalid tools data structure:', data);
+            throw new Error('Invalid tools data structure');
+        }
         tools = data.tools;
-        categories = data.categories;
+        categories = data.categories || [];
+        console.log(`Successfully loaded ${tools.length} tools and ${categories.length} categories`);
     } catch (error) {
         console.error('Error fetching tools:', error);
         throw error;
@@ -50,11 +66,18 @@ function setupEventListeners() {
     // Search input
     searchInput.addEventListener('input', (e) => {
         searchQuery = e.target.value.toLowerCase();
-        renderTools();
+        if (currentCategory) {
+            renderTools();
+        }
     });
 
     // Dark mode toggle
     darkModeToggle.addEventListener('click', toggleDarkMode);
+
+    // Back to categories button
+    backToCategories.addEventListener('click', () => {
+        showCategories();
+    });
 
     // Check for saved dark mode preference
     if (localStorage.getItem('darkMode') === 'true') {
@@ -62,47 +85,79 @@ function setupEventListeners() {
     }
 }
 
-// Render category filters
+// Render category cards
 function renderCategories() {
-    categoryFilters.innerHTML = `
-        <button class="category-filter active px-4 py-2 rounded-full text-sm font-medium bg-gray-100 text-gray-800 hover:bg-gray-200 dark:bg-gray-700 dark:text-white dark:hover:bg-gray-600"
-                data-category="all">
-            All Tools
-        </button>
-        ${categories.map(category => `
-            <button class="category-filter px-4 py-2 rounded-full text-sm font-medium bg-gray-100 text-gray-800 hover:bg-gray-200 dark:bg-gray-700 dark:text-white dark:hover:bg-gray-600"
-                    data-category="${category}">
-                ${category}
-            </button>
-        `).join('')}
-    `;
+    const categoryCards = categories.map(category => {
+        const toolCount = tools.filter(tool => tool.category === category).length;
+        return `
+            <div class="category-card bg-white dark:bg-gray-800 rounded-lg shadow-md overflow-hidden border border-gray-200 dark:border-gray-700 cursor-pointer hover:shadow-lg transition-shadow duration-200"
+                 data-category="${category}">
+                <div class="p-6">
+                    <h3 class="text-xl font-semibold text-gray-900 dark:text-white mb-2">${category}</h3>
+                    <p class="text-gray-600 dark:text-gray-300 mb-4">${getCategoryDescription(category)}</p>
+                    <div class="flex justify-between items-center">
+                        <span class="text-sm text-gray-500 dark:text-gray-400">${toolCount} tools</span>
+                        <span class="text-primary">View Tools →</span>
+                    </div>
+                </div>
+            </div>
+        `;
+    }).join('');
 
-    // Add click event listeners to category filters
-    document.querySelectorAll('.category-filter').forEach(button => {
-        button.addEventListener('click', () => {
-            document.querySelectorAll('.category-filter').forEach(btn => btn.classList.remove('active'));
-            button.classList.add('active');
-            currentCategory = button.dataset.category === 'all' ? null : button.dataset.category;
-            renderTools();
+    categoriesGrid.innerHTML = categoryCards;
+
+    // Add click event listeners to category cards
+    document.querySelectorAll('.category-card').forEach(card => {
+        card.addEventListener('click', () => {
+            const category = card.dataset.category;
+            showTools(category);
         });
     });
 }
 
-// Create ad container HTML
-function createAdContainer() {
-    return `
-        <div class="col-span-full my-8">
-            <div class="ad-container text-center bg-white dark:bg-gray-800 p-4 rounded-lg shadow">
-                <!-- AdSense Ad -->
-                <ins class="adsbygoogle"
-                     style="display:block"
-                     data-ad-client="ca-pub-YOUR_PUBLISHER_ID"
-                     data-ad-slot="YOUR_AD_SLOT_ID"
-                     data-ad-format="auto"
-                     data-full-width-responsive="true"></ins>
-            </div>
-        </div>
-    `;
+// Get category description
+function getCategoryDescription(category) {
+    const descriptions = {
+        "Chatbots & Conversational AI": "Tools for building intelligent chatbots and virtual assistants",
+        "Image Generation & Editing": "AI tools for creating and enhancing images",
+        "Text Generation & Writing Assistance": "Tools that assist with writing and content creation",
+        "Speech Recognition & Synthesis": "Tools for transcribing speech and generating synthetic voices",
+        "Code Generation & Development Assistance": "Tools that aid in coding and software development",
+        "Marketing & SEO": "AI tools for marketing and search engine optimization",
+        "Video Editing & Generation": "Tools for creating and editing videos",
+        "Data Analysis & Visualization": "AI tools for analyzing and visualizing data",
+        "Predictive Analytics & Forecasting": "Tools for making predictions and forecasts",
+        "Virtual Reality & Augmented Reality": "AI tools for VR and AR development",
+        "Healthcare & Medicine": "AI tools for healthcare and medical applications",
+        "Voice Assistants & Automation": "Tools for voice-based automation",
+        "Robotics & Automation": "AI tools for robotics and automation",
+        "Finance & Trading": "AI tools for financial analysis and trading",
+        "Sentiment Analysis & Opinion Mining": "Tools for analyzing sentiment and opinions",
+        "Language Translation & Localization": "AI tools for translation and localization",
+        "Facial Recognition & Computer Vision": "Tools for processing images and detecting faces",
+        "AI for Education & E-Learning": "AI tools for education and online learning",
+        "AI for Cybersecurity & Fraud Detection": "Tools for security and fraud prevention",
+        "Ethical AI & Bias Detection": "Tools for promoting fairness and detecting bias"
+    };
+    return descriptions[category] || "AI tools for various applications";
+}
+
+// Show tools for a specific category
+function showTools(category) {
+    currentCategory = category;
+    categoryTitle.textContent = category;
+    toolsSection.classList.remove('hidden');
+    categoriesGrid.parentElement.classList.add('hidden');
+    renderTools();
+}
+
+// Show categories
+function showCategories() {
+    currentCategory = null;
+    toolsSection.classList.add('hidden');
+    categoriesGrid.parentElement.classList.remove('hidden');
+    searchQuery = '';
+    searchInput.value = '';
 }
 
 // Render tools grid

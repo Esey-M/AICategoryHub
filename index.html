@@ -63,18 +63,29 @@
                     </svg>
                 </div>
             </div>
-            <div class="mt-4 flex flex-wrap gap-2" id="categoryFilters">
-                <!-- Categories will be dynamically inserted here -->
-            </div>
         </div>
     </section>
 
-    <!-- Tools Grid -->
-    <main class="container mx-auto px-4 py-8">
+    <!-- Categories Section -->
+    <section class="container mx-auto px-4 py-8">
+        <h2 class="text-2xl font-bold text-center mb-8 text-gray-900 dark:text-white">AI Tool Categories</h2>
+        <div id="categoriesGrid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            <!-- Categories will be dynamically inserted here -->
+        </div>
+    </section>
+
+    <!-- Tools Section -->
+    <section id="toolsSection" class="container mx-auto px-4 py-8 hidden">
+        <div class="flex justify-between items-center mb-8">
+            <h2 id="categoryTitle" class="text-2xl font-bold text-gray-900 dark:text-white"></h2>
+            <button id="backToCategories" class="px-4 py-2 text-sm font-medium text-primary hover:text-primary-dark">
+                ← Back to Categories
+            </button>
+        </div>
         <div id="toolsGrid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             <!-- Tools will be dynamically inserted here -->
         </div>
-    </main>
+    </section>
 
     <!-- Footer -->
     <footer class="bg-white dark:bg-gray-800 border-t border-gray-200 dark:border-gray-700">
