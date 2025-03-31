@@ -160,50 +160,86 @@ function showCategories() {
     searchInput.value = '';
 }
 
+// Create ad container HTML
+function createAdContainer() {
+    return `
+        <div class="col-span-full my-8">
+            <div class="ad-container text-center bg-white dark:bg-gray-800 p-4 rounded-lg shadow">
+                <!-- AdSense Ad -->
+                <ins class="adsbygoogle"
+                     style="display:block"
+                     data-ad-format="auto"
+                     data-full-width-responsive="true"></ins>
+            </div>
+        </div>
+    `;
+}
+
 // Render tools grid
 function renderTools() {
-    const filteredTools = tools.filter(tool => {
-        const matchesSearch = tool.name.toLowerCase().includes(searchQuery) ||
-                            tool.description.toLowerCase().includes(searchQuery);
-        const matchesCategory = !currentCategory || tool.category === currentCategory;
-        return matchesSearch && matchesCategory;
-    });
+    try {
+        const filteredTools = tools.filter(tool => {
+            const matchesSearch = tool.name.toLowerCase().includes(searchQuery) ||
+                                tool.description.toLowerCase().includes(searchQuery);
+            const matchesCategory = !currentCategory || tool.category === currentCategory;
+            return matchesSearch && matchesCategory;
+        });
 
-    let toolsHTML = '';
-    filteredTools.forEach((tool, index) => {
-        // Add tool card
-        toolsHTML += `
-            <div class="tool-card bg-white dark:bg-gray-800 rounded-lg shadow-md overflow-hidden border border-gray-200 dark:border-gray-700">
-                <div class="p-4">
-                    <div class="flex items-center space-x-4">
-                        <img src="${tool.image}" alt="${tool.name}" class="w-12 h-12 rounded-lg object-contain">
-                        <div>
-                            <h3 class="text-lg font-semibold text-gray-900 dark:text-white">${tool.name}</h3>
-                            <span class="text-sm text-gray-500 dark:text-gray-400">${tool.category}</span>
+        let toolsHTML = '';
+        filteredTools.forEach((tool, index) => {
+            // Add tool card
+            toolsHTML += `
+                <div class="tool-card bg-white dark:bg-gray-800 rounded-lg shadow-md overflow-hidden border border-gray-200 dark:border-gray-700">
+                    <div class="p-4">
+                        <div class="flex items-center space-x-4">
+                            <img src="${tool.image}" alt="${tool.name}" class="w-12 h-12 rounded-lg object-contain">
+                            <div>
+                                <h3 class="text-lg font-semibold text-gray-900 dark:text-white">${tool.name}</h3>
+                                <span class="text-sm text-gray-500 dark:text-gray-400">${tool.category}</span>
+                            </div>
+                        </div>
+                        <p class="mt-4 text-gray-600 dark:text-gray-300">${tool.description}</p>
+                        <div class="mt-4">
+                            <a href="${tool.link}" target="_blank" rel="noopener noreferrer"
+                               class="inline-flex items-center px-4 py-2 border border-transparent text-sm font-medium rounded-md text-white bg-primary hover:bg-primary-dark focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-primary">
+                                Visit Tool
+                            </a>
                         </div>
                     </div>
-                    <p class="mt-4 text-gray-600 dark:text-gray-300">${tool.description}</p>
-                    <div class="mt-4">
-                        <a href="${tool.link}" target="_blank" rel="noopener noreferrer"
-                           class="inline-flex items-center px-4 py-2 border border-transparent text-sm font-medium rounded-md text-white bg-primary hover:bg-primary-dark focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-primary">
-                            Visit Tool
-                        </a>
-                    </div>
                 </div>
+            `;
+
+            // Add ad container after every 5th tool
+            if ((index + 1) % 5 === 0 && index < filteredTools.length - 1) {
+                toolsHTML += createAdContainer();
+            }
+        });
+
+        if (filteredTools.length === 0) {
+            toolsHTML = `
+                <div class="col-span-full text-center py-8">
+                    <p class="text-gray-600 dark:text-gray-400">No tools found for this category${searchQuery ? ' and search query' : ''}.</p>
+                </div>
+            `;
+        }
+
+        toolsGrid.innerHTML = toolsHTML;
+
+        // Initialize new AdSense ads if available
+        try {
+            if (typeof adsbygoogle !== 'undefined') {
+                (adsbygoogle = window.adsbygoogle || []).push({});
+            }
+        } catch (adError) {
+            console.log('AdSense initialization skipped');
+        }
+    } catch (error) {
+        console.error('Error rendering tools:', error);
+        toolsGrid.innerHTML = `
+            <div class="col-span-full text-center py-8">
+                <p class="text-red-600 dark:text-red-400">Error loading tools. Please try again later.</p>
             </div>
         `;
-
-        // Add ad container after every 5th tool
-        if ((index + 1) % 5 === 0 && index < filteredTools.length - 1) {
-            toolsHTML += createAdContainer();
-        }
-    });
-
-    toolsGrid.innerHTML = toolsHTML;
-
-    // Initialize new AdSense ads
-    if (typeof adsbygoogle !== 'undefined') {
-        (adsbygoogle = window.adsbygoogle || []).push({});
     }
 }
 
