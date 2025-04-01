@@ -181,7 +181,7 @@ function createAdContainer() {
     return `
         </div>
         <div class="w-full my-6">
-            <div class="ad-container bg-gray-800/40 p-8 rounded-lg">
+            <div class="ad-container bg-[#1E2530] p-6 rounded-lg">
                 <!-- AdSense Ad -->
                 <ins class="adsbygoogle"
                      style="display:block"
@@ -208,19 +208,23 @@ function renderTools() {
         filteredTools.forEach((tool, index) => {
             // Add tool card
             toolsHTML += `
-                <div class="tool-card p-8 bg-gray-800/40 rounded-lg">
-                    <div class="flex items-start gap-3">
-                        <img src="${tool.image}" alt="${tool.name}" class="w-8 h-8">
-                        <div>
-                            <h3 class="text-white font-medium">${tool.name}</h3>
-                            <p class="text-gray-400 text-sm">${tool.category}</p>
+                <div class="bg-[#1E2530] rounded-lg">
+                    <div class="p-6">
+                        <div class="flex items-center mb-4">
+                            <div class="w-8 h-8 mr-3">
+                                <img src="${tool.image}" alt="${tool.name}" class="w-full h-full">
+                            </div>
+                            <div>
+                                <h3 class="text-white text-lg font-medium mb-1">${tool.name}</h3>
+                                <p class="text-gray-400 text-sm">${tool.category}</p>
+                            </div>
                         </div>
+                        <p class="text-gray-300 mb-4">${tool.description}</p>
+                        <a href="${tool.link}" target="_blank" rel="noopener noreferrer" 
+                           class="inline-block px-4 py-2 bg-blue-500 text-white text-sm font-medium rounded-md hover:bg-blue-600 transition-colors">
+                            Visit Tool
+                        </a>
                     </div>
-                    <p class="mt-4 text-gray-300">${tool.description}</p>
-                    <a href="${tool.link}" target="_blank" rel="noopener noreferrer" 
-                       class="inline-block mt-4 px-4 py-2 bg-blue-500 text-white rounded-md hover:bg-blue-600 transition-colors">
-                        Visit Tool
-                    </a>
                 </div>
             `;
 
@@ -232,7 +236,7 @@ function renderTools() {
 
         if (filteredTools.length === 0) {
             toolsHTML = `
-                <div class="text-center py-8">
+                <div class="col-span-full text-center py-8">
                     <p class="text-gray-400">No tools found for this category${searchQuery ? ' and search query' : ''}.</p>
                 </div>
             `;
@@ -252,7 +256,7 @@ function renderTools() {
     } catch (error) {
         console.error('Error rendering tools:', error);
         toolsGrid.innerHTML = `
-            <div class="text-center py-8">
+            <div class="col-span-full text-center py-8">
                 <p class="text-red-600">Error loading tools. Please try again later.</p>
             </div>
         `;
