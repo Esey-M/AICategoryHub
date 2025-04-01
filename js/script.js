@@ -179,8 +179,9 @@ function showCategories() {
 // Create ad container HTML
 function createAdContainer() {
     return `
-        <div class="w-full my-8">
-            <div class="ad-container max-w-7xl mx-auto bg-white dark:bg-gray-800 p-4 rounded-lg shadow">
+        </div>
+        <div class="w-full my-6">
+            <div class="ad-container bg-gray-800/40 p-8 rounded-lg">
                 <!-- AdSense Ad -->
                 <ins class="adsbygoogle"
                      style="display:block"
@@ -188,6 +189,7 @@ function createAdContainer() {
                      data-full-width-responsive="true"></ins>
             </div>
         </div>
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
     `;
 }
 
@@ -204,55 +206,40 @@ function renderTools() {
         let toolsHTML = '';
         
         filteredTools.forEach((tool, index) => {
-            // Start a new row for every 3 tools
-            if (index % 3 === 0) {
-                toolsHTML += '<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-6">';
-            }
-            
             // Add tool card
             toolsHTML += `
-                <div class="tool-card bg-white dark:bg-gray-800 rounded-lg shadow-md overflow-hidden border border-gray-200 dark:border-gray-700">
-                    <div class="p-6">
-                        <div class="flex items-start space-x-4">
-                            <div class="flex-shrink-0">
-                                <img src="${tool.image}" alt="${tool.name}" class="w-12 h-12 rounded-lg object-contain bg-gray-50 dark:bg-gray-700">
-                            </div>
-                            <div class="min-w-0 flex-1">
-                                <h3 class="text-lg font-semibold text-gray-900 dark:text-white truncate">${tool.name}</h3>
-                                <p class="text-sm text-gray-500 dark:text-gray-400 whitespace-normal">${tool.category}</p>
-                            </div>
-                        </div>
-                        <p class="mt-4 text-gray-600 dark:text-gray-300 line-clamp-2">${tool.description}</p>
-                        <div class="mt-4">
-                            <a href="${tool.link}" target="_blank" rel="noopener noreferrer"
-                               class="inline-flex items-center px-4 py-2 border border-transparent text-sm font-medium rounded-md text-white bg-primary hover:bg-primary-dark focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-primary">
-                                Visit Tool
-                            </a>
+                <div class="tool-card p-8 bg-gray-800/40 rounded-lg">
+                    <div class="flex items-start gap-3">
+                        <img src="${tool.image}" alt="${tool.name}" class="w-8 h-8">
+                        <div>
+                            <h3 class="text-white font-medium">${tool.name}</h3>
+                            <p class="text-gray-400 text-sm">${tool.category}</p>
                         </div>
                     </div>
+                    <p class="mt-4 text-gray-300">${tool.description}</p>
+                    <a href="${tool.link}" target="_blank" rel="noopener noreferrer" 
+                       class="inline-block mt-4 px-4 py-2 bg-blue-500 text-white rounded-md hover:bg-blue-600 transition-colors">
+                        Visit Tool
+                    </a>
                 </div>
             `;
 
-            // Close the row after every 3rd tool or at the end
-            if ((index + 1) % 3 === 0 || index === filteredTools.length - 1) {
-                toolsHTML += '</div>';
-                
-                // Add ad container after every 6th tool
-                if ((index + 1) % 6 === 0 && index < filteredTools.length - 1) {
-                    toolsHTML += createAdContainer();
-                }
+            // Add ad container after every 6th tool (except after the last tool)
+            if ((index + 1) % 6 === 0 && index < filteredTools.length - 1) {
+                toolsHTML += createAdContainer();
             }
         });
 
         if (filteredTools.length === 0) {
             toolsHTML = `
                 <div class="text-center py-8">
-                    <p class="text-gray-600 dark:text-gray-400">No tools found for this category${searchQuery ? ' and search query' : ''}.</p>
+                    <p class="text-gray-400">No tools found for this category${searchQuery ? ' and search query' : ''}.</p>
                 </div>
             `;
         }
 
-        toolsGrid.innerHTML = toolsHTML;
+        // Add the tools HTML to the grid with the correct grid layout
+        toolsGrid.innerHTML = `<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">${toolsHTML}</div>`;
 
         // Initialize new AdSense ads if available
         try {
@@ -266,7 +253,7 @@ function renderTools() {
         console.error('Error rendering tools:', error);
         toolsGrid.innerHTML = `
             <div class="text-center py-8">
-                <p class="text-red-600 dark:text-red-400">Error loading tools. Please try again later.</p>
+                <p class="text-red-600">Error loading tools. Please try again later.</p>
             </div>
         `;
     }
