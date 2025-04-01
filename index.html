@@ -38,15 +38,36 @@
             </div>
         </div>
         <nav class="container mx-auto px-4 py-4 flex justify-between items-center">
-            <h1 class="text-2xl font-bold text-gray-800 dark:text-white">AI Category Hub</h1>
-            <div class="flex items-center space-x-4">
+            <a href="/" class="text-2xl font-bold text-gray-800 dark:text-white hover:text-primary dark:hover:text-primary transition-colors">AI Category Hub</a>
+            <div class="flex items-center space-x-6">
+                <div class="hidden md:flex items-center space-x-6">
+                    <a href="/about" class="text-gray-600 dark:text-gray-300 hover:text-primary dark:hover:text-primary transition-colors">About Us</a>
+                    <a href="/contact" class="text-gray-600 dark:text-gray-300 hover:text-primary dark:hover:text-primary transition-colors">Contact</a>
+                    <a href="/privacy" class="text-gray-600 dark:text-gray-300 hover:text-primary dark:hover:text-primary transition-colors">Privacy</a>
+                    <a href="/terms" class="text-gray-600 dark:text-gray-300 hover:text-primary dark:hover:text-primary transition-colors">Terms</a>
+                </div>
                 <button id="darkModeToggle" class="p-2 rounded-lg hover:bg-gray-100 dark:hover:bg-gray-700">
                     <svg class="w-6 h-6 text-gray-800 dark:text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z"></path>
                     </svg>
                 </button>
+                <!-- Mobile menu button -->
+                <button id="mobileMenuButton" class="md:hidden p-2 rounded-lg hover:bg-gray-100 dark:hover:bg-gray-700">
+                    <svg class="w-6 h-6 text-gray-800 dark:text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                    </svg>
+                </button>
             </div>
         </nav>
+        <!-- Mobile menu -->
+        <div id="mobileMenu" class="md:hidden hidden bg-white dark:bg-gray-800 border-t border-gray-200 dark:border-gray-700">
+            <div class="container mx-auto px-4 py-2">
+                <a href="/about" class="block py-2 text-gray-600 dark:text-gray-300 hover:text-primary dark:hover:text-primary">About Us</a>
+                <a href="/contact" class="block py-2 text-gray-600 dark:text-gray-300 hover:text-primary dark:hover:text-primary">Contact</a>
+                <a href="/privacy" class="block py-2 text-gray-600 dark:text-gray-300 hover:text-primary dark:hover:text-primary">Privacy</a>
+                <a href="/terms" class="block py-2 text-gray-600 dark:text-gray-300 hover:text-primary dark:hover:text-primary">Terms</a>
+            </div>
+        </div>
     </header>
 
     <!-- Search Section -->

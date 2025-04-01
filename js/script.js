@@ -14,6 +14,10 @@ const toolsSection = document.getElementById('toolsSection');
 const categoryTitle = document.getElementById('categoryTitle');
 const backToCategories = document.getElementById('backToCategories');
 
+// Mobile menu functionality
+const mobileMenuButton = document.getElementById('mobileMenuButton');
+const mobileMenu = document.getElementById('mobileMenu');
+
 // Initialize the application
 async function init() {
     try {
@@ -83,6 +87,18 @@ function setupEventListeners() {
     if (localStorage.getItem('darkMode') === 'true') {
         document.documentElement.classList.add('dark');
     }
+
+    // Mobile menu functionality
+    mobileMenuButton.addEventListener('click', () => {
+        mobileMenu.classList.toggle('hidden');
+    });
+
+    // Close mobile menu when clicking outside
+    document.addEventListener('click', (e) => {
+        if (!mobileMenuButton.contains(e.target) && !mobileMenu.contains(e.target)) {
+            mobileMenu.classList.add('hidden');
+        }
+    });
 }
 
 // Render category cards
@@ -163,7 +179,7 @@ function showCategories() {
 // Create ad container HTML
 function createAdContainer() {
     return `
-        <div class="col-span-full my-8">
+        <div class="w-full my-8">
             <div class="ad-container text-center bg-white dark:bg-gray-800 p-4 rounded-lg shadow">
                 <!-- AdSense Ad -->
                 <ins class="adsbygoogle"
@@ -186,6 +202,10 @@ function renderTools() {
         });
 
         let toolsHTML = '';
+        
+        // Create a wrapper div for better grid control
+        toolsHTML = '<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">';
+        
         filteredTools.forEach((tool, index) => {
             // Add tool card
             toolsHTML += `
@@ -209,15 +229,20 @@ function renderTools() {
                 </div>
             `;
 
-            // Add ad container after every 5th tool
-            if ((index + 1) % 5 === 0 && index < filteredTools.length - 1) {
+            // Add ad container after every 6th tool, making sure it spans the full width
+            if ((index + 1) % 6 === 0 && index < filteredTools.length - 1) {
+                toolsHTML += '</div>'; // Close the grid container
                 toolsHTML += createAdContainer();
+                toolsHTML += '<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">'; // Start a new grid container
             }
         });
 
+        // Close the final grid container
+        toolsHTML += '</div>';
+
         if (filteredTools.length === 0) {
             toolsHTML = `
-                <div class="col-span-full text-center py-8">
+                <div class="text-center py-8">
                     <p class="text-gray-600 dark:text-gray-400">No tools found for this category${searchQuery ? ' and search query' : ''}.</p>
                 </div>
             `;
@@ -236,7 +261,7 @@ function renderTools() {
     } catch (error) {
         console.error('Error rendering tools:', error);
         toolsGrid.innerHTML = `
-            <div class="col-span-full text-center py-8">
+            <div class="text-center py-8">
                 <p class="text-red-600 dark:text-red-400">Error loading tools. Please try again later.</p>
             </div>
         `;
