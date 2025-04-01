@@ -341,11 +341,16 @@ function renderTools() {
                 <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
                     ${filteredTools.map((tool, index) => `
                         <div class="category-card bg-white dark:bg-gray-800 rounded-lg shadow-md overflow-hidden border border-gray-200 dark:border-gray-700 hover:shadow-lg transition-shadow duration-200">
-                            <div class="h-48 bg-gray-100 dark:bg-gray-700 flex items-center justify-center">
-                                <img src="${tool.image}" alt="${tool.name}" class="max-h-36 max-w-[80%] object-contain">
-                            </div>
                             <div class="p-6">
-                                <h3 class="text-xl font-semibold text-gray-900 dark:text-white mb-2 text-center">${tool.name}</h3>
+                                <div class="flex items-center mb-4">
+                                    <div class="w-10 h-10 mr-3 flex-shrink-0 rounded-lg overflow-hidden bg-gray-100 dark:bg-gray-700">
+                                        <img src="${tool.image}" alt="${tool.name}" class="w-full h-full object-contain">
+                                    </div>
+                                    <div>
+                                        <h3 class="text-xl font-semibold text-gray-900 dark:text-white">${tool.name}</h3>
+                                        <p class="text-sm text-gray-600 dark:text-gray-300">${tool.category}</p>
+                                    </div>
+                                </div>
                                 <p class="text-gray-600 dark:text-gray-300 mb-4">${tool.description}</p>
                                 <div class="flex justify-between items-center">
                                     <span class="text-sm text-gray-500 dark:text-gray-400">AI Tool</span>
