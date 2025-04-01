@@ -181,7 +181,7 @@ function createAdContainer() {
     return `
         </div>
         <div class="w-full my-6">
-            <div class="ad-container bg-white dark:bg-gray-800 rounded-lg shadow-md overflow-hidden border border-gray-200 dark:border-gray-700 p-6">
+            <div class="bg-white dark:bg-gray-800 rounded-lg shadow-md overflow-hidden border border-gray-200 dark:border-gray-700 p-6">
                 <!-- AdSense Ad -->
                 <ins class="adsbygoogle"
                      style="display:block"
@@ -205,48 +205,59 @@ function renderTools() {
 
         let toolsHTML = '';
         
-        filteredTools.forEach((tool, index) => {
-            // Add tool card
-            toolsHTML += `
-                <div class="bg-white dark:bg-gray-800 rounded-lg shadow-md overflow-hidden border border-gray-200 dark:border-gray-700 hover:shadow-lg transition-shadow duration-200">
-                    <div class="p-6">
-                        <div class="flex items-start space-x-4 mb-4">
-                            <div class="flex-shrink-0">
-                                <img src="${tool.image}" alt="${tool.name}" class="w-12 h-12 rounded-lg object-contain bg-gray-50 dark:bg-gray-700">
-                            </div>
-                            <div class="flex-1 min-w-0">
-                                <h3 class="text-xl font-semibold text-gray-900 dark:text-white mb-1">${tool.name}</h3>
-                                <p class="text-gray-500 dark:text-gray-400 text-sm">${tool.category}</p>
+        // Add the tools HTML to the grid with the correct grid layout and center it
+        toolsGrid.innerHTML = `
+            <div class="max-w-screen-xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                    ${filteredTools.map((tool, index) => `
+                        <div class="category-card bg-white dark:bg-gray-800 rounded-lg shadow-md overflow-hidden border border-gray-200 dark:border-gray-700 cursor-pointer hover:shadow-lg transition-shadow duration-200">
+                            <div class="p-6">
+                                <div class="flex items-center mb-4">
+                                    <div class="w-12 h-12 mr-4">
+                                        <img src="${tool.image}" alt="${tool.name}" class="w-full h-full object-cover rounded-full">
+                                    </div>
+                                    <div>
+                                        <h3 class="text-xl font-semibold text-gray-900 dark:text-white mb-1">${tool.name}</h3>
+                                        <p class="text-gray-600 dark:text-gray-300 text-sm">${tool.category}</p>
+                                    </div>
+                                </div>
+                                <p class="text-gray-600 dark:text-gray-300 mb-4">${tool.description}</p>
+                                <div class="flex justify-between items-center">
+                                    <span class="text-sm text-gray-500 dark:text-gray-400">AI Tool</span>
+                                    <a href="${tool.link}" target="_blank" rel="noopener noreferrer" 
+                                       class="text-primary hover:text-primary-dark transition-colors">
+                                        Visit Tool →
+                                    </a>
+                                </div>
                             </div>
                         </div>
-                        <p class="text-gray-600 dark:text-gray-300 mb-4">${tool.description}</p>
-                        <div class="flex justify-between items-center">
-                            <span class="text-sm text-gray-500 dark:text-gray-400">AI Tool</span>
-                            <a href="${tool.link}" target="_blank" rel="noopener noreferrer" 
-                               class="text-primary hover:text-primary-dark transition-colors">
-                                Visit Tool →
-                            </a>
-                        </div>
+                        ${(index + 1) % 6 === 0 && index < filteredTools.length - 1 ? `
+                            </div>
+                            <div class="w-full my-6">
+                                <div class="bg-white dark:bg-gray-800 rounded-lg shadow-md overflow-hidden border border-gray-200 dark:border-gray-700 p-6">
+                                    <!-- AdSense Ad -->
+                                    <ins class="adsbygoogle"
+                                         style="display:block"
+                                         data-ad-format="auto"
+                                         data-full-width-responsive="true"></ins>
+                                </div>
+                            </div>
+                            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                        ` : ''}
+                    `).join('')}
+                </div>
+            </div>
+        `;
+
+        if (filteredTools.length === 0) {
+            toolsGrid.innerHTML = `
+                <div class="max-w-screen-xl mx-auto px-4 sm:px-6 lg:px-8">
+                    <div class="text-center py-8">
+                        <p class="text-gray-600 dark:text-gray-400">No tools found for this category${searchQuery ? ' and search query' : ''}.</p>
                     </div>
                 </div>
             `;
-
-            // Add ad container after every 6th tool (except after the last tool)
-            if ((index + 1) % 6 === 0 && index < filteredTools.length - 1) {
-                toolsHTML += createAdContainer();
-            }
-        });
-
-        if (filteredTools.length === 0) {
-            toolsHTML = `
-                <div class="col-span-full text-center py-8">
-                    <p class="text-gray-600 dark:text-gray-400">No tools found for this category${searchQuery ? ' and search query' : ''}.</p>
-                </div>
-            `;
         }
-
-        // Add the tools HTML to the grid with the correct grid layout
-        toolsGrid.innerHTML = `<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">${toolsHTML}</div>`;
 
         // Initialize new AdSense ads if available
         try {
@@ -259,8 +270,10 @@ function renderTools() {
     } catch (error) {
         console.error('Error rendering tools:', error);
         toolsGrid.innerHTML = `
-            <div class="col-span-full text-center py-8">
-                <p class="text-red-600 dark:text-red-400">Error loading tools. Please try again later.</p>
+            <div class="max-w-screen-xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center py-8">
+                    <p class="text-red-600 dark:text-red-400">Error loading tools. Please try again later.</p>
+                </div>
             </div>
         `;
     }
