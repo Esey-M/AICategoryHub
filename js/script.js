@@ -50,6 +50,10 @@ async function init() {
         if (tools.length > 0) {
             setupEventListeners();
             renderCategories();
+            
+            // Check URL for category parameter
+            checkUrlForCategory();
+            
             console.log('Application initialized successfully');
         } else {
             showError('Unable to load tools data. Please check your connection and refresh the page.');
@@ -70,6 +74,29 @@ async function init() {
         showError('Failed to initialize application. Please refresh the page and try again.');
     } finally {
         hideLoading();
+    }
+}
+
+// Check URL for category parameter
+function checkUrlForCategory() {
+    const urlParams = new URLSearchParams(window.location.search);
+    const categoryParam = urlParams.get('category');
+    
+    if (categoryParam) {
+        // Find the category that matches the URL parameter (handle URL encoding)
+        const decodedCategory = decodeURIComponent(categoryParam);
+        const matchingCategory = categories.find(category => 
+            category === decodedCategory || 
+            category.toLowerCase() === decodedCategory.toLowerCase()
+        );
+        
+        if (matchingCategory) {
+            console.log(`Loading category from URL: ${matchingCategory}`);
+            showTools(matchingCategory);
+        } else {
+            console.warn(`Category in URL not found: ${categoryParam}`);
+            // Stay on the categories page if the category isn't valid
+        }
     }
 }
 
@@ -176,6 +203,17 @@ function setupEventListeners() {
             mobileMenu.classList.add('hidden');
         }
     });
+    
+    // Handle browser back/forward navigation
+    window.addEventListener('popstate', (event) => {
+        if (event.state && event.state.category) {
+            // User navigated back to a category page
+            showTools(event.state.category);
+        } else {
+            // User navigated back to the main page
+            showCategories();
+        }
+    });
 }
 
 // Render category cards
@@ -242,6 +280,16 @@ function showTools(category) {
     toolsSection.classList.remove('hidden');
     categoriesGrid.parentElement.classList.add('hidden');
     renderTools();
+    
+    // Update URL with the category parameter
+    const encodedCategory = encodeURIComponent(category);
+    const url = `${window.location.pathname}?category=${encodedCategory}`;
+    
+    // Update browser history without reloading the page
+    window.history.pushState({ category: category }, `${category} - AI Category Hub`, url);
+    
+    // Update document title
+    document.title = `${category} - AI Category Hub`;
 }
 
 // Show categories
@@ -251,6 +299,13 @@ function showCategories() {
     categoriesGrid.parentElement.classList.remove('hidden');
     searchQuery = '';
     searchInput.value = '';
+    
+    // Update URL to remove the category parameter
+    const url = window.location.pathname;
+    window.history.pushState({}, 'AI Category Hub - Discover AI Tools', url);
+    
+    // Update document title
+    document.title = 'AI Category Hub - Discover AI Tools';
 }
 
 // Create ad container HTML
