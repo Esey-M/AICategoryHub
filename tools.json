@@ -2,38 +2,6 @@
   "tools": [
     {
       "id": "1",
-      "name": "ChatGPT",
-      "description": "Advanced AI chatbot for text generation, conversation, and assistance",
-      "category": "Chatbots",
-      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/04/ChatGPT_logo.svg/1200px-ChatGPT_logo.svg.png",
-      "link": "https://chat.openai.com"
-    },
-    {
-      "id": "2",
-      "name": "DALL-E",
-      "description": "AI system that creates realistic images and art from natural language descriptions",
-      "category": "Image Generation",
-      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/86/OpenAI_logo.svg/1200px-OpenAI_logo.svg.png",
-      "link": "https://openai.com/dall-e-2"
-    },
-    {
-      "id": "3",
-      "name": "GitHub Copilot",
-      "description": "AI pair programmer that helps write better code faster",
-      "category": "Code Assistance",
-      "image": "https://github.githubassets.com/images/modules/site/social/cards/copilot.png",
-      "link": "https://github.com/features/copilot"
-    },
-    {
-      "id": "4",
-      "name": "Notion AI",
-      "description": "AI-powered writing assistant integrated into Notion for enhanced productivity",
-      "category": "Productivity AI",
-      "image": "https://www.notion.so/cdn-cgi/image/format=auto,width=256,quality=100/front-static/pages/product/home-page-hero-refreshed/notion-ai.png",
-      "link": "https://www.notion.so/ai"
-    },
-    {
-      "id": "5",
       "name": "LiveChat",
       "description": "Complete customer service platform with live chat support",
       "category": "Chatbots & Conversational AI",
@@ -41,7 +9,7 @@
       "link": "https://www.livechat.com"
     },
     {
-      "id": "6",
+      "id": "2",
       "name": "ChatBot.com",
       "description": "Platform to create AI-powered chatbots for various industries",
       "category": "Chatbots & Conversational AI",
@@ -49,7 +17,7 @@
       "link": "https://www.chatbot.com"
     },
     {
-      "id": "7",
+      "id": "3",
       "name": "ManyChat",
       "description": "Chat marketing platform for Facebook Messenger and SMS",
       "category": "Chatbots & Conversational AI",
@@ -57,7 +25,7 @@
       "link": "https://www.manychat.com"
     },
     {
-      "id": "8",
+      "id": "4",
       "name": "Tidio",
       "description": "Live chat and chatbot platform for customer communication",
       "category": "Chatbots & Conversational AI",
@@ -65,7 +33,7 @@
       "link": "https://www.tidio.com"
     },
     {
-      "id": "9",
+      "id": "5",
       "name": "MobileMonkey",
       "description": "Omnichannel chatbot platform for marketing and customer support",
       "category": "Chatbots & Conversational AI",
@@ -73,7 +41,7 @@
       "link": "https://www.mobilemonkey.com"
     },
     {
-      "id": "10",
+      "id": "6",
       "name": "Botsify",
       "description": "AI chatbot platform for websites and messaging apps",
       "category": "Chatbots & Conversational AI",
@@ -81,7 +49,7 @@
       "link": "https://www.botsify.com"
     },
     {
-      "id": "11",
+      "id": "7",
       "name": "Canva",
       "description": "Graphic design platform with AI-powered features",
       "category": "Image Generation & Editing",
@@ -89,7 +57,7 @@
       "link": "https://www.canva.com"
     },
     {
-      "id": "12",
+      "id": "8",
       "name": "Fotor",
       "description": "Online photo editing and design tool with AI effects",
       "category": "Image Generation & Editing",
@@ -97,7 +65,7 @@
       "link": "https://www.fotor.com"
     },
     {
-      "id": "13",
+      "id": "9",
       "name": "BeFunky",
       "description": "Photo editing and graphic design made simple",
       "category": "Image Generation & Editing",
@@ -105,7 +73,7 @@
       "link": "https://www.befunky.com"
     },
     {
-      "id": "14",
+      "id": "10",
       "name": "Pixlr",
       "description": "AI-powered photo editor and design tool",
       "category": "Image Generation & Editing",
@@ -113,7 +81,7 @@
       "link": "https://www.pixlr.com"
     },
     {
-      "id": "15",
+      "id": "11",
       "name": "Remove.bg",
       "description": "Automatically removes backgrounds from images",
       "category": "Image Generation & Editing",
@@ -121,7 +89,7 @@
       "link": "https://www.remove.bg"
     },
     {
-      "id": "16",
+      "id": "12",
       "name": "DesignEvo",
       "description": "AI logo maker with customizable templates",
       "category": "Image Generation & Editing",
@@ -129,7 +97,7 @@
       "link": "https://www.designevo.com"
     },
     {
-      "id": "17",
+      "id": "13",
       "name": "Jasper",
       "description": "AI-powered content generation platform",
       "category": "Text Generation & Writing Assistance",
@@ -137,7 +105,7 @@
       "link": "https://www.jasper.ai"
     },
     {
-      "id": "18",
+      "id": "14",
       "name": "Copy.ai",
       "description": "AI tool for generating marketing copy and content",
       "category": "Text Generation & Writing Assistance",
@@ -145,7 +113,7 @@
       "link": "https://www.copy.ai"
     },
     {
-      "id": "19",
+      "id": "15",
       "name": "Writesonic",
       "description": "AI writing assistant for creating high-quality content",
       "category": "Text Generation & Writing Assistance",
@@ -153,7 +121,7 @@
       "link": "https://www.writesonic.com"
     },
     {
-      "id": "20",
+      "id": "16",
       "name": "Anyword",
       "description": "Data-driven AI writing platform for marketers",
       "category": "Text Generation & Writing Assistance",
@@ -161,7 +129,7 @@
       "link": "https://www.anyword.com"
     },
     {
-      "id": "21",
+      "id": "17",
       "name": "Rytr",
       "description": "AI writing assistant for content creation",
       "category": "Text Generation & Writing Assistance",
@@ -169,7 +137,7 @@
       "link": "https://www.rytr.me"
     },
     {
-      "id": "22",
+      "id": "18",
       "name": "QuillBot",
       "description": "AI-powered paraphrasing and grammar checking tool",
       "category": "Text Generation & Writing Assistance",
@@ -177,7 +145,7 @@
       "link": "https://www.quillbot.com"
     },
     {
-      "id": "23",
+      "id": "19",
       "name": "Descript",
       "description": "Audio and video editing with transcription features",
       "category": "Speech Recognition & Synthesis",
@@ -185,7 +153,7 @@
       "link": "https://www.descript.com"
     },
     {
-      "id": "24",
+      "id": "20",
       "name": "Otter.ai",
       "description": "AI-powered transcription service for meetings and lectures",
       "category": "Speech Recognition & Synthesis",
@@ -193,7 +161,7 @@
       "link": "https://www.otter.ai"
     },
     {
-      "id": "25",
+      "id": "21",
       "name": "Rev",
       "description": "Transcription and captioning services with AI support",
       "category": "Speech Recognition & Synthesis",
@@ -201,7 +169,7 @@
       "link": "https://www.rev.com"
     },
     {
-      "id": "26",
+      "id": "22",
       "name": "Sonix",
       "description": "Automated transcription, translation, and subtitling",
       "category": "Speech Recognition & Synthesis",
@@ -209,7 +177,7 @@
       "link": "https://www.sonix.ai"
     },
     {
-      "id": "27",
+      "id": "23",
       "name": "Speechelo",
       "description": "Text-to-speech software with natural voices",
       "category": "Speech Recognition & Synthesis",
@@ -217,7 +185,7 @@
       "link": "https://www.speechelo.com"
     },
     {
-      "id": "28",
+      "id": "24",
       "name": "Lovo.ai",
       "description": "AI voiceover and text-to-speech platform",
       "category": "Speech Recognition & Synthesis",
@@ -225,7 +193,7 @@
       "link": "https://www.lovo.ai"
     },
     {
-      "id": "29",
+      "id": "25",
       "name": "Tabnine",
       "description": "AI code completion assistant for developers",
       "category": "Code Generation & Development Assistance",
@@ -233,7 +201,7 @@
       "link": "https://www.tabnine.com"
     },
     {
-      "id": "30",
+      "id": "26",
       "name": "Kite",
       "description": "AI-powered code completion tool",
       "category": "Code Generation & Development Assistance",
@@ -241,7 +209,7 @@
       "link": "https://www.kite.com"
     },
     {
-      "id": "31",
+      "id": "27",
       "name": "Codacy",
       "description": "Automated code review and quality analysis",
       "category": "Code Generation & Development Assistance",
@@ -249,7 +217,7 @@
       "link": "https://www.codacy.com"
     },
     {
-      "id": "32",
+      "id": "28",
       "name": "DeepCode",
       "description": "AI-powered code review tool",
       "category": "Code Generation & Development Assistance",
@@ -257,7 +225,7 @@
       "link": "https://www.deepcode.ai"
     },
     {
-      "id": "33",
+      "id": "29",
       "name": "Snyk",
       "description": "Security scanning for vulnerabilities in code",
       "category": "Code Generation & Development Assistance",
@@ -265,7 +233,7 @@
       "link": "https://www.snyk.io"
     },
     {
-      "id": "34",
+      "id": "30",
       "name": "CodeStream",
       "description": "Collaboration tool for development teams",
       "category": "Code Generation & Development Assistance",
@@ -273,7 +241,7 @@
       "link": "https://www.codestream.com"
     },
     {
-      "id": "35",
+      "id": "31",
       "name": "Surfer SEO",
       "description": "AI-driven on-page SEO optimization tool",
       "category": "Marketing & SEO",
@@ -281,7 +249,7 @@
       "link": "https://www.surferseo.com"
     },
     {
-      "id": "36",
+      "id": "32",
       "name": "Frase",
       "description": "AI-powered content optimization and research tool",
       "category": "Marketing & SEO",
@@ -289,7 +257,7 @@
       "link": "https://www.frase.io"
     },
     {
-      "id": "37",
+      "id": "33",
       "name": "Scalenut",
       "description": "AI content research and copywriting platform",
       "category": "Marketing & SEO",
@@ -297,7 +265,7 @@
       "link": "https://www.scalenut.com"
     },
     {
-      "id": "38",
+      "id": "34",
       "name": "Outranking",
       "description": "AI tool for content strategy and optimization",
       "category": "Marketing & SEO",
@@ -305,7 +273,7 @@
       "link": "https://www.outranking.io"
     },
     {
-      "id": "39",
+      "id": "35",
       "name": "MarketMuse",
       "description": "AI content intelligence and strategy platform",
       "category": "Marketing & SEO",
@@ -313,7 +281,7 @@
       "link": "https://www.marketmuse.com"
     },
     {
-      "id": "40",
+      "id": "36",
       "name": "SEMrush",
       "description": "Comprehensive SEO and marketing toolkit with AI features",
       "category": "Marketing & SEO",
@@ -321,7 +289,7 @@
       "link": "https://www.semrush.com"
     },
     {
-      "id": "41",
+      "id": "37",
       "name": "Synthesia",
       "description": "AI-powered platform for creating videos with avatars",
       "category": "Video Editing & Generation",
@@ -329,7 +297,7 @@
       "link": "https://www.synthesia.io"
     },
     {
-      "id": "42",
+      "id": "38",
       "name": "Pictory",
       "description": "AI tool that converts text into engaging videos",
       "category": "Video Editing & Generation",
@@ -337,7 +305,7 @@
       "link": "https://www.pictory.ai"
     },
     {
-      "id": "43",
+      "id": "39",
       "name": "Lumen5",
       "description": "AI-driven video creation platform for marketers",
       "category": "Video Editing & Generation",
@@ -345,7 +313,7 @@
       "link": "https://www.lumen5.com"
     },
     {
-      "id": "44",
+      "id": "40",
       "name": "InVideo",
       "description": "Online video editor with AI-powered features",
       "category": "Video Editing & Generation",
@@ -353,7 +321,7 @@
       "link": "https://www.invideo.io"
     },
     {
-      "id": "45",
+      "id": "41",
       "name": "Animoto",
       "description": "Drag-and-drop video maker with AI capabilities",
       "category": "Video Editing & Generation",
@@ -361,7 +329,7 @@
       "link": "https://www.animoto.com"
     },
     {
-      "id": "46",
+      "id": "42",
       "name": "Wave.video",
       "description": "Video marketing platform with AI features",
       "category": "Video Editing & Generation",
@@ -369,7 +337,7 @@
       "link": "https://www.wave.video"
     },
     {
-      "id": "47",
+      "id": "43",
       "name": "Tableau",
       "description": "Leading data visualization tool with AI analytics",
       "category": "Data Analysis & Visualization",
@@ -377,7 +345,7 @@
       "link": "https://www.tableau.com"
     },
     {
-      "id": "48",
+      "id": "44",
       "name": "Power BI",
       "description": "Microsoft's AI-powered business analytics tool",
       "category": "Data Analysis & Visualization",
@@ -385,7 +353,7 @@
       "link": "https://www.powerbi.com"
     },
     {
-      "id": "49",
+      "id": "45",
       "name": "Qlik Sense",
       "description": "AI-driven data analytics and visualization platform",
       "category": "Data Analysis & Visualization",
@@ -393,7 +361,7 @@
       "link": "https://www.qlik.com"
     },
     {
-      "id": "50",
+      "id": "46",
       "name": "Looker",
       "description": "Data exploration and dashboarding tool with AI features",
       "category": "Data Analysis & Visualization",
@@ -401,7 +369,7 @@
       "link": "https://www.looker.com"
     },
     {
-      "id": "51",
+      "id": "47",
       "name": "Sisense",
       "description": "AI-powered analytics platform for complex data",
       "category": "Data Analysis & Visualization",
@@ -409,7 +377,7 @@
       "link": "https://www.sisense.com"
     },
     {
-      "id": "52",
+      "id": "48",
       "name": "Domo",
       "description": "Business intelligence platform with AI capabilities",
       "category": "Data Analysis & Visualization",
@@ -417,7 +385,7 @@
       "link": "https://www.domo.com"
     },
     {
-      "id": "53",
+      "id": "49",
       "name": "RapidMiner",
       "description": "Data science platform with predictive analytics",
       "category": "Predictive Analytics & Forecasting",
@@ -425,7 +393,7 @@
       "link": "https://www.rapidminer.com"
     },
     {
-      "id": "54",
+      "id": "50",
       "name": "Alteryx",
       "description": "AI-powered data blending and predictive analytics",
       "category": "Predictive Analytics & Forecasting",
@@ -433,7 +401,7 @@
       "link": "https://www.alteryx.com"
     },
     {
-      "id": "55",
+      "id": "51",
       "name": "DataRobot",
       "description": "Automated machine learning platform for predictions",
       "category": "Predictive Analytics & Forecasting",
@@ -441,7 +409,7 @@
       "link": "https://www.datarobot.com"
     },
     {
-      "id": "56",
+      "id": "52",
       "name": "H2O.ai",
       "description": "Open-source AI platform for predictive modeling",
       "category": "Predictive Analytics & Forecasting",
@@ -449,7 +417,7 @@
       "link": "https://www.h2o.ai"
     },
     {
-      "id": "57",
+      "id": "53",
       "name": "IBM SPSS",
       "description": "Statistical analysis software with predictive analytics",
       "category": "Predictive Analytics & Forecasting",
@@ -457,7 +425,7 @@
       "link": "https://www.ibm.com/spss"
     },
     {
-      "id": "58",
+      "id": "54",
       "name": "SAS",
       "description": "Advanced analytics software with AI forecasting",
       "category": "Predictive Analytics & Forecasting",
@@ -465,7 +433,7 @@
       "link": "https://www.sas.com"
     },
     {
-      "id": "59",
+      "id": "55",
       "name": "Unity",
       "description": "Leading platform for creating VR and AR applications",
       "category": "Virtual Reality & Augmented Reality",
@@ -473,7 +441,7 @@
       "link": "https://www.unity.com"
     },
     {
-      "id": "60",
+      "id": "56",
       "name": "Unreal Engine",
       "description": "Advanced real-time 3D creation tool for VR/AR",
       "category": "Virtual Reality & Augmented Reality",
@@ -481,7 +449,7 @@
       "link": "https://www.unrealengine.com"
     },
     {
-      "id": "61",
+      "id": "57",
       "name": "Vuforia",
       "description": "AR development platform for creating immersive experiences",
       "category": "Virtual Reality & Augmented Reality",
@@ -489,7 +457,7 @@
       "link": "https://www.vuforia.com"
     },
     {
-      "id": "62",
+      "id": "58",
       "name": "ZapWorks",
       "description": "Comprehensive AR toolkit for businesses and developers",
       "category": "Virtual Reality & Augmented Reality",
@@ -497,7 +465,7 @@
       "link": "https://www.zapworks.com"
     },
     {
-      "id": "63",
+      "id": "59",
       "name": "Lens Studio",
       "description": "Platform for creating AR experiences on Snapchat",
       "category": "Virtual Reality & Augmented Reality",
@@ -505,7 +473,7 @@
       "link": "https://www.snap.com/lens-studio"
     },
     {
-      "id": "64",
+      "id": "60",
       "name": "8th Wall",
       "description": "Web-based AR development platform",
       "category": "Virtual Reality & Augmented Reality",
@@ -513,7 +481,7 @@
       "link": "https://www.8thwall.com"
     },
     {
-      "id": "65",
+      "id": "61",
       "name": "Infermedica",
       "description": "AI-based diagnostic assistant for healthcare professionals",
       "category": "Healthcare & Medicine",
@@ -521,7 +489,7 @@
       "link": "https://www.infermedica.com"
     },
     {
-      "id": "66",
+      "id": "62",
       "name": "Viz.ai",
       "description": "AI-powered stroke detection and triage software",
       "category": "Healthcare & Medicine",
@@ -529,7 +497,7 @@
       "link": "https://www.viz.ai"
     },
     {
-      "id": "67",
+      "id": "63",
       "name": "Qure.ai",
       "description": "AI for radiology and medical image analysis",
       "category": "Healthcare & Medicine",
@@ -537,7 +505,7 @@
       "link": "https://www.qure.ai"
     },
     {
-      "id": "68",
+      "id": "64",
       "name": "PathAI",
       "description": "AI-powered pathology diagnosis platform",
       "category": "Healthcare & Medicine",
@@ -545,7 +513,7 @@
       "link": "https://www.pathai.com"
     },
     {
-      "id": "69",
+      "id": "65",
       "name": "Butterfly Network",
       "description": "AI-powered handheld ultrasound device",
       "category": "Healthcare & Medicine",
@@ -553,7 +521,7 @@
       "link": "https://www.butterflynetwork.com"
     },
     {
-      "id": "70",
+      "id": "66",
       "name": "IBM Watson Health",
       "description": "AI for medical research, drug discovery, and diagnostics",
       "category": "Healthcare & Medicine",
@@ -561,7 +529,7 @@
       "link": "https://www.ibm.com/watson-health"
     },
     {
-      "id": "71",
+      "id": "67",
       "name": "Amazon Alexa Skills",
       "description": "AI-powered voice assistant for smart devices",
       "category": "Voice Assistants & Automation",
@@ -569,7 +537,7 @@
       "link": "https://www.amazon.com/alexa-skills"
     },
     {
-      "id": "72",
+      "id": "68",
       "name": "Google Assistant Actions",
       "description": "AI-driven voice assistant for smart home and mobile",
       "category": "Voice Assistants & Automation",
@@ -577,7 +545,7 @@
       "link": "https://www.google.com/assistant/actions"
     },
     {
-      "id": "73",
+      "id": "69",
       "name": "Mycroft AI",
       "description": "Open-source AI voice assistant",
       "category": "Voice Assistants & Automation",
@@ -585,7 +553,7 @@
       "link": "https://www.mycroft.ai"
     },
     {
-      "id": "74",
+      "id": "70",
       "name": "Replika",
       "description": "AI chatbot that acts as a personal companion",
       "category": "Voice Assistants & Automation",
@@ -593,7 +561,7 @@
       "link": "https://www.replika.ai"
     },
     {
-      "id": "75",
+      "id": "71",
       "name": "Snips.ai",
       "description": "Private and offline voice assistant technology",
       "category": "Voice Assistants & Automation",
@@ -601,7 +569,7 @@
       "link": "https://www.snips.ai"
     },
     {
-      "id": "76",
+      "id": "72",
       "name": "Houndify",
       "description": "AI voice recognition and assistant technology",
       "category": "Voice Assistants & Automation",
@@ -609,7 +577,7 @@
       "link": "https://www.houndify.com"
     },
     {
-      "id": "77",
+      "id": "73",
       "name": "UiPath",
       "description": "AI-powered RPA for automating business workflows",
       "category": "Robotics & Automation",
@@ -617,7 +585,7 @@
       "link": "https://www.uipath.com"
     },
     {
-      "id": "78",
+      "id": "74",
       "name": "Automation Anywhere",
       "description": "Enterprise-grade RPA software",
       "category": "Robotics & Automation",
@@ -625,7 +593,7 @@
       "link": "https://www.automationanywhere.com"
     },
     {
-      "id": "79",
+      "id": "75",
       "name": "Blue Prism",
       "description": "AI-powered robotic automation software",
       "category": "Robotics & Automation",
@@ -633,7 +601,7 @@
       "link": "https://www.blueprism.com"
     },
     {
-      "id": "80",
+      "id": "76",
       "name": "Robocorp",
       "description": "Open-source RPA with AI-powered automation",
       "category": "Robotics & Automation",
@@ -641,7 +609,7 @@
       "link": "https://www.robocorp.com"
     },
     {
-      "id": "81",
+      "id": "77",
       "name": "Electroneek",
       "description": "AI-driven RPA for small businesses",
       "category": "Robotics & Automation",
@@ -649,7 +617,7 @@
       "link": "https://www.electroneek.com"
     },
     {
-      "id": "82",
+      "id": "78",
       "name": "Kofax",
       "description": "AI-powered automation for business processes",
       "category": "Robotics & Automation",
@@ -657,7 +625,7 @@
       "link": "https://www.kofax.com"
     },
     {
-      "id": "83",
+      "id": "79",
       "name": "Trade Ideas",
       "description": "AI-powered stock market analysis and trading bot",
       "category": "Finance & Trading",
@@ -665,7 +633,7 @@
       "link": "https://www.trade-ideas.com"
     },
     {
-      "id": "84",
+      "id": "80",
       "name": "TrendSpider",
       "description": "AI for stock chart analysis and market predictions",
       "category": "Finance & Trading",
@@ -673,7 +641,7 @@
       "link": "https://www.trendspider.com"
     },
     {
-      "id": "85",
+      "id": "81",
       "name": "Zignaly",
       "description": "AI-driven crypto trading bot",
       "category": "Finance & Trading",
@@ -681,7 +649,7 @@
       "link": "https://www.zignaly.com"
     },
     {
-      "id": "86",
+      "id": "82",
       "name": "3Commas",
       "description": "AI-powered crypto trading automation platform",
       "category": "Finance & Trading",
@@ -689,7 +657,7 @@
       "link": "https://www.3commas.io"
     },
     {
-      "id": "87",
+      "id": "83",
       "name": "Kavout",
       "description": "AI-powered stock market signal detection",
       "category": "Finance & Trading",
@@ -697,7 +665,7 @@
       "link": "https://www.kavout.com"
     },
     {
-      "id": "88",
+      "id": "84",
       "name": "TuringTrader",
       "description": "AI-based backtesting and automated trading software",
       "category": "Finance & Trading",
@@ -705,7 +673,7 @@
       "link": "https://www.turingtrader.com"
     },
     {
-      "id": "89",
+      "id": "85",
       "name": "MonkeyLearn",
       "description": "AI text analysis and sentiment detection platform",
       "category": "Sentiment Analysis & Opinion Mining",
@@ -713,7 +681,7 @@
       "link": "https://www.monkeylearn.com"
     },
     {
-      "id": "90",
+      "id": "86",
       "name": "Brandwatch",
       "description": "AI-powered social media sentiment analysis",
       "category": "Sentiment Analysis & Opinion Mining",
@@ -721,7 +689,7 @@
       "link": "https://www.brandwatch.com"
     },
     {
-      "id": "91",
+      "id": "87",
       "name": "Lexalytics",
       "description": "AI text analytics and sentiment processing tool",
       "category": "Sentiment Analysis & Opinion Mining",
@@ -729,7 +697,7 @@
       "link": "https://www.lexalytics.com"
     },
     {
-      "id": "92",
+      "id": "88",
       "name": "Repustate",
       "description": "AI-powered sentiment analysis API",
       "category": "Sentiment Analysis & Opinion Mining",
@@ -737,7 +705,7 @@
       "link": "https://www.repustate.com"
     },
     {
-      "id": "93",
+      "id": "89",
       "name": "Hootsuite Insights",
       "description": "Social media listening and sentiment analysis",
       "category": "Sentiment Analysis & Opinion Mining",
@@ -745,7 +713,7 @@
       "link": "https://www.hootsuite.com/insights"
     },
     {
-      "id": "94",
+      "id": "90",
       "name": "Clarabridge",
       "description": "AI-driven customer experience analytics",
       "category": "Sentiment Analysis & Opinion Mining",
@@ -753,7 +721,7 @@
       "link": "https://www.clarabridge.com"
     },
     {
-      "id": "95",
+      "id": "91",
       "name": "DeepL",
       "description": "AI-powered language translation tool",
       "category": "Language Translation & Localization",
@@ -761,7 +729,7 @@
       "link": "https://www.deepl.com"
     },
     {
-      "id": "96",
+      "id": "92",
       "name": "Google Translate API",
       "description": "AI-powered translation API",
       "category": "Language Translation & Localization",
@@ -769,7 +737,7 @@
       "link": "https://www.google.com/cloud/translate"
     },
     {
-      "id": "97",
+      "id": "93",
       "name": "Microsoft Translator",
       "description": "AI-driven multilingual translation API",
       "category": "Language Translation & Localization",
@@ -777,7 +745,7 @@
       "link": "https://www.microsoft.com/translator"
     },
     {
-      "id": "98",
+      "id": "94",
       "name": "Smartling",
       "description": "AI-powered content localization software",
       "category": "Language Translation & Localization",
@@ -785,7 +753,7 @@
       "link": "https://www.smartling.com"
     },
     {
-      "id": "99",
+      "id": "95",
       "name": "Lokalise",
       "description": "AI-powered localization management platform",
       "category": "Language Translation & Localization",
@@ -793,7 +761,7 @@
       "link": "https://www.lokalise.com"
     },
     {
-      "id": "100",
+      "id": "96",
       "name": "POEditor",
       "description": "AI-powered software localization and translation platform",
       "category": "Language Translation & Localization",
@@ -801,7 +769,7 @@
       "link": "https://www.poeditor.com"
     },
     {
-      "id": "101",
+      "id": "97",
       "name": "Face++",
       "description": "AI-powered facial recognition and image analysis",
       "category": "Facial Recognition & Computer Vision",
@@ -809,7 +777,7 @@
       "link": "https://www.faceplusplus.com"
     },
     {
-      "id": "102",
+      "id": "98",
       "name": "Amazon Rekognition",
       "description": "AI service for image and video analysis",
       "category": "Facial Recognition & Computer Vision",
@@ -817,7 +785,7 @@
       "link": "https://www.amazon.com/rekognition"
     },
     {
-      "id": "103",
+      "id": "99",
       "name": "Google Cloud Vision API",
       "description": "AI-powered image recognition and analysis",
       "category": "Facial Recognition & Computer Vision",
@@ -825,7 +793,7 @@
       "link": "https://www.google.com/cloud/vision"
     },
     {
-      "id": "104",
+      "id": "100",
       "name": "PimEyes",
       "description": "AI facial recognition and reverse image search",
       "category": "Facial Recognition & Computer Vision",
@@ -833,7 +801,7 @@
       "link": "https://www.pimeyes.com"
     },
     {
-      "id": "105",
+      "id": "101",
       "name": "Clarifai",
       "description": "AI-powered visual recognition platform",
       "category": "Facial Recognition & Computer Vision",
@@ -841,7 +809,7 @@
       "link": "https://www.clarifai.com"
     },
     {
-      "id": "106",
+      "id": "102",
       "name": "DeepVision",
       "description": "AI for facial recognition and video analytics",
       "category": "Facial Recognition & Computer Vision",
@@ -849,7 +817,7 @@
       "link": "https://www.deepvision.ai"
     },
     {
-      "id": "107",
+      "id": "103",
       "name": "Grammarly",
       "description": "AI-powered grammar and writing assistant",
       "category": "AI for Education & E-Learning",
@@ -857,7 +825,7 @@
       "link": "https://www.grammarly.com"
     },
     {
-      "id": "108",
+      "id": "104",
       "name": "QuillBot",
       "description": "AI-powered paraphrasing and summarization tool",
       "category": "AI for Education & E-Learning",
@@ -865,7 +833,7 @@
       "link": "https://www.quillbot.com"
     },
     {
-      "id": "109",
+      "id": "105",
       "name": "Coursera",
       "description": "AI-driven personalized learning platform",
       "category": "AI for Education & E-Learning",
@@ -873,7 +841,7 @@
       "link": "https://www.coursera.org"
     },
     {
-      "id": "110",
+      "id": "106",
       "name": "Udemy",
       "description": "AI-powered course recommendation and e-learning platform",
       "category": "AI for Education & E-Learning",
@@ -881,7 +849,7 @@
       "link": "https://www.udemy.com"
     },
     {
-      "id": "111",
+      "id": "107",
       "name": "Khan Academy",
       "description": "AI-enhanced free education platform",
       "category": "AI for Education & E-Learning",
@@ -889,7 +857,7 @@
       "link": "https://www.khanacademy.org"
     },
     {
-      "id": "112",
+      "id": "108",
       "name": "EdX",
       "description": "AI-driven education platform for university courses",
       "category": "AI for Education & E-Learning",
@@ -897,7 +865,7 @@
       "link": "https://www.edx.org"
     },
     {
-      "id": "113",
+      "id": "109",
       "name": "Darktrace",
       "description": "AI-powered cybersecurity for real-time threat detection",
       "category": "AI for Cybersecurity & Fraud Detection",
@@ -905,7 +873,7 @@
       "link": "https://www.darktrace.com"
     },
     {
-      "id": "114",
+      "id": "110",
       "name": "Netskope",
       "description": "AI-driven cloud security platform",
       "category": "AI for Cybersecurity & Fraud Detection",
@@ -913,7 +881,7 @@
       "link": "https://www.netskope.com"
     },
     {
-      "id": "115",
+      "id": "111",
       "name": "CrowdStrike",
       "description": "AI-powered endpoint security and threat detection",
       "category": "AI for Cybersecurity & Fraud Detection",
@@ -921,7 +889,7 @@
       "link": "https://www.crowdstrike.com"
     },
     {
-      "id": "116",
+      "id": "112",
       "name": "IBM QRadar",
       "description": "AI-powered SIEM (Security Information and Event Management) tool",
       "category": "AI for Cybersecurity & Fraud Detection",
@@ -929,7 +897,7 @@
       "link": "https://www.ibm.com/qradar"
     },
     {
-      "id": "117",
+      "id": "113",
       "name": "Zimperium",
       "description": "AI-driven mobile threat detection software",
       "category": "AI for Cybersecurity & Fraud Detection",
@@ -937,7 +905,7 @@
       "link": "https://www.zimperium.com"
     },
     {
-      "id": "118",
+      "id": "114",
       "name": "Riskified",
       "description": "AI for fraud prevention in e-commerce transactions",
       "category": "AI for Cybersecurity & Fraud Detection",
@@ -945,7 +913,7 @@
       "link": "https://www.riskified.com"
     },
     {
-      "id": "119",
+      "id": "115",
       "name": "IBM AI Fairness 360",
       "description": "Open-source AI toolkit for bias detection",
       "category": "Ethical AI & Bias Detection",
@@ -953,7 +921,7 @@
       "link": "https://www.ibm.com/ai-fairness-360"
     },
     {
-      "id": "120",
+      "id": "116",
       "name": "Google What-If Tool",
       "description": "AI visualization tool for detecting bias in machine learning",
       "category": "Ethical AI & Bias Detection",
@@ -961,7 +929,7 @@
       "link": "https://www.google.com/what-if-tool"
     },
     {
-      "id": "121",
+      "id": "117",
       "name": "Hugging Face FairSeq",
       "description": "AI model for responsible and fair NLP",
       "category": "Ethical AI & Bias Detection",
@@ -969,7 +937,7 @@
       "link": "https://www.huggingface.co/fairseq"
     },
     {
-      "id": "122",
+      "id": "118",
       "name": "AI Ethics Lab",
       "description": "AI consulting and fairness analysis platform",
       "category": "Ethical AI & Bias Detection",
@@ -977,7 +945,7 @@
       "link": "https://www.aiethicslab.com"
     },
     {
-      "id": "123",
+      "id": "119",
       "name": "Fiddler AI",
       "description": "AI-powered explainability and fairness monitoring tool",
       "category": "Ethical AI & Bias Detection",
@@ -985,7 +953,7 @@
       "link": "https://www.fiddler.ai"
     },
     {
-      "id": "124",
+      "id": "120",
       "name": "Pymetrics",
       "description": "AI-driven hiring platform focused on bias-free recruitment",
       "category": "Ethical AI & Bias Detection",
@@ -994,20 +962,10 @@
     }
   ],
   "categories": [
-    "Chatbots",
-    "Image Generation",
-    "Code Assistance",
-    "Productivity AI",
-    "Text Generation",
-    "Audio AI",
-    "Video AI",
     "Chatbots & Conversational AI",
     "Image Generation & Editing",
-    "Text Generation & Writing Assistance",
-    "Speech Recognition & Synthesis",
-    "Code Generation & Development Assistance",
+    "Video AI",
     "Marketing & SEO",
-    "Video Editing & Generation",
     "Data Analysis & Visualization",
     "Predictive Analytics & Forecasting",
     "Virtual Reality & Augmented Reality",
