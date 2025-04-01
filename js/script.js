@@ -181,7 +181,7 @@ function createAdContainer() {
     return `
         </div>
         <div class="w-full my-6">
-            <div class="ad-container bg-[#1E2530] p-6 rounded-lg">
+            <div class="ad-container bg-white dark:bg-gray-800 rounded-lg shadow-md overflow-hidden border border-gray-200 dark:border-gray-700 p-6">
                 <!-- AdSense Ad -->
                 <ins class="adsbygoogle"
                      style="display:block"
@@ -208,22 +208,25 @@ function renderTools() {
         filteredTools.forEach((tool, index) => {
             // Add tool card
             toolsHTML += `
-                <div class="bg-[#1E2530] rounded-lg">
+                <div class="bg-white dark:bg-gray-800 rounded-lg shadow-md overflow-hidden border border-gray-200 dark:border-gray-700 hover:shadow-lg transition-shadow duration-200">
                     <div class="p-6">
-                        <div class="flex items-center mb-4">
-                            <div class="w-8 h-8 mr-3">
-                                <img src="${tool.image}" alt="${tool.name}" class="w-full h-full">
+                        <div class="flex items-start space-x-4 mb-4">
+                            <div class="flex-shrink-0">
+                                <img src="${tool.image}" alt="${tool.name}" class="w-12 h-12 rounded-lg object-contain bg-gray-50 dark:bg-gray-700">
                             </div>
-                            <div>
-                                <h3 class="text-white text-lg font-medium mb-1">${tool.name}</h3>
-                                <p class="text-gray-400 text-sm">${tool.category}</p>
+                            <div class="flex-1 min-w-0">
+                                <h3 class="text-xl font-semibold text-gray-900 dark:text-white mb-1">${tool.name}</h3>
+                                <p class="text-gray-500 dark:text-gray-400 text-sm">${tool.category}</p>
                             </div>
                         </div>
-                        <p class="text-gray-300 mb-4">${tool.description}</p>
-                        <a href="${tool.link}" target="_blank" rel="noopener noreferrer" 
-                           class="inline-block px-4 py-2 bg-blue-500 text-white text-sm font-medium rounded-md hover:bg-blue-600 transition-colors">
-                            Visit Tool
-                        </a>
+                        <p class="text-gray-600 dark:text-gray-300 mb-4">${tool.description}</p>
+                        <div class="flex justify-between items-center">
+                            <span class="text-sm text-gray-500 dark:text-gray-400">AI Tool</span>
+                            <a href="${tool.link}" target="_blank" rel="noopener noreferrer" 
+                               class="text-primary hover:text-primary-dark transition-colors">
+                                Visit Tool →
+                            </a>
+                        </div>
                     </div>
                 </div>
             `;
@@ -237,7 +240,7 @@ function renderTools() {
         if (filteredTools.length === 0) {
             toolsHTML = `
                 <div class="col-span-full text-center py-8">
-                    <p class="text-gray-400">No tools found for this category${searchQuery ? ' and search query' : ''}.</p>
+                    <p class="text-gray-600 dark:text-gray-400">No tools found for this category${searchQuery ? ' and search query' : ''}.</p>
                 </div>
             `;
         }
@@ -257,7 +260,7 @@ function renderTools() {
         console.error('Error rendering tools:', error);
         toolsGrid.innerHTML = `
             <div class="col-span-full text-center py-8">
-                <p class="text-red-600">Error loading tools. Please try again later.</p>
+                <p class="text-red-600 dark:text-red-400">Error loading tools. Please try again later.</p>
             </div>
         `;
     }
