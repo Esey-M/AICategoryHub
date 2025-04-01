@@ -27,16 +27,47 @@ async function init() {
             return;
         }
         showLoading();
-        await fetchTools();
-        setupEventListeners();
-        renderCategories();
+        
+        // Attempt to fetch tools
+        try {
+            await fetchTools();
+            console.log('Tools fetched successfully');
+        } catch (fetchError) {
+            console.error('Error fetching tools:', fetchError);
+            
+            // Show a retry dialog
+            const retry = confirm('Failed to load AI tools. Would you like to retry?');
+            if (retry) {
+                hideLoading();
+                return init(); // Retry initialization
+            } else {
+                // Continue with potentially empty data, display limited UI
+                console.warn('Continuing with potentially limited data');
+            }
+        }
+        
+        // Only proceed with UI setup if we have data
+        if (tools.length > 0) {
+            setupEventListeners();
+            renderCategories();
+            console.log('Application initialized successfully');
+        } else {
+            showError('Unable to load tools data. Please check your connection and refresh the page.');
+            console.error('No tools data available');
+        }
+        
         // Initialize AdSense ads
-        if (typeof adsbygoogle !== 'undefined') {
-            (adsbygoogle = window.adsbygoogle || []).push({});
+        try {
+            if (typeof adsbygoogle !== 'undefined') {
+                (adsbygoogle = window.adsbygoogle || []).push({});
+                console.log('AdSense initialized');
+            }
+        } catch (adError) {
+            console.warn('AdSense initialization skipped:', adError);
         }
     } catch (error) {
         console.error('Error initializing application:', error);
-        showError('Failed to load AI tools. Please try again later.');
+        showError('Failed to initialize application. Please refresh the page and try again.');
     } finally {
         hideLoading();
     }
@@ -46,21 +77,67 @@ async function init() {
 async function fetchTools() {
     try {
         console.log('Fetching tools data...');
-        const response = await fetch('tools.json');
+        
+        // Use the full path to tools.json to ensure it's found
+        const toolsUrl = window.location.origin + '/tools.json';
+        console.log('Attempting to fetch from:', toolsUrl);
+        
+        const response = await fetch(toolsUrl, {
+            method: 'GET',
+            headers: {
+                'Accept': 'application/json',
+                'Cache-Control': 'no-cache'
+            }
+        });
+        
+        // Log detailed response information
+        console.log('Response status:', response.status);
+        console.log('Response ok:', response.ok);
+        
         if (!response.ok) {
             console.error('Failed to fetch tools:', response.status, response.statusText);
             throw new Error(`Failed to fetch tools: ${response.status} ${response.statusText}`);
         }
+        
         const data = await response.json();
-        if (!data.tools || !Array.isArray(data.tools)) {
+        
+        console.log('Data received:', data ? 'Yes' : 'No');
+        
+        if (!data || !data.tools || !Array.isArray(data.tools)) {
             console.error('Invalid tools data structure:', data);
             throw new Error('Invalid tools data structure');
         }
+        
         tools = data.tools;
         categories = data.categories || [];
+        
         console.log(`Successfully loaded ${tools.length} tools and ${categories.length} categories`);
+        
+        // Save to localStorage as a backup for future loads
+        try {
+            localStorage.setItem('toolsData', JSON.stringify(data));
+            console.log('Saved tools data to localStorage');
+        } catch (storageError) {
+            console.warn('Failed to save tools data to localStorage:', storageError);
+        }
     } catch (error) {
         console.error('Error fetching tools:', error);
+        
+        // Try to load from localStorage if available
+        try {
+            const cachedData = localStorage.getItem('toolsData');
+            if (cachedData) {
+                console.log('Attempting to load tools from localStorage');
+                const data = JSON.parse(cachedData);
+                tools = data.tools;
+                categories = data.categories || [];
+                console.log(`Loaded ${tools.length} tools and ${categories.length} categories from localStorage`);
+                return;
+            }
+        } catch (localStorageError) {
+            console.error('Failed to load from localStorage:', localStorageError);
+        }
+        
         throw error;
     }
 }
@@ -294,10 +371,44 @@ function hideLoading() {
     loadingSpinner.classList.add('hidden');
 }
 
-// Error handling
+// Show error message
 function showError(message) {
-    // You can implement a more sophisticated error display here
-    alert(message);
+    console.error('Showing error message:', message);
+    
+    // Create error element if it doesn't exist
+    let errorElement = document.getElementById('errorMessage');
+    if (!errorElement) {
+        errorElement = document.createElement('div');
+        errorElement.id = 'errorMessage';
+        errorElement.className = 'fixed inset-0 flex items-center justify-center z-50 bg-black bg-opacity-50';
+        document.body.appendChild(errorElement);
+    }
+    
+    // Create error message content
+    errorElement.innerHTML = `
+        <div class="bg-white dark:bg-gray-800 rounded-lg p-6 max-w-md mx-auto shadow-xl">
+            <h3 class="text-xl font-semibold text-gray-900 dark:text-white mb-4">Error</h3>
+            <p class="text-gray-600 dark:text-gray-300 mb-6">${message}</p>
+            <div class="flex justify-end">
+                <button id="retryButton" class="px-4 py-2 bg-primary text-white rounded-md mr-2 hover:bg-primary-dark">
+                    Retry
+                </button>
+                <button id="closeErrorButton" class="px-4 py-2 bg-gray-200 dark:bg-gray-700 text-gray-800 dark:text-white rounded-md hover:bg-gray-300 dark:hover:bg-gray-600">
+                    OK
+                </button>
+            </div>
+        </div>
+    `;
+    
+    // Add event listeners
+    document.getElementById('closeErrorButton').addEventListener('click', () => {
+        errorElement.classList.add('hidden');
+    });
+    
+    document.getElementById('retryButton').addEventListener('click', () => {
+        errorElement.classList.add('hidden');
+        location.reload();
+    });
 }
 
 // Initialize the application when the DOM is loaded
