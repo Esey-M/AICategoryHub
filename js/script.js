@@ -344,11 +344,11 @@ function renderTools() {
                         <div class="category-card bg-white dark:bg-gray-800 rounded-lg shadow-md overflow-hidden border border-gray-200 dark:border-gray-700 hover:shadow-lg transition-all duration-200">
                             <div class="p-6">
                                 <div class="flex items-center mb-4">
-                                    <div class="w-10 h-10 mr-3 flex-shrink-0 rounded-lg overflow-hidden bg-gray-100 dark:bg-gray-700">
+                                    <div class="w-20 h-20 mr-4 flex-shrink-0 rounded-lg overflow-hidden bg-gray-100 dark:bg-gray-700">
                                         <img src="${tool.image}" 
                                              alt="${tool.name}" 
-                                             class="w-full h-full object-contain"
-                                             onerror="this.onerror=null; this.src='https://placehold.co/100x100/222/fff?text=${encodeURIComponent(tool.name.charAt(0))}'; this.classList.add('fallback-img');">
+                                             class="w-full h-full object-contain p-1"
+                                             onerror="this.onerror=null; this.src='https://placehold.co/200x200/222/fff?text=${encodeURIComponent(tool.name.charAt(0))}'; this.classList.add('fallback-img');">
                                     </div>
                                     <div>
                                         <h3 class="text-xl font-semibold text-gray-900 dark:text-white">${tool.name}</h3>
