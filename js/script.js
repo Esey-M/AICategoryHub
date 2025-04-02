@@ -373,7 +373,7 @@ function renderTools() {
                                     <ins class="adsbygoogle"
                                          style="display:block; height:60px;"
                                          data-ad-format="horizontal"
-                                         data-ad-client="ca-pub-YOUR_ADSENSE_ID"
+                                         data-ad-client="ca-pub-7154813783212995"
                                          data-ad-slot="YOUR_AD_SLOT"></ins>
                                 </div>
                             </div>
