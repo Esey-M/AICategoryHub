@@ -345,7 +345,10 @@ function renderTools() {
                             <div class="p-6">
                                 <div class="flex items-center mb-4">
                                     <div class="w-10 h-10 mr-3 flex-shrink-0 rounded-lg overflow-hidden bg-gray-100 dark:bg-gray-700">
-                                        <img src="${tool.image || '/images/placeholder.png'}" alt="${tool.name}" class="w-full h-full object-contain">
+                                        <img src="${tool.image}" 
+                                             alt="${tool.name}" 
+                                             class="w-full h-full object-contain"
+                                             onerror="this.onerror=null; this.src='https://placehold.co/100x100/222/fff?text=${encodeURIComponent(tool.name.charAt(0))}'; this.classList.add('fallback-img');">
                                     </div>
                                     <div>
                                         <h3 class="text-xl font-semibold text-gray-900 dark:text-white">${tool.name}</h3>
