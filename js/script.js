@@ -279,6 +279,10 @@ function showTools(category) {
     categoryTitle.textContent = category;
     toolsSection.classList.remove('hidden');
     categoriesGrid.parentElement.classList.add('hidden');
+    
+    // Add flex-center class to toolsGrid to ensure proper centering
+    toolsGrid.classList.add('flex', 'justify-center', 'w-full');
+    
     renderTools();
     
     // Update URL with the category parameter
@@ -299,6 +303,9 @@ function showCategories() {
     categoriesGrid.parentElement.classList.remove('hidden');
     searchQuery = '';
     searchInput.value = '';
+    
+    // Remove flex-center class when going back to categories
+    toolsGrid.classList.remove('flex', 'justify-center', 'w-full');
     
     // Update URL to remove the category parameter
     const url = window.location.pathname;
@@ -337,14 +344,14 @@ function renderTools() {
 
         // Add the tools HTML to the grid with the correct grid layout and center it
         toolsGrid.innerHTML = `
-            <div class="max-w-screen-xl mx-auto px-4 sm:px-6 lg:px-8">
-                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            <div class="w-[90%] mx-auto my-8 flex flex-col items-center">
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 w-full">
                     ${filteredTools.map((tool, index) => `
-                        <div class="category-card bg-white dark:bg-gray-800 rounded-lg shadow-md overflow-hidden border border-gray-200 dark:border-gray-700 hover:shadow-lg transition-shadow duration-200">
+                        <div class="category-card bg-white dark:bg-gray-800 rounded-lg shadow-md overflow-hidden border border-gray-200 dark:border-gray-700 hover:shadow-lg transition-all duration-200">
                             <div class="p-6">
                                 <div class="flex items-center mb-4">
                                     <div class="w-10 h-10 mr-3 flex-shrink-0 rounded-lg overflow-hidden bg-gray-100 dark:bg-gray-700">
-                                        <img src="${tool.image}" alt="${tool.name}" class="w-full h-full object-contain">
+                                        <img src="${tool.image || '/images/placeholder.png'}" alt="${tool.name}" class="w-full h-full object-contain">
                                     </div>
                                     <div>
                                         <h3 class="text-xl font-semibold text-gray-900 dark:text-white">${tool.name}</h3>
@@ -363,7 +370,7 @@ function renderTools() {
                         </div>
                         ${(index + 1) % 6 === 0 && index < filteredTools.length - 1 ? `
                             </div>
-                            <div class="w-full my-6">
+                            <div class="w-full my-8">
                                 <div class="bg-white dark:bg-gray-800 rounded-lg shadow-md overflow-hidden border border-gray-200 dark:border-gray-700 p-6">
                                     <!-- AdSense Ad -->
                                     <ins class="adsbygoogle"
@@ -372,7 +379,7 @@ function renderTools() {
                                          data-full-width-responsive="true"></ins>
                                 </div>
                             </div>
-                            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 w-full">
                         ` : ''}
                     `).join('')}
                 </div>
@@ -381,7 +388,7 @@ function renderTools() {
 
         if (filteredTools.length === 0) {
             toolsGrid.innerHTML = `
-                <div class="max-w-screen-xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="w-[90%] mx-auto my-8 flex justify-center">
                     <div class="text-center py-8">
                         <p class="text-gray-600 dark:text-gray-400">No tools found for this category${searchQuery ? ' and search query' : ''}.</p>
                     </div>
@@ -400,7 +407,7 @@ function renderTools() {
     } catch (error) {
         console.error('Error rendering tools:', error);
         toolsGrid.innerHTML = `
-            <div class="max-w-screen-xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="w-[90%] mx-auto my-8 flex justify-center">
                 <div class="text-center py-8">
                     <p class="text-red-600 dark:text-red-400">Error loading tools. Please try again later.</p>
                 </div>
