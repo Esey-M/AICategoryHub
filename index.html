@@ -96,15 +96,15 @@
     </section>
 
     <!-- Tools Section -->
-    <section id="toolsSection" class="container mx-auto px-4 py-8 hidden">
-        <div class="flex justify-between items-center mb-8">
-            <h2 id="categoryTitle" class="text-2xl font-bold text-gray-900 dark:text-white"></h2>
-            <button id="backToCategories" class="px-4 py-2 text-sm font-medium text-primary hover:text-primary-dark">
-                ← Back to Categories
-            </button>
-        </div>
-        <div id="toolsGrid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            <!-- Tools will be dynamically inserted here -->
+    <section id="toolsSection" class="hidden py-12">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8 flex flex-col items-center">
+            <div class="flex items-center mb-8 w-[90%]">
+                <button id="backToCategories" class="text-primary mr-4 hover:text-primary-dark">
+                    ← Back to Categories
+                </button>
+                <h2 id="categoryTitle" class="text-3xl font-bold text-gray-900 dark:text-white"></h2>
+            </div>
+            <div id="toolsGrid" class="w-full flex justify-center"></div>
         </div>
     </section>
 

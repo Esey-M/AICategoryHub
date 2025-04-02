@@ -280,9 +280,6 @@ function showTools(category) {
     toolsSection.classList.remove('hidden');
     categoriesGrid.parentElement.classList.add('hidden');
     
-    // Add flex-center class to toolsGrid to ensure proper centering
-    toolsGrid.classList.add('flex', 'justify-center', 'w-full');
-    
     renderTools();
     
     // Update URL with the category parameter
@@ -303,9 +300,6 @@ function showCategories() {
     categoriesGrid.parentElement.classList.remove('hidden');
     searchQuery = '';
     searchInput.value = '';
-    
-    // Remove flex-center class when going back to categories
-    toolsGrid.classList.remove('flex', 'justify-center', 'w-full');
     
     // Update URL to remove the category parameter
     const url = window.location.pathname;
@@ -344,7 +338,7 @@ function renderTools() {
 
         // Add the tools HTML to the grid with the correct grid layout and center it
         toolsGrid.innerHTML = `
-            <div class="w-[90%] mx-auto my-8 flex flex-col items-center">
+            <div class="w-[90%] mx-auto">
                 <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 w-full">
                     ${filteredTools.map((tool, index) => `
                         <div class="category-card bg-white dark:bg-gray-800 rounded-lg shadow-md overflow-hidden border border-gray-200 dark:border-gray-700 hover:shadow-lg transition-all duration-200">
@@ -388,7 +382,7 @@ function renderTools() {
 
         if (filteredTools.length === 0) {
             toolsGrid.innerHTML = `
-                <div class="w-[90%] mx-auto my-8 flex justify-center">
+                <div class="w-[90%] mx-auto">
                     <div class="text-center py-8">
                         <p class="text-gray-600 dark:text-gray-400">No tools found for this category${searchQuery ? ' and search query' : ''}.</p>
                     </div>
@@ -407,7 +401,7 @@ function renderTools() {
     } catch (error) {
         console.error('Error rendering tools:', error);
         toolsGrid.innerHTML = `
-            <div class="w-[90%] mx-auto my-8 flex justify-center">
+            <div class="w-[90%] mx-auto">
                 <div class="text-center py-8">
                     <p class="text-red-600 dark:text-red-400">Error loading tools. Please try again later.</p>
                 </div>
