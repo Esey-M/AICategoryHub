@@ -367,13 +367,14 @@ function renderTools() {
                         </div>
                         ${(index + 1) % 6 === 0 && index < filteredTools.length - 1 ? `
                             </div>
-                            <div class="w-full my-8">
-                                <div class="bg-white dark:bg-gray-800 rounded-lg shadow-md overflow-hidden border border-gray-200 dark:border-gray-700 p-6">
+                            <div class="w-full my-4">
+                                <div class="bg-white dark:bg-gray-800 rounded-lg shadow-md overflow-hidden border border-gray-200 dark:border-gray-700 p-4">
                                     <!-- AdSense Ad -->
                                     <ins class="adsbygoogle"
-                                         style="display:block"
-                                         data-ad-format="auto"
-                                         data-full-width-responsive="true"></ins>
+                                         style="display:block; height:120px;"
+                                         data-ad-format="horizontal"
+                                         data-ad-client="ca-pub-YOUR_ADSENSE_ID"
+                                         data-ad-slot="YOUR_AD_SLOT"></ins>
                                 </div>
                             </div>
                             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 w-full">
