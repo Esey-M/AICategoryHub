@@ -49,6 +49,38 @@
       "link": "https://www.botsify.com"
     },
     {
+      "id": "401",
+      "name": "Botpress",
+      "description": "Open-source conversational AI platform for building sophisticated chatbots",
+      "category": "Chatbots & Conversational AI",
+      "image": "https://avatars.githubusercontent.com/u/26473895",
+      "link": "https://botpress.com/?fpr=aicategoryhub"
+    },
+    {
+      "id": "402",
+      "name": "Landbot",
+      "description": "No-code chatbot builder for lead generation and customer service",
+      "category": "Chatbots & Conversational AI",
+      "image": "https://assets-global.website-files.com/605a3cacba514a77ca2e831c/6086d9b8e7f1dee8d9108eb8_landbot%20logo%20square.png",
+      "link": "https://landbot.io/?fp_ref=aicategoryhub"
+    },
+    {
+      "id": "403",
+      "name": "Intercom",
+      "description": "Customer messaging platform with chatbot automation features",
+      "category": "Chatbots & Conversational AI",
+      "image": "https://static.intercomassets.com/assets/cdn/avatars/intercom_icon-16da6e37e12905314275cc9b8a46474c42e239b70ca820a27e1fd5d0c4442c9f.png",
+      "link": "https://www.intercom.com/partner/?ref=aicategoryhub"
+    },
+    {
+      "id": "404",
+      "name": "Drift",
+      "description": "Conversational marketing platform with AI chatbots for businesses",
+      "category": "Chatbots & Conversational AI",
+      "image": "https://theme.zdassets.com/theme_assets/9066695/721fb23291e5199aec0dd796439c5d126bcea557.svg",
+      "link": "https://www.drift.com/partner-program/?ref=aicategoryhub"
+    },
+    {
       "id": "7",
       "name": "Canva",
       "description": "Graphic design platform with AI-powered features",
@@ -95,6 +127,54 @@
       "category": "Image Generation & Editing",
       "image": "https://www.designevo.com/wp-content/uploads/2021/03/designevo-logo.svg",
       "link": "https://www.designevo.com"
+    },
+    {
+      "id": "405",
+      "name": "Midjourney",
+      "description": "AI image generator that creates stunning artwork from text descriptions",
+      "category": "Image Generation & Editing",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/e/e6/Midjourney_Emblem.png",
+      "link": "https://www.midjourney.com/refer/?r=aicategoryhub"
+    },
+    {
+      "id": "406",
+      "name": "Photoroom",
+      "description": "AI-powered photo editor that removes backgrounds and creates studio-quality product photos",
+      "category": "Image Generation & Editing",
+      "image": "https://photoroom.com/images/new-logo-photoroom.png",
+      "link": "https://www.photoroom.com/en/?ref=aicategoryhub"
+    },
+    {
+      "id": "407",
+      "name": "NightCafe Creator",
+      "description": "AI art generator using multiple algorithms like VQGAN+CLIP and DALL-E",
+      "category": "Image Generation & Editing",
+      "image": "https://creator.nightcafe.studio/static/favicon.png",
+      "link": "https://creator.nightcafe.studio/signup?invite=aicategoryhub"
+    },
+    {
+      "id": "408",
+      "name": "Stable Diffusion",
+      "description": "AI image generation model that creates detailed images from text descriptions",
+      "category": "Image Generation & Editing",
+      "image": "https://stability.ai/assets/images/stable-diffusion.png",
+      "link": "https://stability.ai/stable-diffusion?ref=aicategoryhub"
+    },
+    {
+      "id": "409",
+      "name": "Hotpot.ai",
+      "description": "AI tools for creating graphics, pictures, and writing",
+      "category": "Image Generation & Editing",
+      "image": "https://hotpot.ai/images/site/hotpot/logo.png",
+      "link": "https://hotpot.ai/?ref=aicategoryhub"
+    },
+    {
+      "id": "410",
+      "name": "Let's Enhance",
+      "description": "AI image upscaler that enhances and increases image resolution without quality loss",
+      "category": "Image Generation & Editing",
+      "image": "https://assets-global.website-files.com/620d94224f647d84ac701acc/65eef7d16bf9f85f23300caa_LE-icon-512.png",
+      "link": "https://letsenhance.io/?ref=aicategoryhub"
     },
     {
       "id": "13",
@@ -145,6 +225,62 @@
       "link": "https://www.quillbot.com"
     },
     {
+      "id": "411",
+      "name": "WordAI",
+      "description": "Advanced AI content rewriter that produces human-quality text",
+      "category": "Text Generation & Writing Assistance",
+      "image": "https://wordai.com/images/WordAI.svg",
+      "link": "https://wordai.com/?ref=aicategoryhub"
+    },
+    {
+      "id": "412",
+      "name": "Copysmith",
+      "description": "AI content generator for e-commerce and enterprise teams",
+      "category": "Text Generation & Writing Assistance",
+      "image": "https://www.copysmith.ai/images/logo.svg",
+      "link": "https://copysmith.ai/?utm_source=aicategoryhub"
+    },
+    {
+      "id": "413",
+      "name": "ContentBot",
+      "description": "AI content creator for blogs, articles, and marketing copy",
+      "category": "Text Generation & Writing Assistance",
+      "image": "https://contentbot.ai/images/contentbot-logo-150x150.png",
+      "link": "https://contentbot.ai/?ref=aicategoryhub"
+    },
+    {
+      "id": "414",
+      "name": "Hypotenuse AI",
+      "description": "AI writer that generates high-quality content from just a few keywords",
+      "category": "Text Generation & Writing Assistance",
+      "image": "https://assets-global.website-files.com/60e5f2de011b86acebc30db7/60e5f2de011b86c970c30e29_Favicon-256.png",
+      "link": "https://www.hypotenuse.ai/?ref=aicategoryhub"
+    },
+    {
+      "id": "415",
+      "name": "TextCortex",
+      "description": "AI writing assistant that works across platforms and browsers",
+      "category": "Text Generation & Writing Assistance",
+      "image": "https://textcortex.com/static/logo.jpg",
+      "link": "https://textcortex.com/?via=aicategoryhub"
+    },
+    {
+      "id": "416",
+      "name": "Article Forge",
+      "description": "AI writer that creates entire articles in minutes using deep learning",
+      "category": "Text Generation & Writing Assistance",
+      "image": "https://contentatscale.ai/wp-content/uploads/2022/12/article-forge-icon.png",
+      "link": "https://www.articleforge.com/?ref=aicategoryhub"
+    },
+    {
+      "id": "417",
+      "name": "Frase.io",
+      "description": "AI content research and optimization platform",
+      "category": "Text Generation & Writing Assistance",
+      "image": "https://frase.io/wp-content/uploads/2022/04/frase-logo.png",
+      "link": "https://www.frase.io/?ref=aicategoryhub"
+    },
+    {
       "id": "19",
       "name": "Descript",
       "description": "Audio and video editing with transcription features",
@@ -191,6 +327,70 @@
       "category": "Speech Recognition & Synthesis",
       "image": "https://www.lovo.ai/wp-content/uploads/2021/03/lovo-logo.svg",
       "link": "https://www.lovo.ai"
+    },
+    {
+      "id": "418",
+      "name": "Murf.ai",
+      "description": "AI voice generator with studio-quality voices for videos and presentations",
+      "category": "Speech Recognition & Synthesis",
+      "image": "https://murf.ai/resources/images/murf-logo.svg",
+      "link": "https://murf.ai/?ref=aicategoryhub"
+    },
+    {
+      "id": "419",
+      "name": "AssemblyAI",
+      "description": "API for speech recognition, transcription, and language understanding",
+      "category": "Speech Recognition & Synthesis",
+      "image": "https://images.prismic.io/assemblyai/b6304ea6-0d41-4f96-ac05-8c9dcc3021bc_Assembly+AI+Logo.png",
+      "link": "https://www.assemblyai.com/?ref=aicategoryhub"
+    },
+    {
+      "id": "420",
+      "name": "Play.ht",
+      "description": "AI voice generator with 600+ lifelike voices in 60+ languages",
+      "category": "Speech Recognition & Synthesis",
+      "image": "https://play.ht/img/logo/blue-on-white.png",
+      "link": "https://play.ht/?via=aicategoryhub"
+    },
+    {
+      "id": "421",
+      "name": "Resemble.ai",
+      "description": "AI voice cloning and synthetic speech generation platform",
+      "category": "Speech Recognition & Synthesis",
+      "image": "https://assets-global.website-files.com/60657a3524896e7537929016/62b0c0db6c61c43b0d63b7d5_Favicon-Resemble-256.png",
+      "link": "https://www.resemble.ai/?utm_source=aicategoryhub"
+    },
+    {
+      "id": "422",
+      "name": "Wellsaid Labs",
+      "description": "AI text-to-speech platform with lifelike voices for commercial use",
+      "category": "Speech Recognition & Synthesis",
+      "image": "https://assets-global.website-files.com/6149033cd135430f57142c28/61917e6e6a5de446a92a8a25_Favicon-WellSaid-256.png",
+      "link": "https://wellsaidlabs.com/?ref=aicategoryhub"
+    },
+    {
+      "id": "423",
+      "name": "Verbit",
+      "description": "AI-powered transcription and captioning platform for businesses",
+      "category": "Speech Recognition & Synthesis",
+      "image": "https://verbit.ai/wp-content/uploads/2023/04/verbit-logo.svg",
+      "link": "https://verbit.ai/?ref=aicategoryhub"
+    },
+    {
+      "id": "424",
+      "name": "Transcribe",
+      "description": "AI transcription service with speaker identification and automatic timestamps",
+      "category": "Speech Recognition & Synthesis",
+      "image": "https://transcribe.com/img/logo.svg",
+      "link": "https://transcribe.com/?ref=aicategoryhub"
+    },
+    {
+      "id": "425",
+      "name": "Listnr",
+      "description": "AI voice generator with 600+ natural-sounding AI voices",
+      "category": "Speech Recognition & Synthesis",
+      "image": "https://listnr.tech/images/logo.svg",
+      "link": "https://listnr.tech/?ref=aicategoryhub"
     },
     {
       "id": "25",
@@ -241,52 +441,68 @@
       "link": "https://www.codestream.com"
     },
     {
-      "id": "31",
-      "name": "Surfer SEO",
-      "description": "AI-driven on-page SEO optimization tool",
-      "category": "Marketing & SEO",
-      "image": "https://www.surferseo.com/wp-content/uploads/2021/03/surfer-seo-logo.svg",
-      "link": "https://www.surferseo.com"
+      "id": "426",
+      "name": "GitHub Copilot",
+      "description": "AI pair programmer that suggests code and functions in real-time",
+      "category": "Code Generation & Development Assistance",
+      "image": "https://github.githubassets.com/assets/GitHub-Mark-ea2971cee799.png",
+      "link": "https://github.com/features/copilot?ref=aicategoryhub"
     },
     {
-      "id": "32",
-      "name": "Frase",
-      "description": "AI-powered content optimization and research tool",
-      "category": "Marketing & SEO",
-      "image": "https://www.frase.io/wp-content/uploads/2021/03/frase-logo.svg",
-      "link": "https://www.frase.io"
+      "id": "427",
+      "name": "CodeWhisperer",
+      "description": "Amazon's AI code generator that provides code recommendations",
+      "category": "Code Generation & Development Assistance",
+      "image": "https://d1.awsstatic.com/product-marketing/CodeWhisperer/amazon-q-developer.da3ec37df54ff1fb260ea54e0eee43c4744b8313.png",
+      "link": "https://aws.amazon.com/codewhisperer/?ref=aicategoryhub"
     },
     {
-      "id": "33",
-      "name": "Scalenut",
-      "description": "AI content research and copywriting platform",
-      "category": "Marketing & SEO",
-      "image": "https://www.scalenut.com/wp-content/uploads/2021/03/scalenut-logo.svg",
-      "link": "https://www.scalenut.com"
+      "id": "428",
+      "name": "Replit Ghost Writer",
+      "description": "AI coding assistant integrated directly in Replit's online IDE",
+      "category": "Code Generation & Development Assistance",
+      "image": "https://replit.com/cdn-cgi/image/width=2048,quality=80/https://storage.googleapis.com/replit/images/1696524036412_24d2503c8c33afd84c738866ad1b52b7.png",
+      "link": "https://replit.com/site/ghostwriter?ref=aicategoryhub"
     },
     {
-      "id": "34",
-      "name": "Outranking",
-      "description": "AI tool for content strategy and optimization",
-      "category": "Marketing & SEO",
-      "image": "https://www.outranking.io/wp-content/uploads/2021/03/outranking-logo.svg",
-      "link": "https://www.outranking.io"
+      "id": "429",
+      "name": "CodeT5",
+      "description": "Open-source AI code generator for multiple programming languages",
+      "category": "Code Generation & Development Assistance",
+      "image": "https://huggingface.co/datasets/huggingface/brand-assets/resolve/main/hf-logo.svg",
+      "link": "https://huggingface.co/salesforce/codet5p-16b?ref=aicategoryhub"
     },
     {
-      "id": "35",
-      "name": "MarketMuse",
-      "description": "AI content intelligence and strategy platform",
-      "category": "Marketing & SEO",
-      "image": "https://www.marketmuse.com/wp-content/uploads/2021/03/marketmuse-logo.svg",
-      "link": "https://www.marketmuse.com"
+      "id": "430",
+      "name": "Sourcery",
+      "description": "AI code refactoring tool that automatically improves Python code",
+      "category": "Code Generation & Development Assistance",
+      "image": "https://uploads-ssl.webflow.com/627a5f5ebb01b6e453b5617d/628e69fd2b2cc353ce0b0b98_favicon-256.png",
+      "link": "https://sourcery.ai/?ref=aicategoryhub"
     },
     {
-      "id": "36",
-      "name": "SEMrush",
-      "description": "Comprehensive SEO and marketing toolkit with AI features",
-      "category": "Marketing & SEO",
-      "image": "https://www.semrush.com/wp-content/uploads/2021/03/semrush-logo.svg",
-      "link": "https://www.semrush.com"
+      "id": "431",
+      "name": "Mintlify",
+      "description": "AI documentation writer that generates code docs in seconds",
+      "category": "Code Generation & Development Assistance",
+      "image": "https://mintlify.com/logo.png",
+      "link": "https://mintlify.com/?ref=aicategoryhub"
+    },
+    {
+      "id": "432",
+      "name": "Codeium",
+      "description": "Free AI-powered code acceleration toolkit with autocompletion",
+      "category": "Code Generation & Development Assistance",
+      "image": "https://codeium.com/favicon-32x32.png",
+      "link": "https://codeium.com/?ref=aicategoryhub"
+    },
+    {
+      "id": "433",
+      "name": "WhatTheDiff",
+      "description": "AI code review assistant that explains code changes in plain English",
+      "category": "Code Generation & Development Assistance",
+      "image": "https://whatthediff.ai/images/favicon.png",
+      "link": "https://whatthediff.ai/?ref=aicategoryhub"
     },
     {
       "id": "37",
@@ -297,44 +513,92 @@
       "link": "https://www.synthesia.io/partners/affiliate?via=aicategoryhub"
     },
     {
-      "id": "38",
-      "name": "Pictory",
-      "description": "AI tool that converts text into engaging videos",
+      "id": "434",
+      "name": "D-ID",
+      "description": "AI technology that creates talking avatars from still photos",
       "category": "Video Editing & Generation",
-      "image": "https://pictory.ai/wp-content/uploads/2022/02/pictory-logo.png",
-      "link": "https://pictory.ai?ref=aicategoryhub"
+      "image": "https://www.d-id.com/wp-content/uploads/2023/05/D-ID-favicon.png",
+      "link": "https://www.d-id.com/?ref=aicategoryhub"
     },
     {
-      "id": "39",
-      "name": "Lumen5",
-      "description": "AI-driven video creation platform for marketers",
+      "id": "435",
+      "name": "Descript",
+      "description": "All-in-one video editor with transcription and AI voice cloning",
       "category": "Video Editing & Generation",
-      "image": "https://storage.googleapis.com/lumen5-site-images/L5-logo/L5-logo-header.png",
-      "link": "https://lumen5.com/?fpr=aicategoryhub"
+      "image": "https://assets-global.website-files.com/616a981883ab8f6b9e32843c/6193c301cd5e195f25eb9b3d_Descript-favicon-2021-72x72.png",
+      "link": "https://www.descript.com/?lmref=aicategoryhub"
     },
     {
-      "id": "40",
-      "name": "InVideo",
-      "description": "Online video editor with AI-powered features",
-      "category": "Video Editing & Generation",
-      "image": "https://assets.invideo.io/invideo-logo.png",
-      "link": "https://invideo.io/?ref=aicategoryhub"
+      "id": "31",
+      "name": "Surfer SEO",
+      "description": "AI-driven on-page SEO optimization tool",
+      "category": "Marketing & SEO",
+      "image": "https://www.surferseo.com/wp-content/uploads/2021/03/surfer-seo-logo.svg",
+      "link": "https://www.surferseo.com"
     },
     {
-      "id": "41",
-      "name": "Animoto",
-      "description": "Drag-and-drop video maker with AI capabilities",
-      "category": "Video Editing & Generation",
-      "image": "https://d2m21dzi54s7kp.cloudfront.net/wp-content/uploads/2022/10/animoto_logo_blue_bg-1.png",
-      "link": "https://animoto.com/affiliates"
+      "id": "436",
+      "name": "SE Ranking",
+      "description": "All-in-one SEO software with AI recommendations for ranking improvement",
+      "category": "Marketing & SEO",
+      "image": "https://seranking.com/blog/wp-content/uploads/2021/01/SR-icon.svg",
+      "link": "https://seranking.com/?ref=aicategoryhub"
     },
     {
-      "id": "42",
-      "name": "Wave.video",
-      "description": "Video marketing platform with AI features",
-      "category": "Video Editing & Generation",
-      "image": "https://wave.video/static/wavevideo-logo-blue@2x.png",
-      "link": "https://wave.video/?tap_a=36043-61014c&tap_s=594428-4ccec5"
+      "id": "437",
+      "name": "Ahrefs",
+      "description": "SEO toolset with AI insights for website audit and competitive analysis",
+      "category": "Marketing & SEO",
+      "image": "https://cdn.ahrefs.com/web/static/img/logos/logo-short-dark-bg.svg",
+      "link": "https://ahrefs.com/?ref=aicategoryhub"
+    },
+    {
+      "id": "438",
+      "name": "MarketMuse",
+      "description": "AI content planning and optimization platform",
+      "category": "Marketing & SEO",
+      "image": "https://marketmuse.com/wp-content/uploads/2021/05/marketmuse-logo-icon-512x512-1.png",
+      "link": "https://www.marketmuse.com/?ref=aicategoryhub"
+    },
+    {
+      "id": "439",
+      "name": "CrawlIQ",
+      "description": "AI-powered SEO assistant for content optimization and keyword research",
+      "category": "Marketing & SEO",
+      "image": "https://crawliq.ai/images/logo.png",
+      "link": "https://crawliq.ai/?ref=aicategoryhub"
+    },
+    {
+      "id": "440",
+      "name": "NeuralText",
+      "description": "AI content generation and SEO optimization platform",
+      "category": "Marketing & SEO",
+      "image": "https://assets-global.website-files.com/60e5f2de011b86a092c30dc5/60e5f2de011b8666b2c30e08_Favicon-256.png",
+      "link": "https://www.neuraltext.com/?via=aicategoryhub"
+    },
+    {
+      "id": "441",
+      "name": "Clearscope",
+      "description": "AI-powered content optimization platform for higher organic traffic",
+      "category": "Marketing & SEO",
+      "image": "https://images.prismic.io/clearscope-marketing/a11fcaa7-04df-4148-9a8f-a61a960d8dfd_Clearscope-Logo-Icon-v3.svg",
+      "link": "https://www.clearscope.io/?ref=aicategoryhub"
+    },
+    {
+      "id": "442",
+      "name": "Rank Math",
+      "description": "AI-powered WordPress SEO plugin with content analysis",
+      "category": "Marketing & SEO",
+      "image": "https://rankmath.com/wp-content/uploads/Rank-Math-Logo-Square.svg",
+      "link": "https://rankmath.com/?ref=aicategoryhub"
+    },
+    {
+      "id": "443",
+      "name": "SearchAtlas",
+      "description": "SEO platform with AI-driven content optimization tools",
+      "category": "Marketing & SEO",
+      "image": "https://assets-global.website-files.com/605a3cacba514a8ec52e8332/605a3cacba514a568c2e8393_favicon-32x32.png",
+      "link": "https://searchatlas.com/?ref=aicategoryhub"
     },
     {
       "id": "43",
@@ -345,44 +609,68 @@
       "link": "https://www.tableau.com"
     },
     {
-      "id": "44",
-      "name": "Power BI",
-      "description": "Microsoft's AI-powered business analytics tool",
+      "id": "444",
+      "name": "Dataiku",
+      "description": "Data science platform for AI and machine learning analytics",
       "category": "Data Analysis & Visualization",
-      "image": "https://www.powerbi.com/wp-content/uploads/2021/03/power-bi-logo.svg",
-      "link": "https://www.powerbi.com"
+      "image": "https://cdn.dataiku.com/img/favicon/favicon-96x96.png",
+      "link": "https://www.dataiku.com/partners/technology-partners/?ref=aicategoryhub"
     },
     {
-      "id": "45",
-      "name": "Qlik Sense",
-      "description": "AI-driven data analytics and visualization platform",
+      "id": "445",
+      "name": "Sigma Computing",
+      "description": "Cloud analytics and business intelligence platform with AI features",
       "category": "Data Analysis & Visualization",
-      "image": "https://www.qlik.com/wp-content/uploads/2021/03/qlik-logo.svg",
-      "link": "https://www.qlik.com"
+      "image": "https://sigmacomputing.com/wp-content/uploads/2022/01/Sigma-Logo-Square-Blue-512-1.png",
+      "link": "https://www.sigmacomputing.com/?ref=aicategoryhub"
     },
     {
-      "id": "46",
-      "name": "Looker",
-      "description": "Data exploration and dashboarding tool with AI features",
+      "id": "446",
+      "name": "ThoughtSpot",
+      "description": "AI-powered analytics platform with natural language search",
       "category": "Data Analysis & Visualization",
-      "image": "https://www.looker.com/wp-content/uploads/2021/03/looker-logo.svg",
-      "link": "https://www.looker.com"
+      "image": "https://www.thoughtspot.com/assets/img/thoughtspot.png",
+      "link": "https://www.thoughtspot.com/partners/become-a-partner?ref=aicategoryhub"
     },
     {
-      "id": "47",
-      "name": "Sisense",
-      "description": "AI-powered analytics platform for complex data",
+      "id": "447",
+      "name": "Census",
+      "description": "Reverse ETL tool that syncs data to business tools using AI",
       "category": "Data Analysis & Visualization",
-      "image": "https://www.sisense.com/wp-content/uploads/2021/03/sisense-logo.svg",
-      "link": "https://www.sisense.com"
+      "image": "https://assets.census.com/assets/logo/census-logo-icon.svg",
+      "link": "https://www.getcensus.com/?ref=aicategoryhub"
     },
     {
-      "id": "48",
-      "name": "Domo",
-      "description": "Business intelligence platform with AI capabilities",
+      "id": "448",
+      "name": "Datalore",
+      "description": "Online data science notebook with AI code completion",
       "category": "Data Analysis & Visualization",
-      "image": "https://www.domo.com/wp-content/uploads/2021/03/domo-logo.svg",
-      "link": "https://www.domo.com"
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/79/Datalore_icon.svg/1200px-Datalore_icon.svg.png",
+      "link": "https://datalore.jetbrains.com/?ref=aicategoryhub"
+    },
+    {
+      "id": "449",
+      "name": "ObservableHQ",
+      "description": "Interactive visualization platform for data analysis",
+      "category": "Data Analysis & Visualization",
+      "image": "https://avatars.githubusercontent.com/u/30080011",
+      "link": "https://observablehq.com/?ref=aicategoryhub"
+    },
+    {
+      "id": "450",
+      "name": "Deepnote",
+      "description": "Collaborative data science notebook with real-time collaboration",
+      "category": "Data Analysis & Visualization",
+      "image": "https://deepnote.com/favicon.ico",
+      "link": "https://deepnote.com/?ref=aicategoryhub"
+    },
+    {
+      "id": "451",
+      "name": "Hex",
+      "description": "Collaborative data platform combining SQL, Python, and visual data apps",
+      "category": "Data Analysis & Visualization",
+      "image": "https://images.ctfassets.net/vrrt8g9li2by/1MliC8RegqTJmE3zYrDPnA/9da2e5f62396ac095fe14c85da7d0237/hex-mark-blue.svg",
+      "link": "https://hex.tech/?ref=aicategoryhub"
     },
     {
       "id": "49",
@@ -393,44 +681,68 @@
       "link": "https://www.rapidminer.com"
     },
     {
-      "id": "50",
-      "name": "Alteryx",
-      "description": "AI-powered data blending and predictive analytics",
+      "id": "452",
+      "name": "BigML",
+      "description": "Machine learning platform for predictive analytics",
       "category": "Predictive Analytics & Forecasting",
-      "image": "https://www.alteryx.com/wp-content/uploads/2021/03/alteryx-logo.svg",
-      "link": "https://www.alteryx.com"
+      "image": "https://static.bigml.com/static/img/favicon.ico",
+      "link": "https://bigml.com/affiliate/?ref=aicategoryhub"
     },
     {
-      "id": "51",
-      "name": "DataRobot",
-      "description": "Automated machine learning platform for predictions",
+      "id": "453",
+      "name": "Pecan AI",
+      "description": "Predictive analytics platform for business metrics and KPIs",
       "category": "Predictive Analytics & Forecasting",
-      "image": "https://www.datarobot.com/wp-content/uploads/2021/03/datarobot-logo.svg",
-      "link": "https://www.datarobot.com"
+      "image": "https://pecan.ai/wp-content/uploads/2021/06/pecan-favicon-150x150-1.png",
+      "link": "https://www.pecan.ai/?utm_source=aicategoryhub"
     },
     {
-      "id": "52",
-      "name": "H2O.ai",
-      "description": "Open-source AI platform for predictive modeling",
+      "id": "454",
+      "name": "Akkio",
+      "description": "No-code AI automation platform for predictive analytics",
       "category": "Predictive Analytics & Forecasting",
-      "image": "https://www.h2o.ai/wp-content/uploads/2021/03/h2o-logo.svg",
-      "link": "https://www.h2o.ai"
+      "image": "https://global-uploads.webflow.com/5f0e33f0cd5dd5676bc651d8/629e684ad49a15301e4390ee_a-logo-blue-centered-p-500.png",
+      "link": "https://www.akkio.com/?ref=aicategoryhub"
     },
     {
-      "id": "53",
-      "name": "IBM SPSS",
-      "description": "Statistical analysis software with predictive analytics",
+      "id": "455",
+      "name": "Obviously AI",
+      "description": "No-code predictive analytics for business users",
       "category": "Predictive Analytics & Forecasting",
-      "image": "https://www.ibm.com/wp-content/uploads/2021/03/spss-logo.svg",
-      "link": "https://www.ibm.com/spss"
+      "image": "https://assets-global.website-files.com/60468f86b731682ac6c763df/6244e7e40cb76152ade7e5f8_OAI-icon-blue.svg",
+      "link": "https://www.obviously.ai/?ref=aicategoryhub"
     },
     {
-      "id": "54",
-      "name": "SAS",
-      "description": "Advanced analytics software with AI forecasting",
+      "id": "456",
+      "name": "Apteo",
+      "description": "Customer analytics platform with predictive insights",
       "category": "Predictive Analytics & Forecasting",
-      "image": "https://www.sas.com/wp-content/uploads/2021/03/sas-logo.svg",
-      "link": "https://www.sas.com"
+      "image": "https://apteo.co/img/icon.svg",
+      "link": "https://www.apteo.co/?ref=aicategoryhub"
+    },
+    {
+      "id": "457",
+      "name": "Knime",
+      "description": "Open-source data analytics and predictive modeling platform",
+      "category": "Predictive Analytics & Forecasting",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/3/3a/Knime_logo.png",
+      "link": "https://www.knime.com/partners?ref=aicategoryhub"
+    },
+    {
+      "id": "458",
+      "name": "Analance",
+      "description": "Advanced analytics platform with AI-driven predictions",
+      "category": "Predictive Analytics & Forecasting",
+      "image": "https://cdn-dkdjd.nitrocdn.com/QXRxRJSFIiMGcXaJTILzxvhXznKSrMaR/assets/images/optimized/rev-df6329b/wp-content/themes/ducen/images/favicons/apple-icon-120x120.png",
+      "link": "https://analance.ducenit.com/?ref=aicategoryhub"
+    },
+    {
+      "id": "459",
+      "name": "Aible",
+      "description": "AI platform that optimizes for business impact and ROI",
+      "category": "Predictive Analytics & Forecasting",
+      "image": "https://images.g2crowd.com/uploads/product/image/large_detail/large_detail_f2878a61f86a55774bd26d9a8b9b4dd9/aible.png",
+      "link": "https://aible.com/partner/?ref=aicategoryhub"
     },
     {
       "id": "55",
@@ -441,44 +753,60 @@
       "link": "https://www.unity.com"
     },
     {
-      "id": "56",
-      "name": "Unreal Engine",
-      "description": "Advanced real-time 3D creation tool for VR/AR",
+      "id": "460",
+      "name": "Matterport",
+      "description": "3D virtual tour platform with AI spatial data",
       "category": "Virtual Reality & Augmented Reality",
-      "image": "https://www.unrealengine.com/wp-content/uploads/2021/03/unreal-engine-logo.svg",
-      "link": "https://www.unrealengine.com"
+      "image": "https://static.zdassets.com/hc/settings_assets/2151453/360000377308/NUbQqWzxvOg9FQzKZUZJUQ-favicon.png",
+      "link": "https://matterport.com/partners/referral-partners?ref=aicategoryhub"
     },
     {
-      "id": "57",
-      "name": "Vuforia",
-      "description": "AR development platform for creating immersive experiences",
+      "id": "461",
+      "name": "Niantic Lightship",
+      "description": "AR platform for creating real-world metaverse experiences",
       "category": "Virtual Reality & Augmented Reality",
-      "image": "https://www.vuforia.com/wp-content/uploads/2021/03/vuforia-logo.svg",
-      "link": "https://www.vuforia.com"
+      "image": "https://lightship.dev/favicon.ico",
+      "link": "https://lightship.dev/?ref=aicategoryhub"
     },
     {
-      "id": "58",
-      "name": "ZapWorks",
-      "description": "Comprehensive AR toolkit for businesses and developers",
+      "id": "462",
+      "name": "Blippar",
+      "description": "AR content creation platform with no-code tools",
       "category": "Virtual Reality & Augmented Reality",
-      "image": "https://www.zapworks.com/wp-content/uploads/2021/03/zapworks-logo.svg",
-      "link": "https://www.zapworks.com"
+      "image": "https://cdn-ckjgj.nitrocdn.com/UMqCTaRXgFmKdOUKGvSYEwLSnDWtEXMu/assets/images/optimized/rev-1bd933c/wp-content/themes/blippar/favicon/favicon-196x196.png",
+      "link": "https://www.blippar.com/partners?ref=aicategoryhub"
     },
     {
-      "id": "59",
-      "name": "Lens Studio",
-      "description": "Platform for creating AR experiences on Snapchat",
+      "id": "463",
+      "name": "Gravity Sketch",
+      "description": "VR/AR design platform for 3D creation",
       "category": "Virtual Reality & Augmented Reality",
-      "image": "https://www.snap.com/wp-content/uploads/2021/03/lens-studio-logo.svg",
-      "link": "https://www.snap.com/lens-studio"
+      "image": "https://images.squarespace-cdn.com/content/v1/5c91e966d86cc91ce68db07b/1555956308789-TXVMEKDGMQ5LQS0IXVRD/g-solid.png",
+      "link": "https://www.gravitysketch.com/partnerships/?ref=aicategoryhub"
     },
     {
-      "id": "60",
-      "name": "8th Wall",
-      "description": "Web-based AR development platform",
+      "id": "464",
+      "name": "Varjo",
+      "description": "Professional VR/XR headsets with human-eye resolution",
       "category": "Virtual Reality & Augmented Reality",
-      "image": "https://www.8thwall.com/wp-content/uploads/2021/03/8th-wall-logo.svg",
-      "link": "https://www.8thwall.com"
+      "image": "https://varjo.com/wp-content/uploads/2023/11/favicon.png",
+      "link": "https://varjo.com/partnerships/?ref=aicategoryhub"
+    },
+    {
+      "id": "465",
+      "name": "Spatial",
+      "description": "3D collaboration platform for AR/VR meetings",
+      "category": "Virtual Reality & Augmented Reality",
+      "image": "https://spatial.io/favicon.svg",
+      "link": "https://spatial.io/partners?ref=aicategoryhub"
+    },
+    {
+      "id": "466",
+      "name": "Magic Leap",
+      "description": "AR headset and platform for enterprise applications",
+      "category": "Virtual Reality & Augmented Reality",
+      "image": "https://ml-cms.imgix.net/large-cropped-favicon-bb0e18ef38d3.png",
+      "link": "https://www.magicleap.com/partner?ref=aicategoryhub"
     },
     {
       "id": "61",
@@ -489,44 +817,68 @@
       "link": "https://www.infermedica.com"
     },
     {
-      "id": "62",
-      "name": "Viz.ai",
-      "description": "AI-powered stroke detection and triage software",
+      "id": "467",
+      "name": "Ada Health",
+      "description": "AI-powered symptom assessment and care navigation platform",
       "category": "Healthcare & Medicine",
-      "image": "https://www.viz.ai/wp-content/uploads/2021/03/viz-ai-logo.svg",
-      "link": "https://www.viz.ai"
+      "image": "https://ada.com/favicon-96x96.png",
+      "link": "https://ada.com/business/?ref=aicategoryhub"
     },
     {
-      "id": "63",
-      "name": "Qure.ai",
-      "description": "AI for radiology and medical image analysis",
+      "id": "468",
+      "name": "Babylon Health",
+      "description": "AI-powered digital health service with virtual consultations",
       "category": "Healthcare & Medicine",
-      "image": "https://www.qure.ai/wp-content/uploads/2021/03/qure-ai-logo.svg",
-      "link": "https://www.qure.ai"
+      "image": "https://www.babylonhealth.com/content/dam/babylon/common/logos/babylon-thumbnail-logo.svg",
+      "link": "https://www.babylonhealth.com/partners?ref=aicategoryhub"
     },
     {
-      "id": "64",
-      "name": "PathAI",
-      "description": "AI-powered pathology diagnosis platform",
+      "id": "469",
+      "name": "Diagnoss",
+      "description": "AI medical coding assistant for healthcare providers",
       "category": "Healthcare & Medicine",
-      "image": "https://www.pathai.com/wp-content/uploads/2021/03/pathai-logo.svg",
-      "link": "https://www.pathai.com"
+      "image": "https://diagnoss.com/wp-content/uploads/2022/11/cropped-Favicon-32x32.png",
+      "link": "https://diagnoss.com/?ref=aicategoryhub"
     },
     {
-      "id": "65",
-      "name": "Butterfly Network",
-      "description": "AI-powered handheld ultrasound device",
+      "id": "470",
+      "name": "BioXcel",
+      "description": "AI platform for drug discovery and development",
       "category": "Healthcare & Medicine",
-      "image": "https://www.butterflynetwork.com/wp-content/uploads/2021/03/butterfly-network-logo.svg",
-      "link": "https://www.butterflynetwork.com"
+      "image": "https://www.bioxceltherapeutics.com/favicon.ico",
+      "link": "https://www.bioxceltherapeutics.com/investors?ref=aicategoryhub"
     },
     {
-      "id": "66",
-      "name": "IBM Watson Health",
-      "description": "AI for medical research, drug discovery, and diagnostics",
+      "id": "471",
+      "name": "Owkin",
+      "description": "AI for medical research and drug development",
       "category": "Healthcare & Medicine",
-      "image": "https://www.ibm.com/watson-health/wp-content/uploads/2021/03/watson-health-logo.svg",
-      "link": "https://www.ibm.com/watson-health"
+      "image": "https://owkin.com/wp-content/themes/owkin/favicon/favicon-32x32.png",
+      "link": "https://owkin.com/partners/?ref=aicategoryhub"
+    },
+    {
+      "id": "472",
+      "name": "Atomwise",
+      "description": "AI for drug discovery and structure-based drug design",
+      "category": "Healthcare & Medicine",
+      "image": "https://assets-global.website-files.com/63b5d1c13b6fc31f5a08fd63/64c7fe49273a170dc4e3248e_atomwise-favicon.png",
+      "link": "https://www.atomwise.com/partner/?ref=aicategoryhub"
+    },
+    {
+      "id": "473",
+      "name": "Eko",
+      "description": "AI-powered digital stethoscopes and ECG devices",
+      "category": "Healthcare & Medicine",
+      "image": "https://res.cloudinary.com/ekohealth/image/upload/v1589840960/eko-logo-primary_i5xfiz.svg",
+      "link": "https://www.ekohealth.com/affiliates?ref=aicategoryhub"
+    },
+    {
+      "id": "474",
+      "name": "Binah.ai",
+      "description": "AI-powered health monitoring through video of a person's face",
+      "category": "Healthcare & Medicine",
+      "image": "https://www.binah.ai/wp-content/uploads/2022/10/cropped-Binah.ai-Website-favicon-192x192.png",
+      "link": "https://www.binah.ai/partners/?ref=aicategoryhub"
     },
     {
       "id": "67",
@@ -537,44 +889,52 @@
       "link": "https://www.amazon.com/alexa-skills"
     },
     {
-      "id": "68",
-      "name": "Google Assistant Actions",
-      "description": "AI-driven voice assistant for smart home and mobile",
+      "id": "475",
+      "name": "SoundHound",
+      "description": "Voice AI platform for integrating voice assistants into products",
       "category": "Voice Assistants & Automation",
-      "image": "https://www.google.com/assistant/actions/wp-content/uploads/2021/03/google-assistant-logo.svg",
-      "link": "https://www.google.com/assistant/actions"
+      "image": "https://www.soundhound.com/wp-content/uploads/2021/03/favicon.png",
+      "link": "https://www.soundhound.com/partners?ref=aicategoryhub"
     },
     {
-      "id": "69",
-      "name": "Mycroft AI",
-      "description": "Open-source AI voice assistant",
+      "id": "476",
+      "name": "Voiceflow",
+      "description": "Voice app design platform for building voice experiences",
       "category": "Voice Assistants & Automation",
-      "image": "https://www.mycroft.ai/wp-content/uploads/2021/03/mycroft-logo.svg",
-      "link": "https://www.mycroft.ai"
+      "image": "https://assets-global.website-files.com/60e823700e8ef67e1fe5d2a7/60e835600af544c67e0886a2_voiceflow-app-icon.jpg",
+      "link": "https://www.voiceflow.com/partner?ref=aicategoryhub"
     },
     {
-      "id": "70",
-      "name": "Replika",
-      "description": "AI chatbot that acts as a personal companion",
+      "id": "477",
+      "name": "Jovo",
+      "description": "Open-source framework for voice app development",
       "category": "Voice Assistants & Automation",
-      "image": "https://www.replika.ai/wp-content/uploads/2021/03/replika-logo.svg",
-      "link": "https://www.replika.ai"
+      "image": "https://www.jovo.tech/favicon-96x96.png",
+      "link": "https://www.jovo.tech/partners?ref=aicategoryhub"
     },
     {
-      "id": "71",
-      "name": "Snips.ai",
-      "description": "Private and offline voice assistant technology",
+      "id": "478",
+      "name": "Alan AI",
+      "description": "Voice assistant platform for adding voice capabilities to apps",
       "category": "Voice Assistants & Automation",
-      "image": "https://www.snips.ai/wp-content/uploads/2021/03/snips-logo.svg",
-      "link": "https://www.snips.ai"
+      "image": "https://alan.app/static/images/logo_github/alan_color.svg",
+      "link": "https://alan.app/partner-program?ref=aicategoryhub"
     },
     {
-      "id": "72",
-      "name": "Houndify",
-      "description": "AI voice recognition and assistant technology",
+      "id": "479",
+      "name": "Picovoice",
+      "description": "Private voice AI for on-device voice recognition",
       "category": "Voice Assistants & Automation",
-      "image": "https://www.houndify.com/wp-content/uploads/2021/03/houndify-logo.svg",
-      "link": "https://www.houndify.com"
+      "image": "https://picovoice.ai/favicon.ico",
+      "link": "https://picovoice.ai/partners/?ref=aicategoryhub"
+    },
+    {
+      "id": "480",
+      "name": "Smartling",
+      "description": "Voice localization platform for global voice assistants",
+      "category": "Voice Assistants & Automation",
+      "image": "https://assets-global.website-files.com/5a6fa2b5a9b5570001887e0a/5a6fa2b5a9b5570001887e27_Logo.png",
+      "link": "https://www.smartling.com/partners/?ref=aicategoryhub"
     },
     {
       "id": "73",
@@ -585,44 +945,60 @@
       "link": "https://www.uipath.com"
     },
     {
-      "id": "74",
-      "name": "Automation Anywhere",
-      "description": "Enterprise-grade RPA software",
+      "id": "481",
+      "name": "WorkFusion",
+      "description": "AI-driven intelligent automation platform",
       "category": "Robotics & Automation",
-      "image": "https://www.automationanywhere.com/wp-content/uploads/2021/03/automation-anywhere-logo.svg",
-      "link": "https://www.automationanywhere.com"
+      "image": "https://pbs.twimg.com/profile_images/1468996876703248386/o7jdx-NZ_400x400.jpg",
+      "link": "https://www.workfusion.com/partners/?ref=aicategoryhub"
     },
     {
-      "id": "75",
-      "name": "Blue Prism",
-      "description": "AI-powered robotic automation software",
+      "id": "482",
+      "name": "Automation Hero",
+      "description": "Intelligent process automation platform with document AI",
       "category": "Robotics & Automation",
-      "image": "https://www.blueprism.com/wp-content/uploads/2021/03/blue-prism-logo.svg",
-      "link": "https://www.blueprism.com"
+      "image": "https://assets-global.website-files.com/5e7d970b057d0fd03f9746ec/5e7d9748f1e9887a16e41437_favicon-32x32.png",
+      "link": "https://automationhero.ai/partners/?ref=aicategoryhub"
     },
     {
-      "id": "76",
-      "name": "Robocorp",
-      "description": "Open-source RPA with AI-powered automation",
+      "id": "483",
+      "name": "Hyperscience",
+      "description": "Intelligent document processing with machine learning",
       "category": "Robotics & Automation",
-      "image": "https://www.robocorp.com/wp-content/uploads/2021/03/robocorp-logo.svg",
-      "link": "https://www.robocorp.com"
+      "image": "https://uploads-ssl.webflow.com/5f22e8658d41e13794c869ae/5f4683150b4b72e51d12b18f_Logo.svg",
+      "link": "https://hyperscience.com/partners/?ref=aicategoryhub"
     },
     {
-      "id": "77",
-      "name": "Electroneek",
-      "description": "AI-driven RPA for small businesses",
+      "id": "484",
+      "name": "Rossum",
+      "description": "AI document gateway for automated data extraction",
       "category": "Robotics & Automation",
-      "image": "https://www.electroneek.com/wp-content/uploads/2021/03/electroneek-logo.svg",
-      "link": "https://www.electroneek.com"
+      "image": "https://rossum.ai/wp-content/uploads/2021/01/icon-512x512-1.png",
+      "link": "https://rossum.ai/partners/?ref=aicategoryhub"
     },
     {
-      "id": "78",
-      "name": "Kofax",
-      "description": "AI-powered automation for business processes",
+      "id": "485",
+      "name": "Rapid Robotics",
+      "description": "Trained robotic workforce for manufacturing",
       "category": "Robotics & Automation",
-      "image": "https://www.kofax.com/wp-content/uploads/2021/03/kofax-logo.svg",
-      "link": "https://www.kofax.com"
+      "image": "https://rapid-robotics.com/wp-content/uploads/2022/06/rr-favicon.svg",
+      "link": "https://rapid-robotics.com/partners/?ref=aicategoryhub"
+    },
+    {
+      "id": "486",
+      "name": "Bright Machines",
+      "description": "Intelligent automation for manufacturing with AI",
+      "category": "Robotics & Automation",
+      "image": "https://www.brightmachines.com/wp-content/uploads/2019/05/bright-machines-favicon-1-150x150.png",
+      "link": "https://www.brightmachines.com/partners/?ref=aicategoryhub"
+    },
+    {
+      "id": "487",
+      "name": "Laiye",
+      "description": "Intelligent automation platform combining RPA, IDP, and chatbots",
+      "category": "Robotics & Automation",
+      "image": "https://laiye.com/themes/system/assets/images/default/logo-sq@2x.png",
+      "link": "https://laiye.com/en/partners/?ref=aicategoryhub"
     },
     {
       "id": "79",
@@ -633,44 +1009,60 @@
       "link": "https://www.trade-ideas.com"
     },
     {
-      "id": "80",
-      "name": "TrendSpider",
-      "description": "AI for stock chart analysis and market predictions",
+      "id": "488",
+      "name": "Alpaca",
+      "description": "API for commission-free stock trading with AI capabilities",
       "category": "Finance & Trading",
-      "image": "https://www.trendspider.com/wp-content/uploads/2021/03/trendspider-logo.svg",
-      "link": "https://www.trendspider.com"
+      "image": "https://alpaca.markets/themes/alpaca-theme/favicon.svg",
+      "link": "https://alpaca.markets/partnerships?ref=aicategoryhub"
     },
     {
-      "id": "81",
-      "name": "Zignaly",
-      "description": "AI-driven crypto trading bot",
+      "id": "489",
+      "name": "QuantConnect",
+      "description": "Algorithmic trading platform with AI tools for strategy development",
       "category": "Finance & Trading",
-      "image": "https://www.zignaly.com/wp-content/uploads/2021/03/zignaly-logo.svg",
-      "link": "https://www.zignaly.com"
+      "image": "https://cdn.quantconnect.com/web/i/favicon.ico",
+      "link": "https://www.quantconnect.com/brokerages?ref=aicategoryhub"
     },
     {
-      "id": "82",
-      "name": "3Commas",
-      "description": "AI-powered crypto trading automation platform",
-      "category": "Finance & Trading",
-      "image": "https://www.3commas.io/wp-content/uploads/2021/03/3commas-logo.svg",
-      "link": "https://www.3commas.io"
-    },
-    {
-      "id": "83",
+      "id": "490",
       "name": "Kavout",
-      "description": "AI-powered stock market signal detection",
+      "description": "AI investment platform with predictive analytics",
       "category": "Finance & Trading",
-      "image": "https://www.kavout.com/wp-content/uploads/2021/03/kavout-logo.svg",
-      "link": "https://www.kavout.com"
+      "image": "https://assets-global.website-files.com/62692ed0df070f6e3bb8bf42/62c50521bc0c9df78d82bd60_1.svg",
+      "link": "https://www.kavout.com/?ref=aicategoryhub"
     },
     {
-      "id": "84",
-      "name": "TuringTrader",
-      "description": "AI-based backtesting and automated trading software",
+      "id": "491",
+      "name": "Tickeron",
+      "description": "AI-powered trading insights and analysis platform",
       "category": "Finance & Trading",
-      "image": "https://www.turingtrader.com/wp-content/uploads/2021/03/turingtrader-logo.svg",
-      "link": "https://www.turingtrader.com"
+      "image": "https://tickeron.com/images/favicon.ico",
+      "link": "https://tickeron.com/affiliate/?ref=aicategoryhub"
+    },
+    {
+      "id": "492",
+      "name": "Trovio",
+      "description": "AI-driven asset management and digital financial products",
+      "category": "Finance & Trading",
+      "image": "https://trovio.io/wp-content/uploads/2022/05/Trovio-Icon-Blue-Crop.png",
+      "link": "https://trovio.io/partners/?ref=aicategoryhub"
+    },
+    {
+      "id": "493",
+      "name": "AlgoBulls",
+      "description": "Algorithmic trading platform with AI strategy builder",
+      "category": "Finance & Trading",
+      "image": "https://algobulls.com/favicon.ico",
+      "link": "https://algobulls.com/affiliate?ref=aicategoryhub"
+    },
+    {
+      "id": "494",
+      "name": "Auquan",
+      "description": "Data science platform for investment strategies with AI",
+      "category": "Finance & Trading",
+      "image": "https://www.auquan.com/hubfs/Auquan-favicons/favicon-196x196.png",
+      "link": "https://www.auquan.com/partners/?ref=aicategoryhub"
     },
     {
       "id": "85",
@@ -681,44 +1073,52 @@
       "link": "https://www.monkeylearn.com"
     },
     {
-      "id": "86",
-      "name": "Brandwatch",
-      "description": "AI-powered social media sentiment analysis",
+      "id": "495",
+      "name": "Aspect-Based Sentiment",
+      "description": "AI-powered aspect-based sentiment analysis for customer feedback",
       "category": "Sentiment Analysis & Opinion Mining",
-      "image": "https://www.brandwatch.com/wp-content/uploads/2021/03/brandwatch-logo.svg",
-      "link": "https://www.brandwatch.com"
+      "image": "https://aspectbasedsenti.com/images/abs-logo.svg",
+      "link": "https://aspectbasedsenti.com/?ref=aicategoryhub"
     },
     {
-      "id": "87",
-      "name": "Lexalytics",
-      "description": "AI text analytics and sentiment processing tool",
+      "id": "496",
+      "name": "Thematic",
+      "description": "Customer feedback analysis with AI-powered theme discovery",
       "category": "Sentiment Analysis & Opinion Mining",
-      "image": "https://www.lexalytics.com/wp-content/uploads/2021/03/lexalytics-logo.svg",
-      "link": "https://www.lexalytics.com"
+      "image": "https://assets.thematic.com/website/images/new-t-favicon.png",
+      "link": "https://getthematic.com/affiliate/?ref=aicategoryhub"
     },
     {
-      "id": "88",
-      "name": "Repustate",
-      "description": "AI-powered sentiment analysis API",
+      "id": "497",
+      "name": "Keatext",
+      "description": "AI feedback analytics platform for sentiment and insight extraction",
       "category": "Sentiment Analysis & Opinion Mining",
-      "image": "https://www.repustate.com/wp-content/uploads/2021/03/repustate-logo.svg",
-      "link": "https://www.repustate.com"
+      "image": "https://keatext.ai/wp-content/uploads/2022/01/keatext-icon-1.svg",
+      "link": "https://keatext.ai/partners?ref=aicategoryhub"
     },
     {
-      "id": "89",
-      "name": "Hootsuite Insights",
-      "description": "Social media listening and sentiment analysis",
+      "id": "498",
+      "name": "SentiOne",
+      "description": "Social media monitoring with sentiment analysis",
       "category": "Sentiment Analysis & Opinion Mining",
-      "image": "https://www.hootsuite.com/insights/wp-content/uploads/2021/03/hootsuite-insights-logo.svg",
-      "link": "https://www.hootsuite.com/insights"
+      "image": "https://sentione.com/images/logo.svg",
+      "link": "https://sentione.com/partners?ref=aicategoryhub"
     },
     {
-      "id": "90",
-      "name": "Clarabridge",
-      "description": "AI-driven customer experience analytics",
+      "id": "499",
+      "name": "Symanto",
+      "description": "Psychological AI text analytics for sentiment and emotion",
       "category": "Sentiment Analysis & Opinion Mining",
-      "image": "https://www.clarabridge.com/wp-content/uploads/2021/03/clarabridge-logo.svg",
-      "link": "https://www.clarabridge.com"
+      "image": "https://symanto.com/wp-content/uploads/2022/01/favicon.png",
+      "link": "https://symanto.com/affiliate-program/?ref=aicategoryhub"
+    },
+    {
+      "id": "500",
+      "name": "Chattermill",
+      "description": "Customer experience analytics with AI-powered insights",
+      "category": "Sentiment Analysis & Opinion Mining",
+      "image": "https://assets-global.website-files.com/61b87e0647e71e60a69d97db/61ca08bdb8de5669dfa64b6e_logo.svg",
+      "link": "https://chattermill.com/partners/?ref=aicategoryhub"
     },
     {
       "id": "91",
@@ -729,44 +1129,60 @@
       "link": "https://www.deepl.com"
     },
     {
-      "id": "92",
-      "name": "Google Translate API",
-      "description": "AI-powered translation API",
+      "id": "501",
+      "name": "XTM Cloud",
+      "description": "AI-powered translation management system",
       "category": "Language Translation & Localization",
-      "image": "https://www.google.com/cloud/translate/wp-content/uploads/2021/03/google-translate-logo.svg",
-      "link": "https://www.google.com/cloud/translate"
+      "image": "https://xtm.cloud/wp-content/uploads/2020/03/xtm-cloud-blue-sq-1-150x150.png",
+      "link": "https://xtm.cloud/partners/?ref=aicategoryhub"
     },
     {
-      "id": "93",
-      "name": "Microsoft Translator",
-      "description": "AI-driven multilingual translation API",
+      "id": "502",
+      "name": "Phrase",
+      "description": "Localization platform with AI translation capabilities",
       "category": "Language Translation & Localization",
-      "image": "https://www.microsoft.com/translator/wp-content/uploads/2021/03/microsoft-translator-logo.svg",
-      "link": "https://www.microsoft.com/translator"
+      "image": "https://phrase.com/wp-content/themes/phrase-v2/img/logo-blue.svg",
+      "link": "https://phrase.com/partners/?ref=aicategoryhub"
     },
     {
-      "id": "94",
-      "name": "Smartling",
-      "description": "AI-powered content localization software",
+      "id": "503",
+      "name": "Text United",
+      "description": "Translation management software with AI capabilities",
       "category": "Language Translation & Localization",
-      "image": "https://www.smartling.com/wp-content/uploads/2021/03/smartling-logo.svg",
-      "link": "https://www.smartling.com"
+      "image": "https://www.textunited.com/wp-content/uploads/2018/08/favicon_logo.png",
+      "link": "https://www.textunited.com/partners/?ref=aicategoryhub"
     },
     {
-      "id": "95",
-      "name": "Lokalise",
-      "description": "AI-powered localization management platform",
+      "id": "504",
+      "name": "Lengoo",
+      "description": "AI-powered translation service with human expertise",
       "category": "Language Translation & Localization",
-      "image": "https://www.lokalise.com/wp-content/uploads/2021/03/lokalise-logo.svg",
-      "link": "https://www.lokalise.com"
+      "image": "https://i0.wp.com/lengoo.com/wp-content/uploads/2021/05/lengoo-sign-retina-1.png",
+      "link": "https://lengoo.com/partners/?ref=aicategoryhub"
     },
     {
-      "id": "96",
-      "name": "POEditor",
-      "description": "AI-powered software localization and translation platform",
+      "id": "505",
+      "name": "Weglot",
+      "description": "Website translation plugin with AI assistance",
       "category": "Language Translation & Localization",
-      "image": "https://www.poeditor.com/wp-content/uploads/2021/03/poeditor-logo.svg",
-      "link": "https://www.poeditor.com"
+      "image": "https://weglot.com/wp-content/themes/weglot/dist/images/weglot-logo.svg",
+      "link": "https://weglot.com/affiliate-program/?ref=aicategoryhub"
+    },
+    {
+      "id": "506",
+      "name": "Language I/O",
+      "description": "AI-driven customer support translation platform",
+      "category": "Language Translation & Localization",
+      "image": "https://languageio.com/hs-fs/hubfs/language-io-logo.png",
+      "link": "https://languageio.com/partners?ref=aicategoryhub"
+    },
+    {
+      "id": "507",
+      "name": "TransPerfect",
+      "description": "AI-enhanced translation and localization services",
+      "category": "Language Translation & Localization",
+      "image": "https://www.transperfect.com/sites/default/files/transperfect-logo.png",
+      "link": "https://www.transperfect.com/affiliate-program/?ref=aicategoryhub"
     },
     {
       "id": "97",
@@ -777,44 +1193,60 @@
       "link": "https://www.faceplusplus.com"
     },
     {
-      "id": "98",
-      "name": "Amazon Rekognition",
-      "description": "AI service for image and video analysis",
+      "id": "508",
+      "name": "Trueface",
+      "description": "Computer vision platform with facial recognition capabilities",
       "category": "Facial Recognition & Computer Vision",
-      "image": "https://www.amazon.com/rekognition/wp-content/uploads/2021/03/rekognition-logo.svg",
-      "link": "https://www.amazon.com/rekognition"
+      "image": "https://trueface.ai/wp-content/uploads/2020/10/TF_Logo_Circle_Color.png",
+      "link": "https://trueface.ai/partners/?ref=aicategoryhub"
     },
     {
-      "id": "99",
-      "name": "Google Cloud Vision API",
-      "description": "AI-powered image recognition and analysis",
+      "id": "509",
+      "name": "Kairos",
+      "description": "Ethical facial recognition API for developers",
       "category": "Facial Recognition & Computer Vision",
-      "image": "https://www.google.com/cloud/vision/wp-content/uploads/2021/03/cloud-vision-logo.svg",
-      "link": "https://www.google.com/cloud/vision"
+      "image": "https://www.kairos.com/hubfs/kairos-favicon-32.png",
+      "link": "https://www.kairos.com/partner?ref=aicategoryhub"
     },
     {
-      "id": "100",
-      "name": "PimEyes",
-      "description": "AI facial recognition and reverse image search",
+      "id": "510",
+      "name": "Sightcorp",
+      "description": "Computer vision AI for facial analysis and emotion recognition",
       "category": "Facial Recognition & Computer Vision",
-      "image": "https://www.pimeyes.com/wp-content/uploads/2021/03/pimeyes-logo.svg",
-      "link": "https://www.pimeyes.com"
+      "image": "https://sightcorp.com/wp-content/uploads/2021/05/logo-sightcorp-favikon.png",
+      "link": "https://sightcorp.com/affiliate/?ref=aicategoryhub"
     },
     {
-      "id": "101",
-      "name": "Clarifai",
-      "description": "AI-powered visual recognition platform",
+      "id": "511",
+      "name": "Paravision",
+      "description": "Advanced facial recognition technology for security applications",
       "category": "Facial Recognition & Computer Vision",
-      "image": "https://www.clarifai.com/wp-content/uploads/2021/03/clarifai-logo.svg",
-      "link": "https://www.clarifai.com"
+      "image": "https://paravision.ai/wp-content/uploads/2022/11/paravision-favicon-300x300.png",
+      "link": "https://paravision.ai/partners/?ref=aicategoryhub"
     },
     {
-      "id": "102",
-      "name": "DeepVision",
-      "description": "AI for facial recognition and video analytics",
+      "id": "512",
+      "name": "Chooch",
+      "description": "Visual AI platform for computer vision applications",
       "category": "Facial Recognition & Computer Vision",
-      "image": "https://www.deepvision.ai/wp-content/uploads/2021/03/deepvision-logo.svg",
-      "link": "https://www.deepvision.ai"
+      "image": "https://chooch.com/wp-content/uploads/2022/06/Group-2-2.svg",
+      "link": "https://chooch.com/partners/?ref=aicategoryhub"
+    },
+    {
+      "id": "513",
+      "name": "Mobius Labs",
+      "description": "Computer vision solutions with semantic understanding",
+      "category": "Facial Recognition & Computer Vision",
+      "image": "https://mobiuslabs.com/wp-content/uploads/2022/10/m-black-1.jpg",
+      "link": "https://mobiuslabs.com/partners/?ref=aicategoryhub"
+    },
+    {
+      "id": "514",
+      "name": "Roboflow",
+      "description": "Computer vision platform to build and deploy models",
+      "category": "Facial Recognition & Computer Vision",
+      "image": "https://assets-global.website-files.com/5f6bc60e665f54db361e52a9/5f6bc60e665f546a6f1e5304_roboflow_favicon.png",
+      "link": "https://roboflow.com/affiliate?ref=aicategoryhub"
     },
     {
       "id": "103",
@@ -825,44 +1257,60 @@
       "link": "https://www.grammarly.com"
     },
     {
-      "id": "104",
-      "name": "QuillBot",
-      "description": "AI-powered paraphrasing and summarization tool",
+      "id": "515",
+      "name": "Century Tech",
+      "description": "AI-powered learning platform for personalized education",
       "category": "AI for Education & E-Learning",
-      "image": "https://www.quillbot.com/wp-content/uploads/2021/03/quillbot-logo.svg",
-      "link": "https://www.quillbot.com"
+      "image": "https://www.century.tech/wp-content/uploads/2022/01/CENTURY_Favicon.png",
+      "link": "https://www.century.tech/partners/?ref=aicategoryhub"
     },
     {
-      "id": "105",
-      "name": "Coursera",
-      "description": "AI-driven personalized learning platform",
+      "id": "516",
+      "name": "Cognii",
+      "description": "Virtual learning assistant with conversational AI",
       "category": "AI for Education & E-Learning",
-      "image": "https://www.coursera.org/wp-content/uploads/2021/03/coursera-logo.svg",
-      "link": "https://www.coursera.org"
+      "image": "https://www.cognii.com/images/Cognii_Logo.png",
+      "link": "https://www.cognii.com/partner?ref=aicategoryhub"
     },
     {
-      "id": "106",
-      "name": "Udemy",
-      "description": "AI-powered course recommendation and e-learning platform",
+      "id": "517",
+      "name": "Squirrel AI",
+      "description": "Adaptive learning platform with AI tutoring",
       "category": "AI for Education & E-Learning",
-      "image": "https://www.udemy.com/wp-content/uploads/2021/03/udemy-logo.svg",
-      "link": "https://www.udemy.com"
+      "image": "https://www.squirrelai.com/static/img/logo@2x.png",
+      "link": "https://www.squirrelai.com/partners/?ref=aicategoryhub"
     },
     {
-      "id": "107",
-      "name": "Khan Academy",
-      "description": "AI-enhanced free education platform",
+      "id": "518",
+      "name": "Carnegie Learning",
+      "description": "AI-powered math learning platform with tutoring",
       "category": "AI for Education & E-Learning",
-      "image": "https://www.khanacademy.org/wp-content/uploads/2021/03/khan-academy-logo.svg",
-      "link": "https://www.khanacademy.org"
+      "image": "https://www.carnegielearning.com/hubfs/Carnegie-Learning-March2020/Images/cl-logo.svg",
+      "link": "https://www.carnegielearning.com/partners/?ref=aicategoryhub"
     },
     {
-      "id": "108",
-      "name": "EdX",
-      "description": "AI-driven education platform for university courses",
+      "id": "519",
+      "name": "Querium",
+      "description": "AI tutoring system for STEM subjects",
       "category": "AI for Education & E-Learning",
-      "image": "https://www.edx.org/wp-content/uploads/2021/03/edx-logo.svg",
-      "link": "https://www.edx.org"
+      "image": "https://querium.com/wp-content/uploads/2020/09/favicon.jpg",
+      "link": "https://querium.com/partners/?ref=aicategoryhub"
+    },
+    {
+      "id": "520",
+      "name": "Blutick",
+      "description": "AI-powered mathematics learning platform with line-by-line feedback",
+      "category": "AI for Education & E-Learning",
+      "image": "https://www.blutick.com/wp-content/uploads/2021/01/Blutick-favicon.png",
+      "link": "https://www.blutick.com/partners/?ref=aicategoryhub"
+    },
+    {
+      "id": "521",
+      "name": "PaperRater",
+      "description": "AI grammar checker and plagiarism detection tool",
+      "category": "AI for Education & E-Learning",
+      "image": "https://paperrater.com/img/paper_rater_icon_rect.svg",
+      "link": "https://www.paperrater.com/affiliate?ref=aicategoryhub"
     },
     {
       "id": "109",
@@ -873,44 +1321,68 @@
       "link": "https://www.darktrace.com"
     },
     {
-      "id": "110",
-      "name": "Netskope",
-      "description": "AI-driven cloud security platform",
+      "id": "522",
+      "name": "SentinelOne",
+      "description": "Autonomous cybersecurity platform with AI threat detection",
       "category": "AI for Cybersecurity & Fraud Detection",
-      "image": "https://www.netskope.com/wp-content/uploads/2021/03/netskope-logo.svg",
-      "link": "https://www.netskope.com"
+      "image": "https://www.sentinelone.com/wp-content/uploads/2021/02/S1_blue-big.png",
+      "link": "https://www.sentinelone.com/partners/?ref=aicategoryhub"
     },
     {
-      "id": "111",
-      "name": "CrowdStrike",
-      "description": "AI-powered endpoint security and threat detection",
+      "id": "523",
+      "name": "Deep Instinct",
+      "description": "Deep learning cybersecurity platform for prevention-first security",
       "category": "AI for Cybersecurity & Fraud Detection",
-      "image": "https://www.crowdstrike.com/wp-content/uploads/2021/03/crowdstrike-logo.svg",
-      "link": "https://www.crowdstrike.com"
+      "image": "https://www.deepinstinct.com/hubfs/Website/Icons/Favicon/favicon-32x32.png",
+      "link": "https://www.deepinstinct.com/partners?ref=aicategoryhub"
     },
     {
-      "id": "112",
-      "name": "IBM QRadar",
-      "description": "AI-powered SIEM (Security Information and Event Management) tool",
+      "id": "524",
+      "name": "Vectra AI",
+      "description": "AI-driven threat detection and response platform",
       "category": "AI for Cybersecurity & Fraud Detection",
-      "image": "https://www.ibm.com/qradar/wp-content/uploads/2021/03/qradar-logo.svg",
-      "link": "https://www.ibm.com/qradar"
+      "image": "https://www.vectra.ai/hs-fs/hubfs/Favicon.png",
+      "link": "https://www.vectra.ai/partners?ref=aicategoryhub"
     },
     {
-      "id": "113",
-      "name": "Zimperium",
-      "description": "AI-driven mobile threat detection software",
+      "id": "525",
+      "name": "Feedzai",
+      "description": "AI fraud detection platform for financial institutions",
       "category": "AI for Cybersecurity & Fraud Detection",
-      "image": "https://www.zimperium.com/wp-content/uploads/2021/03/zimperium-logo.svg",
-      "link": "https://www.zimperium.com"
+      "image": "https://feedzai.com/wp-content/uploads/2021/03/feedzai-logo-light.svg",
+      "link": "https://feedzai.com/partners/?ref=aicategoryhub"
     },
     {
-      "id": "114",
-      "name": "Riskified",
-      "description": "AI for fraud prevention in e-commerce transactions",
+      "id": "526",
+      "name": "HUMAN Security",
+      "description": "Bot detection and fraud prevention platform",
       "category": "AI for Cybersecurity & Fraud Detection",
-      "image": "https://www.riskified.com/wp-content/uploads/2021/03/riskified-logo.svg",
-      "link": "https://www.riskified.com"
+      "image": "https://www.humansecurity.com/hubfs/Brand%20Assets/HUMAN_logo_blue.svg",
+      "link": "https://www.humansecurity.com/partners?ref=aicategoryhub"
+    },
+    {
+      "id": "527",
+      "name": "Shape Security",
+      "description": "AI-powered fraud prevention for web and mobile applications",
+      "category": "AI for Cybersecurity & Fraud Detection",
+      "image": "https://www.shapesecurity.com/hubfs/Shape-Security-favicon.png",
+      "link": "https://www.shapesecurity.com/partners?ref=aicategoryhub"
+    },
+    {
+      "id": "528",
+      "name": "Abnormal Security",
+      "description": "AI email security platform to stop advanced threats",
+      "category": "AI for Cybersecurity & Fraud Detection",
+      "image": "https://abnormalsecurity.com/favicon.ico",
+      "link": "https://abnormalsecurity.com/partners?ref=aicategoryhub"
+    },
+    {
+      "id": "529",
+      "name": "BioCatch",
+      "description": "Behavioral biometrics platform for fraud detection",
+      "category": "AI for Cybersecurity & Fraud Detection",
+      "image": "https://www.biocatch.com/hubfs/Favicon_2022@2x.png",
+      "link": "https://www.biocatch.com/partners?ref=aicategoryhub"
     },
     {
       "id": "115",
@@ -921,92 +1393,60 @@
       "link": "https://www.ibm.com/ai-fairness-360"
     },
     {
-      "id": "116",
-      "name": "Google What-If Tool",
-      "description": "AI visualization tool for detecting bias in machine learning",
+      "id": "530",
+      "name": "Holistic AI",
+      "description": "AI risk management and auditing platform",
       "category": "Ethical AI & Bias Detection",
-      "image": "https://www.google.com/what-if-tool/wp-content/uploads/2021/03/what-if-tool-logo.svg",
-      "link": "https://www.google.com/what-if-tool"
+      "image": "https://uploads-ssl.webflow.com/6181ddef605072373b2ad665/6181ddef605072c56f2ad688_favicon.png",
+      "link": "https://holisticai.com/partners/?ref=aicategoryhub"
     },
     {
-      "id": "117",
-      "name": "Hugging Face FairSeq",
-      "description": "AI model for responsible and fair NLP",
+      "id": "531",
+      "name": "Credo AI",
+      "description": "Governance platform for responsible AI deployment",
       "category": "Ethical AI & Bias Detection",
-      "image": "https://www.huggingface.co/fairseq/wp-content/uploads/2021/03/fairseq-logo.svg",
-      "link": "https://www.huggingface.co/fairseq"
+      "image": "https://credo.ai/hubfs/Credo%20AI%20Logo%20SVG%20CMYK.svg",
+      "link": "https://credo.ai/partners?ref=aicategoryhub"
     },
     {
-      "id": "118",
-      "name": "AI Ethics Lab",
-      "description": "AI consulting and fairness analysis platform",
+      "id": "532",
+      "name": "Diveplane",
+      "description": "Understandable and explainable AI platform",
       "category": "Ethical AI & Bias Detection",
-      "image": "https://www.aiethicslab.com/wp-content/uploads/2021/03/ai-ethics-lab-logo.svg",
-      "link": "https://www.aiethicslab.com"
+      "image": "https://diveplane.com/wp-content/uploads/2021/02/3.-Diveplane-Logo-Icon-RGB.png",
+      "link": "https://diveplane.com/partners/?ref=aicategoryhub"
     },
     {
-      "id": "119",
-      "name": "Fiddler AI",
-      "description": "AI-powered explainability and fairness monitoring tool",
+      "id": "533",
+      "name": "Parity",
+      "description": "AI bias detection and mitigation platform",
       "category": "Ethical AI & Bias Detection",
-      "image": "https://www.fiddler.ai/wp-content/uploads/2021/03/fiddler-ai-logo.svg",
-      "link": "https://www.fiddler.ai"
+      "image": "https://parity.ai/assets/images/logo/parity-logo-white.svg",
+      "link": "https://parity.ai/partners/?ref=aicategoryhub"
     },
     {
-      "id": "120",
-      "name": "Pymetrics",
-      "description": "AI-driven hiring platform focused on bias-free recruitment",
+      "id": "534",
+      "name": "Giskard",
+      "description": "Open-source AI testing framework for detecting bias",
       "category": "Ethical AI & Bias Detection",
-      "image": "https://www.pymetrics.ai/wp-content/uploads/2021/03/pymetrics-logo.svg",
-      "link": "https://www.pymetrics.ai"
+      "image": "https://github.com/Giskard-AI/giskard/raw/main/giskard.png",
+      "link": "https://giskard.ai/?ref=aicategoryhub"
     },
     {
-      "id": "300",
-      "name": "Runway",
-      "description": "AI video generation and editing platform with powerful features for creators",
-      "category": "Video Editing & Generation",
-      "image": "https://storage.googleapis.com/runway-public-assets/images/ai-tools-to-watch-2023/runway-logo.png",
-      "link": "https://runwayml.com/?ref=aicategoryhub"
+      "id": "535",
+      "name": "Arthur AI",
+      "description": "AI monitoring platform for performance, bias, and explainability",
+      "category": "Ethical AI & Bias Detection",
+      "image": "https://www.arthur.ai/hubfs/Raw_Webflow/logo_sticker_blue_512.png",
+      "link": "https://www.arthur.ai/partners?ref=aicategoryhub"
     },
     {
-      "id": "301",
-      "name": "Vidnoz",
-      "description": "Create AI videos with lifelike avatars and natural voices in minutes",
-      "category": "Video Editing & Generation",
-      "image": "https://www.vidnoz.com/assets/home/favicon.png",
-      "link": "https://www.vidnoz.com/affiliates.html?utm_source=aicategoryhub"
-    },
-    {
-      "id": "302",
-      "name": "Steve AI",
-      "description": "Convert text to video with AI characters and voiceovers instantly",
-      "category": "Video Editing & Generation",
-      "image": "https://www.steve.ai/images/full-logo.png",
-      "link": "https://www.steve.ai/?fp_ref=aicategoryhub"
-    },
-    {
-      "id": "303",
-      "name": "Kapwing",
-      "description": "Professional online video editor with AI tools for creators",
-      "category": "Video Editing & Generation",
-      "image": "https://cdn.kapwing.com/static/logo.png",
-      "link": "https://www.kapwing.com/?ref=aicategoryhub"
-    },
-    {
-      "id": "304",
-      "name": "Fliki",
-      "description": "Turn text into videos with realistic AI voices and images",
-      "category": "Video Editing & Generation",
-      "image": "https://global-uploads.webflow.com/62b64adff22ceb2a355857a8/62b7e7ca1912e46c81252df0_fliki-icon-color.png",
-      "link": "https://fliki.ai/?via=aicategoryhub"
-    },
-    {
-      "id": "305",
-      "name": "Elai.io",
-      "description": "Create AI videos with digital presenters from just text",
-      "category": "Video Editing & Generation",
-      "image": "https://elai.io/wp-content/uploads/2023/05/cropped-elai-favicon-180x180.png",
-      "link": "https://elai.io/?ref=aicategoryhub"
+      "id": "536",
+      "name": "Responsibly",
+      "description": "AI responsibility toolkit for responsible machine learning",
+      "category": "Ethical AI & Bias Detection",
+      "image": "https://responsibly.ai/assets/img/logo/logo-color.png",
+      "link": "https://responsibly.ai/?ref=aicategoryhub"
     }
   ],
   "categories": [
