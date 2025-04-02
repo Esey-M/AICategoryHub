@@ -959,6 +959,54 @@
       "category": "Ethical AI & Bias Detection",
       "image": "https://www.pymetrics.ai/wp-content/uploads/2021/03/pymetrics-logo.svg",
       "link": "https://www.pymetrics.ai"
+    },
+    {
+      "id": "300",
+      "name": "Runway",
+      "description": "AI video generation and editing platform with powerful features for creators",
+      "category": "Video Editing & Generation",
+      "image": "https://uploads-ssl.webflow.com/5fb35ea7a78d179091d1d522/64f7c4ffcdc33bf2d65f56e4_runway-logo.png",
+      "link": "https://runwayml.com/?ref=aicategoryhub"
+    },
+    {
+      "id": "301",
+      "name": "Synthesia",
+      "description": "AI video creation platform that turns text into professional videos with virtual avatars",
+      "category": "Video Editing & Generation",
+      "image": "https://cdn.synthesia.io/images/logo/synthesia-logo.svg",
+      "link": "https://www.synthesia.io/partners/affiliate?via=aicategoryhub"
+    },
+    {
+      "id": "302",
+      "name": "Invideo",
+      "description": "Online video creator with AI-powered templates and editing tools",
+      "category": "Video Editing & Generation",
+      "image": "https://invideo.io/wp-content/uploads/2022/07/logo-dark.svg",
+      "link": "https://invideo.io/?ref=aicategoryhub"
+    },
+    {
+      "id": "303",
+      "name": "Pictory",
+      "description": "Turn long-form content into short videos automatically with AI",
+      "category": "Video Editing & Generation",
+      "image": "https://pictory.ai/wp-content/uploads/2022/02/pictory-logo.png",
+      "link": "https://pictory.ai?ref=aicategoryhub"
+    },
+    {
+      "id": "304",
+      "name": "Fliki",
+      "description": "Turn text into videos with realistic AI voices and images",
+      "category": "Video Editing & Generation",
+      "image": "https://fliki.ai/assets/images/fliki-logo.svg",
+      "link": "https://fliki.ai/?via=aicategoryhub"
+    },
+    {
+      "id": "305",
+      "name": "Elai.io",
+      "description": "Create AI videos with digital presenters from just text",
+      "category": "Video Editing & Generation",
+      "image": "https://elai.io/wp-content/uploads/2022/03/elai-logo.svg",
+      "link": "https://elai.io/?ref=aicategoryhub"
     }
   ],
   "categories": [
