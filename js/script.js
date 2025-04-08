@@ -362,70 +362,54 @@ function getCategoryDescription(category) {
 
 // Show tools for a specific category
 function showTools(category) {
-    try {
-        console.log(`Showing tools for category: ${category}`);
-        currentCategory = category;
-        
-        // Get elements safely
-        const categoryTitleElement = document.getElementById('categoryTitle');
-        const categoryDescriptionElement = document.getElementById('categoryDescription');
-        const toolsSectionElement = document.getElementById('toolsSection');
-        const categoriesSectionElement = document.getElementById('categoriesSection');
-        const guideLinkElement = document.getElementById('guideLink');
-        const categoryGuideLinkElement = document.getElementById('categoryGuideLink');
-        
-        // Update category title and description
-        if (categoryTitleElement) {
-            categoryTitleElement.textContent = category;
-        } else {
-            console.warn('categoryTitle element not found');
-        }
-        
-        if (categoryDescriptionElement) {
-            categoryDescriptionElement.textContent = getCategoryDescription(category);
-        } else {
-            console.warn('categoryDescription element not found');
-        }
-        
-        // Show tools section and hide categories section
-        if (toolsSectionElement) {
-            toolsSectionElement.classList.remove('hidden');
-        } else {
-            console.warn('toolsSection element not found');
-            return; // Exit early if critical element is missing
-        }
-        
-        if (categoriesSectionElement) {
-            categoriesSectionElement.classList.add('hidden');
-        } else {
-            console.warn('categoriesSection element not found');
-        }
-        
-        // Set guide link if available
-        if (guideLinkElement && categoryGuideLinkElement) {
-            if (category === "Chatbots & Conversational AI") {
-                guideLinkElement.classList.remove('hidden');
-                categoryGuideLinkElement.href = "guides/chatbots.html";
-                categoryGuideLinkElement.textContent = "Check out our in-depth guide to Chatbots & Conversational AI";
-            } else {
-                guideLinkElement.classList.add('hidden');
-            }
-        }
-        
-        // Update URL and browser history
-        const encodedCategory = encodeURIComponent(category);
-        const url = `${window.location.pathname}?category=${encodedCategory}`;
-        window.history.pushState({ category: category }, `${category} - AI Category Hub`, url);
-        
-        // Update page title
-        document.title = `${category} - AI Category Hub`;
-        
-        // Render the tools for this category
-        renderTools();
-    } catch (error) {
-        console.error('Error in showTools function:', error);
-        showError('Failed to display tools. Please try again.');
+    const categoryTitle = document.getElementById('categoryTitle');
+    const categoryDescription = document.getElementById('categoryDescription');
+    const toolsSection = document.getElementById('toolsSection');
+    const categoriesSection = document.getElementById('categoriesSection');
+    const guideLink = document.getElementById('guideLink');
+
+    if (!categoryTitle || !categoryDescription || !toolsSection || !categoriesSection) {
+        console.error('Required elements not found');
+        showError('Error loading category view');
+        return;
     }
+
+    // Hide categories and show tools section
+    categoriesSection.style.display = 'none';
+    toolsSection.style.display = 'block';
+
+    // Update category title and description
+    categoryTitle.textContent = category;
+    categoryDescription.textContent = getCategoryDescription(category);
+
+    // Handle guide link visibility based on available guides
+    if (guideLink) {
+        const guideMap = {
+            'Chatbots & Conversational AI': 'chatbots.html',
+            'Image Generation & Editing': 'image-generation.html',
+            'Text Generation & Writing Assistance': 'text-generation.html',
+            'Speech Recognition & Synthesis': 'speech-recognition.html',
+            'Code Generation & Development Assistance': 'code-generation.html',
+            'Video Editing & Generation': 'video-editing.html'
+        };
+
+        if (guideMap[category]) {
+            guideLink.style.display = 'block';
+            guideLink.href = `guides/${guideMap[category]}`;
+            guideLink.textContent = `Read our comprehensive guide on ${category}`;
+        } else {
+            guideLink.style.display = 'none';
+        }
+    }
+
+    // Update URL and page title
+    const urlCategory = encodeURIComponent(category.toLowerCase().replace(/[^a-z0-9]+/g, '-'));
+    const newUrl = `${window.location.pathname}?category=${urlCategory}`;
+    window.history.pushState({ category: category }, '', newUrl);
+    document.title = `${category} - AI Category Hub`;
+
+    // Render tools for the selected category
+    renderTools(category);
 }
 
 // Show categories
