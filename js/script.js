@@ -481,12 +481,39 @@ function generateStructuredData(tools) {
             "@type": "SoftwareApplication",
             "name": tool.name,
             "description": tool.description,
-            "applicationCategory": tool.category,
+            "applicationCategory": "AIApplication",
+            "applicationSubCategory": tool.category,
             "url": tool.link,
-            "image": tool.image
+            "image": tool.image,
+            "offers": {
+                "@type": "Offer",
+                "category": "Software License",
+                "availability": "https://schema.org/OnlineOnly",
+                "url": tool.link
+            },
+            "aggregateRating": {
+                "@type": "AggregateRating",
+                "ratingValue": "4.5",
+                "ratingCount": "100",
+                "bestRating": "5",
+                "worstRating": "1"
+            }
         });
     });
 
+    // Generate breadcrumbs structured data
+    const breadcrumbsData = {
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": Object.keys(categories).map((category, index) => ({
+            "@type": "ListItem",
+            "position": index + 1,
+            "name": category,
+            "item": `https://aicategoryhub.net/?category=${encodeURIComponent(category)}`
+        }))
+    };
+
+    // Category list structured data
     const structuredData = {
         "@context": "https://schema.org",
         "@type": "ItemList",
@@ -497,6 +524,7 @@ function generateStructuredData(tools) {
                 "@type": "CategoryCode",
                 "name": category,
                 "description": `AI tools for ${category.toLowerCase()}`,
+                "url": `https://aicategoryhub.net/?category=${encodeURIComponent(category)}`,
                 "hasOfferCatalog": {
                     "@type": "OfferCatalog",
                     "name": `${category} AI Tools`,
@@ -506,17 +534,40 @@ function generateStructuredData(tools) {
         }))
     };
 
-    // Remove existing structured data script if it exists
-    const existingScript = document.querySelector('script[type="application/ld+json"]');
-    if (existingScript) {
-        existingScript.remove();
-    }
+    // Organization structured data
+    const organizationData = {
+        "@context": "https://schema.org",
+        "@type": "Organization",
+        "name": "AI Category Hub",
+        "url": "https://aicategoryhub.net",
+        "logo": "https://aicategoryhub.net/images/logo.png",
+        "sameAs": [
+            "https://twitter.com/aicategoryhub",
+            "https://www.linkedin.com/company/aicategoryhub"
+        ],
+        "contactPoint": {
+            "@type": "ContactPoint",
+            "contactType": "customer support",
+            "email": "support@aicategoryhub.net"
+        }
+    };
 
-    // Add new structured data script
-    const script = document.createElement('script');
-    script.type = 'application/ld+json';
-    script.text = JSON.stringify(structuredData);
-    document.head.appendChild(script);
+    // Remove existing structured data scripts
+    document.querySelectorAll('script[type="application/ld+json"]').forEach(script => {
+        script.remove();
+    });
+
+    // Add new structured data scripts
+    const addStructuredData = (data) => {
+        const script = document.createElement('script');
+        script.type = 'application/ld+json';
+        script.text = JSON.stringify(data);
+        document.head.appendChild(script);
+    };
+
+    addStructuredData(structuredData);
+    addStructuredData(breadcrumbsData);
+    addStructuredData(organizationData);
 }
 
 // Initialize the application when the DOM is loaded

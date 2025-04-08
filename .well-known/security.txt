@@ -1,0 +1,5 @@
+Contact: mailto:simonmhretab17@gmail.com
+Expires: 2025-12-31T23:59:59+00:00
+Preferred-Languages: en
+Canonical: https://aicategoryhub.net/.well-known/security.txt
+Policy: https://aicategoryhub.net/security-policy 
