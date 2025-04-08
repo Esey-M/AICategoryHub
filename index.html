@@ -135,15 +135,31 @@
     </section>
 
     <!-- Tools Section -->
-    <section id="toolsSection" class="hidden py-12">
-        <div class="container mx-auto px-4 sm:px-6 lg:px-8 flex flex-col items-center">
-            <div class="flex items-center mb-8 w-[90%]">
-                <button id="backToCategories" class="text-primary mr-4 hover:text-primary-dark">
-                    ← Back to Categories
-                </button>
-                <h2 id="categoryTitle" class="text-3xl font-bold text-gray-900 dark:text-white"></h2>
+    <section id="toolsSection" class="container mx-auto px-4 py-12 hidden">
+        <div class="flex justify-between items-center mb-8">
+            <h2 id="categoryTitle" class="text-3xl font-bold">Loading...</h2>
+            <button id="backButton" class="bg-primary hover:bg-blue-600 text-white px-4 py-2 rounded-md transition">
+                Back to Categories
+            </button>
+        </div>
+        
+        <div id="categoryDescription" class="mb-6 text-lg text-gray-700 dark:text-gray-300">Loading description...</div>
+        
+        <!-- Link to in-depth guide if available -->
+        <div id="guideLink" class="mb-8 p-4 bg-blue-50 dark:bg-blue-900 rounded-lg shadow-sm">
+            <p class="text-lg">
+                <span class="font-bold">Want to learn more?</span> 
+                <a id="categoryGuideLink" href="#" class="text-primary hover:underline ml-2">Check out our in-depth guide to this category</a>
+            </p>
+        </div>
+        
+        <div id="toolsContainer" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            <!-- Tools will be loaded here -->
+            <div class="animate-pulse bg-white dark:bg-gray-800 rounded-lg shadow-md p-6">
+                <div class="h-4 bg-gray-200 dark:bg-gray-700 rounded w-3/4 mb-2"></div>
+                <div class="h-4 bg-gray-200 dark:bg-gray-700 rounded mb-2"></div>
+                <div class="h-4 bg-gray-200 dark:bg-gray-700 rounded w-5/6"></div>
             </div>
-            <div id="toolsGrid" class="w-full flex justify-center"></div>
         </div>
     </section>
 

@@ -278,11 +278,22 @@ function getCategoryDescription(category) {
 // Show tools for a specific category
 function showTools(category) {
     currentCategory = category;
-    categoryTitle.textContent = category;
-    toolsSection.classList.remove('hidden');
-    categoriesGrid.parentElement.classList.add('hidden');
+    document.getElementById('categoryTitle').textContent = category;
+    document.getElementById('categoryDescription').textContent = getCategoryDescription(category);
+    document.getElementById('toolsSection').classList.remove('hidden');
+    document.getElementById('categoriesSection').classList.add('hidden');
     
-    renderTools();
+    // Check if in-depth guide is available for this category
+    const guideLink = document.getElementById('guideLink');
+    const categoryGuideLink = document.getElementById('categoryGuideLink');
+    
+    if (category === "Chatbots & Conversational AI") {
+        guideLink.classList.remove('hidden');
+        categoryGuideLink.href = "guides/chatbots.html";
+        categoryGuideLink.textContent = "Check out our in-depth guide to Chatbots & Conversational AI";
+    } else {
+        guideLink.classList.add('hidden');
+    }
     
     // Update URL with the category parameter
     const encodedCategory = encodeURIComponent(category);
@@ -293,6 +304,8 @@ function showTools(category) {
     
     // Update document title
     document.title = `${category} - AI Category Hub`;
+    
+    renderTools();
 }
 
 // Show categories
@@ -332,10 +345,7 @@ function createAdContainer() {
 function renderTools() {
     try {
         const filteredTools = tools.filter(tool => {
-            const matchesSearch = tool.name.toLowerCase().includes(searchQuery) ||
-                                tool.description.toLowerCase().includes(searchQuery);
-            const matchesCategory = !currentCategory || tool.category === currentCategory;
-            return matchesSearch && matchesCategory;
+            return tool.category === currentCategory;
         });
 
         // Add the tools HTML to the grid with the correct grid layout and center it
