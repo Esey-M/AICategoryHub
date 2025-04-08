@@ -362,51 +362,114 @@ function getCategoryDescription(category) {
 
 // Show tools for a specific category
 function showTools(category) {
-    currentCategory = category;
-    document.getElementById('categoryTitle').textContent = category;
-    document.getElementById('categoryDescription').textContent = getCategoryDescription(category);
-    document.getElementById('toolsSection').classList.remove('hidden');
-    document.getElementById('categoriesSection').classList.add('hidden');
-    
-    // Check if in-depth guide is available for this category
-    const guideLink = document.getElementById('guideLink');
-    const categoryGuideLink = document.getElementById('categoryGuideLink');
-    
-    if (category === "Chatbots & Conversational AI") {
-        guideLink.classList.remove('hidden');
-        categoryGuideLink.href = "guides/chatbots.html";
-        categoryGuideLink.textContent = "Check out our in-depth guide to Chatbots & Conversational AI";
-    } else {
-        guideLink.classList.add('hidden');
+    try {
+        console.log(`Showing tools for category: ${category}`);
+        currentCategory = category;
+        
+        // Get elements safely
+        const categoryTitleElement = document.getElementById('categoryTitle');
+        const categoryDescriptionElement = document.getElementById('categoryDescription');
+        const toolsSectionElement = document.getElementById('toolsSection');
+        const categoriesSectionElement = document.getElementById('categoriesSection');
+        const guideLinkElement = document.getElementById('guideLink');
+        const categoryGuideLinkElement = document.getElementById('categoryGuideLink');
+        
+        // Update category title and description
+        if (categoryTitleElement) {
+            categoryTitleElement.textContent = category;
+        } else {
+            console.warn('categoryTitle element not found');
+        }
+        
+        if (categoryDescriptionElement) {
+            categoryDescriptionElement.textContent = getCategoryDescription(category);
+        } else {
+            console.warn('categoryDescription element not found');
+        }
+        
+        // Show tools section and hide categories section
+        if (toolsSectionElement) {
+            toolsSectionElement.classList.remove('hidden');
+        } else {
+            console.warn('toolsSection element not found');
+            return; // Exit early if critical element is missing
+        }
+        
+        if (categoriesSectionElement) {
+            categoriesSectionElement.classList.add('hidden');
+        } else {
+            console.warn('categoriesSection element not found');
+        }
+        
+        // Set guide link if available
+        if (guideLinkElement && categoryGuideLinkElement) {
+            if (category === "Chatbots & Conversational AI") {
+                guideLinkElement.classList.remove('hidden');
+                categoryGuideLinkElement.href = "guides/chatbots.html";
+                categoryGuideLinkElement.textContent = "Check out our in-depth guide to Chatbots & Conversational AI";
+            } else {
+                guideLinkElement.classList.add('hidden');
+            }
+        }
+        
+        // Update URL and browser history
+        const encodedCategory = encodeURIComponent(category);
+        const url = `${window.location.pathname}?category=${encodedCategory}`;
+        window.history.pushState({ category: category }, `${category} - AI Category Hub`, url);
+        
+        // Update page title
+        document.title = `${category} - AI Category Hub`;
+        
+        // Render the tools for this category
+        renderTools();
+    } catch (error) {
+        console.error('Error in showTools function:', error);
+        showError('Failed to display tools. Please try again.');
     }
-    
-    // Update URL with the category parameter
-    const encodedCategory = encodeURIComponent(category);
-    const url = `${window.location.pathname}?category=${encodedCategory}`;
-    
-    // Update browser history without reloading the page
-    window.history.pushState({ category: category }, `${category} - AI Category Hub`, url);
-    
-    // Update document title
-    document.title = `${category} - AI Category Hub`;
-    
-    renderTools();
 }
 
 // Show categories
 function showCategories() {
-    currentCategory = null;
-    toolsSection.classList.add('hidden');
-    categoriesGrid.parentElement.classList.remove('hidden');
-    searchQuery = '';
-    searchInput.value = '';
-    
-    // Update URL to remove the category parameter
-    const url = window.location.pathname;
-    window.history.pushState({}, 'AI Category Hub - Discover AI Tools', url);
-    
-    // Update document title
-    document.title = 'AI Category Hub - Discover AI Tools';
+    try {
+        console.log('Showing categories view...');
+        currentCategory = null;
+        
+        // Get elements safely
+        const toolsSectionElement = document.getElementById('toolsSection');
+        const categoriesSectionElement = document.getElementById('categoriesSection');
+        const searchInputElement = document.getElementById('searchInput');
+        
+        // Hide tools section and show categories section
+        if (toolsSectionElement) {
+            toolsSectionElement.classList.add('hidden');
+        } else {
+            console.warn('toolsSection element not found');
+        }
+        
+        if (categoriesSectionElement) {
+            categoriesSectionElement.classList.remove('hidden');
+        } else {
+            console.warn('categoriesSection element not found');
+            return; // Exit early if critical element is missing
+        }
+        
+        // Reset search
+        searchQuery = '';
+        if (searchInputElement) {
+            searchInputElement.value = '';
+        }
+        
+        // Update URL and browser history
+        const url = window.location.pathname;
+        window.history.pushState({}, 'AI Category Hub - Discover AI Tools', url);
+        
+        // Update page title
+        document.title = 'AI Category Hub - Discover AI Tools';
+        
+        console.log('Categories view displayed successfully');
+    } catch (error) {
+        console.error('Error in showCategories function:', error);
+    }
 }
 
 // Create ad container HTML
@@ -438,56 +501,60 @@ function renderTools() {
             return;
         }
 
-        // Add the tools HTML to the grid with the correct grid layout and center it
+        // Add the tools HTML to the grid with the original layout
         toolsGrid.innerHTML = `
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 w-full">
-                ${filteredTools.map((tool, index) => `
-                    <div class="category-card bg-white dark:bg-gray-800 rounded-lg shadow-md overflow-hidden border border-gray-200 dark:border-gray-700 hover:shadow-lg transition-all duration-200">
-                        <div class="p-6">
-                            <div class="flex items-center mb-4">
-                                <div class="w-20 h-20 mr-4 flex-shrink-0 rounded-lg overflow-hidden bg-gray-100 dark:bg-gray-700">
-                                    <img src="${tool.image}" 
-                                         alt="${tool.name}" 
-                                         class="w-full h-full object-contain p-1"
-                                         onerror="this.onerror=null; this.src='https://placehold.co/200x200/222/fff?text=${encodeURIComponent(tool.name.charAt(0))}'; this.classList.add('fallback-img');">
+            <div class="w-[90%] mx-auto">
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                    ${filteredTools.map((tool, index) => `
+                        <div class="category-card bg-white dark:bg-gray-800 rounded-lg shadow-md overflow-hidden border border-gray-200 dark:border-gray-700 hover:shadow-lg transition-shadow duration-200">
+                            <div class="p-6">
+                                <div class="flex items-center mb-4">
+                                    <div class="w-16 h-16 mr-4 flex-shrink-0 rounded-lg overflow-hidden bg-gray-100 dark:bg-gray-700">
+                                        <img src="${tool.image}" 
+                                             alt="${tool.name}" 
+                                             class="w-full h-full object-contain p-1"
+                                             onerror="this.onerror=null; this.src='https://placehold.co/200x200/222/fff?text=${encodeURIComponent(tool.name.charAt(0))}'; this.classList.add('fallback-img');">
+                                    </div>
+                                    <div>
+                                        <h3 class="text-xl font-semibold text-gray-900 dark:text-white">${tool.name}</h3>
+                                        <p class="text-sm text-gray-500 dark:text-gray-400">${tool.category}</p>
+                                    </div>
                                 </div>
-                                <div>
-                                    <h3 class="text-xl font-semibold text-gray-900 dark:text-white">${tool.name}</h3>
-                                    <p class="text-sm text-gray-600 dark:text-gray-300">${tool.category}</p>
+                                <p class="text-gray-600 dark:text-gray-300 mb-4">${tool.description}</p>
+                                <div class="flex justify-between items-center w-full">
+                                    <span class="text-sm text-gray-500 dark:text-gray-400">AI Tool</span>
+                                    <a href="${tool.link}" target="_blank" rel="noopener noreferrer" 
+                                       class="text-primary hover:underline">
+                                        Visit Tool →
+                                    </a>
                                 </div>
                             </div>
-                            <p class="text-gray-600 dark:text-gray-300 mb-4">${tool.description}</p>
-                            <div class="flex justify-between items-center">
-                                <span class="text-sm text-gray-500 dark:text-gray-400">AI Tool</span>
-                                <a href="${tool.link}" target="_blank" rel="noopener noreferrer" 
-                                   class="text-primary hover:text-primary-dark transition-colors">
-                                    Visit Tool →
-                                </a>
+                        </div>
+                        ${(index + 1) % 6 === 0 && index < filteredTools.length - 1 ? `
                             </div>
-                        </div>
-                    </div>
-                    ${(index + 1) % 6 === 0 && index < filteredTools.length - 1 ? `
-                        </div>
-                        <div class="w-full my-2">
-                            <div class="bg-white dark:bg-gray-800 rounded-lg shadow-md overflow-hidden border border-gray-200 dark:border-gray-700 p-2">
-                                <!-- AdSense Ad -->
-                                <ins class="adsbygoogle"
-                                     style="display:block; height:60px;"
-                                     data-ad-format="horizontal"
-                                     data-ad-client="ca-pub-7154813783212995"
-                                     data-ad-slot="YOUR_AD_SLOT"></ins>
+                            <div class="w-full my-2">
+                                <div class="bg-white dark:bg-gray-800 rounded-lg shadow-md overflow-hidden border border-gray-200 dark:border-gray-700 p-2">
+                                    <!-- AdSense Ad -->
+                                    <ins class="adsbygoogle"
+                                         style="display:block"
+                                         data-ad-format="horizontal"
+                                         data-ad-client="ca-pub-7154813783212995"
+                                         data-ad-slot="YOUR_AD_SLOT"></ins>
+                                </div>
                             </div>
-                        </div>
-                        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 w-full">
-                    ` : ''}
-                `).join('')}
+                            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                        ` : ''}
+                    `).join('')}
+                </div>
             </div>
         `;
 
         if (filteredTools.length === 0) {
             toolsGrid.innerHTML = `
-                <div class="text-center py-8">
-                    <p class="text-gray-600 dark:text-gray-400">No tools found for this category${searchQuery ? ' and search query' : ''}.</p>
+                <div class="w-[90%] mx-auto">
+                    <div class="text-center py-8">
+                        <p class="text-gray-600 dark:text-gray-400">No tools found for this category${searchQuery ? ' and search query' : ''}.</p>
+                    </div>
                 </div>
             `;
         }
@@ -504,8 +571,10 @@ function renderTools() {
         console.error('Error rendering tools:', error);
         if (toolsGrid) {
             toolsGrid.innerHTML = `
-                <div class="text-center py-8">
-                    <p class="text-red-600 dark:text-red-400">Error loading tools. Please try again later.</p>
+                <div class="w-[90%] mx-auto">
+                    <div class="text-center py-8">
+                        <p class="text-red-600 dark:text-red-400">Error loading tools. Please try again later.</p>
+                    </div>
                 </div>
             `;
         }
@@ -520,11 +589,15 @@ function toggleDarkMode() {
 
 // Loading state management
 function showLoading() {
-    loadingSpinner.classList.remove('hidden');
+    if (loadingSpinner) {
+        loadingSpinner.classList.remove('hidden');
+    }
 }
 
 function hideLoading() {
-    loadingSpinner.classList.add('hidden');
+    if (loadingSpinner) {
+        loadingSpinner.classList.add('hidden');
+    }
 }
 
 // Show error message
@@ -667,4 +740,4 @@ function generateStructuredData(tools) {
 }
 
 // Initialize the application when the DOM is loaded
-document.addEventListener('DOMContentLoaded', init); 
+document.addEventListener('DOMContentLoaded', init);
