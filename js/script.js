@@ -171,51 +171,86 @@ async function fetchTools() {
     }
 }
 
-// Setup event listeners
+// Set up event listeners
 function setupEventListeners() {
-    // Search input
-    searchInput.addEventListener('input', (e) => {
-        searchQuery = e.target.value.toLowerCase();
-        if (currentCategory) {
-            renderTools();
-        }
-    });
-
-    // Dark mode toggle
-    darkModeToggle.addEventListener('click', toggleDarkMode);
-
-    // Back to categories button
-    backToCategories.addEventListener('click', () => {
-        showCategories();
-    });
-
-    // Check for saved dark mode preference
-    if (localStorage.getItem('darkMode') === 'true') {
-        document.documentElement.classList.add('dark');
-    }
-
-    // Mobile menu functionality
-    mobileMenuButton.addEventListener('click', () => {
-        mobileMenu.classList.toggle('hidden');
-    });
-
-    // Close mobile menu when clicking outside
-    document.addEventListener('click', (e) => {
-        if (!mobileMenuButton.contains(e.target) && !mobileMenu.contains(e.target)) {
-            mobileMenu.classList.add('hidden');
-        }
-    });
-    
-    // Handle browser back/forward navigation
-    window.addEventListener('popstate', (event) => {
-        if (event.state && event.state.category) {
-            // User navigated back to a category page
-            showTools(event.state.category);
+    try {
+        // Make sure we find the elements before adding listeners
+        const backButton = document.getElementById('backButton');
+        if (backButton) {
+            backButton.addEventListener('click', showCategories);
         } else {
-            // User navigated back to the main page
-            showCategories();
+            console.warn("Back button element not found");
         }
-    });
+
+        const guideLink = document.getElementById('guideLink');
+        if (guideLink) {
+            guideLink.classList.add('hidden'); // Hide by default
+        }
+
+        const toolsContainer = document.getElementById('toolsContainer');
+        if (!toolsContainer) {
+            console.warn("Tools container element not found");
+        }
+
+        // Check for other required elements
+        const categoryTitle = document.getElementById('categoryTitle');
+        const categoryDescription = document.getElementById('categoryDescription');
+        
+        if (!categoryTitle) {
+            console.warn("Category title element not found");
+        }
+        
+        if (!categoryDescription) {
+            console.warn("Category description element not found");
+        }
+
+        // Search input
+        searchInput.addEventListener('input', (e) => {
+            searchQuery = e.target.value.toLowerCase();
+            if (currentCategory) {
+                renderTools();
+            }
+        });
+
+        // Dark mode toggle
+        darkModeToggle.addEventListener('click', toggleDarkMode);
+
+        // Back to categories button
+        backToCategories.addEventListener('click', () => {
+            showCategories();
+        });
+
+        // Check for saved dark mode preference
+        if (localStorage.getItem('darkMode') === 'true') {
+            document.documentElement.classList.add('dark');
+        }
+
+        // Mobile menu functionality
+        mobileMenuButton.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // Close mobile menu when clicking outside
+        document.addEventListener('click', (e) => {
+            if (!mobileMenuButton.contains(e.target) && !mobileMenu.contains(e.target)) {
+                mobileMenu.classList.add('hidden');
+            }
+        });
+        
+        // Handle browser back/forward navigation
+        window.addEventListener('popstate', (event) => {
+            if (event.state && event.state.category) {
+                // User navigated back to a category page
+                showTools(event.state.category);
+            } else {
+                // User navigated back to the main page
+                showCategories();
+            }
+        });
+    } catch (error) {
+        console.error("Error in setupEventListeners:", error);
+        showError("Failed to initialize event listeners. Please refresh the page and try again.");
+    }
 }
 
 // Render category cards
