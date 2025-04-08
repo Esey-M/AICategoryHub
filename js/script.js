@@ -54,6 +54,8 @@ async function init() {
             // Check URL for category parameter
             checkUrlForCategory();
             
+            generateStructuredData(tools);
+            
             console.log('Application initialized successfully');
         } else {
             showError('Unable to load tools data. Please check your connection and refresh the page.');
@@ -467,6 +469,54 @@ function showError(message) {
         errorElement.classList.add('hidden');
         location.reload();
     });
+}
+
+function generateStructuredData(tools) {
+    const categories = {};
+    tools.forEach(tool => {
+        if (!categories[tool.category]) {
+            categories[tool.category] = [];
+        }
+        categories[tool.category].push({
+            "@type": "SoftwareApplication",
+            "name": tool.name,
+            "description": tool.description,
+            "applicationCategory": tool.category,
+            "url": tool.link,
+            "image": tool.image
+        });
+    });
+
+    const structuredData = {
+        "@context": "https://schema.org",
+        "@type": "ItemList",
+        "itemListElement": Object.entries(categories).map(([category, tools], index) => ({
+            "@type": "ListItem",
+            "position": index + 1,
+            "item": {
+                "@type": "CategoryCode",
+                "name": category,
+                "description": `AI tools for ${category.toLowerCase()}`,
+                "hasOfferCatalog": {
+                    "@type": "OfferCatalog",
+                    "name": `${category} AI Tools`,
+                    "itemListElement": tools
+                }
+            }
+        }))
+    };
+
+    // Remove existing structured data script if it exists
+    const existingScript = document.querySelector('script[type="application/ld+json"]');
+    if (existingScript) {
+        existingScript.remove();
+    }
+
+    // Add new structured data script
+    const script = document.createElement('script');
+    script.type = 'application/ld+json';
+    script.text = JSON.stringify(structuredData);
+    document.head.appendChild(script);
 }
 
 // Initialize the application when the DOM is loaded
