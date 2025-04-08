@@ -407,21 +407,29 @@ function showTools(category) {
             "Video Editing & Generation": "video-editing"
         };
 
-        if (guideMap[category]) {
-            guideLink.href = `guides/${guideMap[category]}.html`;
-            guideLink.classList.remove('hidden');
+        const guideSlug = guideMap[category];
+        if (guideSlug) {
+            guideLink.href = `guides/${guideSlug}.html`;
+            guideLink.textContent = `Read our comprehensive guide on ${category}`;
             guideLink.style.display = 'inline-block';
-            guideLink.style.cursor = 'pointer';
+            guideLink.parentElement.parentElement.style.display = 'block';
+            console.log('Guide link updated:', guideLink.href);
         } else {
-            guideLink.classList.add('hidden');
             guideLink.style.display = 'none';
+            guideLink.parentElement.parentElement.style.display = 'none';
+            console.log('Guide link hidden for category:', category);
         }
+    } else {
+        console.error('Guide link element not found');
     }
 
     // Ensure back button is visible and clickable
     if (backButton) {
-        backButton.style.display = 'block';
+        backButton.style.display = 'inline-block';
         backButton.style.cursor = 'pointer';
+        console.log('Back button made visible');
+    } else {
+        console.error('Back button element not found');
     }
 
     // Render the tools for this category
@@ -451,10 +459,11 @@ function showCategories() {
     // Reset page title
     document.title = 'AI Category Hub';
 
-    // Hide guide link
+    // Hide guide link container
     if (guideLink) {
-        guideLink.classList.add('hidden');
         guideLink.style.display = 'none';
+        guideLink.parentElement.parentElement.style.display = 'none';
+        console.log('Guide link hidden');
     }
 
     // Reset current category
