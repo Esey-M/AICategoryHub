@@ -363,13 +363,14 @@ function getCategoryDescription(category) {
 // Show tools for a specific category
 function showTools(category) {
     console.log('showTools called with category:', category);
-    currentCategory = category; // Set the current category
+    currentCategory = category;
     
     const categoryTitle = document.getElementById('categoryTitle');
     const categoryDescription = document.getElementById('categoryDescription');
     const toolsSection = document.getElementById('toolsSection');
     const categoriesSection = document.getElementById('categoriesSection');
     const guideLink = document.getElementById('guideLink');
+    const backButton = document.getElementById('backButton');
 
     if (!categoryTitle || !categoryDescription || !toolsSection || !categoriesSection) {
         console.error('Required elements not found');
@@ -379,85 +380,85 @@ function showTools(category) {
 
     // Hide categories and show tools section
     categoriesSection.style.display = 'none';
-    toolsSection.classList.remove('hidden'); // Remove hidden class
+    toolsSection.classList.remove('hidden');
     toolsSection.style.display = 'block';
 
     // Update category title and description
     categoryTitle.textContent = category;
     categoryDescription.textContent = getCategoryDescription(category);
 
-    // Handle guide link visibility based on available guides
+    // Update URL with category parameter
+    const urlParams = new URLSearchParams(window.location.search);
+    urlParams.set('category', encodeURIComponent(category));
+    const newUrl = `${window.location.pathname}?${urlParams.toString()}`;
+    history.pushState({ category }, '', newUrl);
+
+    // Update page title
+    document.title = `${category} - AI Category Hub`;
+
+    // Show or hide guide link based on category
     if (guideLink) {
         const guideMap = {
-            'Chatbots & Conversational AI': 'chatbots.html',
-            'Image Generation & Editing': 'image-generation.html',
-            'Text Generation & Writing Assistance': 'text-generation.html',
-            'Speech Recognition & Synthesis': 'speech-recognition.html',
-            'Code Generation & Development Assistance': 'code-generation.html',
-            'Video Editing & Generation': 'video-editing.html'
+            "Chatbots & Conversational AI": "chatbots",
+            "Image Generation & Editing": "image-generation",
+            "Text Generation & Writing Assistance": "text-generation",
+            "Speech Recognition & Synthesis": "speech-recognition",
+            "Code Generation & Development Assistance": "code-generation",
+            "Video Editing & Generation": "video-editing"
         };
 
         if (guideMap[category]) {
-            guideLink.style.display = 'block';
-            guideLink.href = `guides/${guideMap[category]}`;
-            guideLink.textContent = `Read our comprehensive guide on ${category}`;
+            guideLink.href = `guides/${guideMap[category]}.html`;
+            guideLink.classList.remove('hidden');
+            guideLink.style.display = 'inline-block';
+            guideLink.style.cursor = 'pointer';
         } else {
+            guideLink.classList.add('hidden');
             guideLink.style.display = 'none';
         }
     }
 
-    // Update URL and page title
-    const urlCategory = encodeURIComponent(category.toLowerCase().replace(/[^a-z0-9]+/g, '-'));
-    const newUrl = `${window.location.pathname}?category=${urlCategory}`;
-    window.history.pushState({ category: category }, '', newUrl);
-    document.title = `${category} - AI Category Hub`;
+    // Ensure back button is visible and clickable
+    if (backButton) {
+        backButton.style.display = 'block';
+        backButton.style.cursor = 'pointer';
+    }
 
-    // Render tools for the selected category
-    renderTools(category);
+    // Render the tools for this category
+    renderTools();
 }
 
 // Show categories
 function showCategories() {
-    try {
-        console.log('Showing categories view...');
-        currentCategory = null;
-        
-        // Get elements safely
-        const toolsSectionElement = document.getElementById('toolsSection');
-        const categoriesSectionElement = document.getElementById('categoriesSection');
-        const searchInputElement = document.getElementById('searchInput');
-        
-        // Hide tools section and show categories section
-        if (toolsSectionElement) {
-            toolsSectionElement.classList.add('hidden');
-        } else {
-            console.warn('toolsSection element not found');
-        }
-        
-        if (categoriesSectionElement) {
-            categoriesSectionElement.classList.remove('hidden');
-        } else {
-            console.warn('categoriesSection element not found');
-            return; // Exit early if critical element is missing
-        }
-        
-        // Reset search
-        searchQuery = '';
-        if (searchInputElement) {
-            searchInputElement.value = '';
-        }
-        
-        // Update URL and browser history
-        const url = window.location.pathname;
-        window.history.pushState({}, 'AI Category Hub - Discover AI Tools', url);
-        
-        // Update page title
-        document.title = 'AI Category Hub - Discover AI Tools';
-        
-        console.log('Categories view displayed successfully');
-    } catch (error) {
-        console.error('Error in showCategories function:', error);
+    console.log('showCategories called');
+    
+    const toolsSection = document.getElementById('toolsSection');
+    const categoriesSection = document.getElementById('categoriesSection');
+    const guideLink = document.getElementById('guideLink');
+
+    if (!toolsSection || !categoriesSection) {
+        console.error('Required sections not found');
+        return;
     }
+
+    // Hide tools and show categories
+    toolsSection.style.display = 'none';
+    categoriesSection.style.display = 'block';
+
+    // Reset URL
+    history.pushState({}, '', window.location.pathname);
+
+    // Reset page title
+    document.title = 'AI Category Hub';
+
+    // Hide guide link
+    if (guideLink) {
+        guideLink.classList.add('hidden');
+        guideLink.style.display = 'none';
+    }
+
+    // Reset current category
+    currentCategory = null;
 }
 
 // Create ad container HTML
