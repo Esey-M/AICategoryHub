@@ -4,24 +4,26 @@ let categories = [];
 let currentCategory = null;
 let searchQuery = '';
 
-// DOM Elements
-const toolsGrid = document.getElementById('toolsGrid');
-const categoriesGrid = document.getElementById('categoriesGrid');
-const searchInput = document.getElementById('searchInput');
-const darkModeToggle = document.getElementById('darkModeToggle');
-const loadingSpinner = document.getElementById('loadingSpinner');
-const toolsSection = document.getElementById('toolsSection');
-const categoryTitle = document.getElementById('categoryTitle');
-const backToCategories = document.getElementById('backToCategories');
-
-// Mobile menu functionality
-const mobileMenuButton = document.getElementById('mobileMenuButton');
-const mobileMenu = document.getElementById('mobileMenu');
+// DOM Elements - will be initialized properly in the init function
+let toolsGrid;
+let categoriesGrid;
+let searchInput;
+let darkModeToggle;
+let loadingSpinner;
+let toolsSection;
+let categoryTitle;
+let mobileMenuButton;
+let mobileMenu;
+let backButton;
 
 // Initialize the application
 async function init() {
     try {
         console.log('Initializing application...');
+        
+        // Initialize DOM elements safely
+        initializeDOMElements();
+        
         if (!loadingSpinner) {
             console.error('Loading spinner element not found');
             return;
@@ -77,6 +79,37 @@ async function init() {
     } finally {
         hideLoading();
     }
+}
+
+// Initialize DOM element references safely
+function initializeDOMElements() {
+    console.log('Initializing DOM elements...');
+    
+    // Essential elements
+    toolsGrid = document.getElementById('toolsContainer');
+    categoriesGrid = document.getElementById('categoriesGrid');
+    searchInput = document.getElementById('searchInput');
+    darkModeToggle = document.getElementById('darkModeToggle');
+    loadingSpinner = document.getElementById('loadingSpinner');
+    toolsSection = document.getElementById('toolsSection');
+    categoryTitle = document.getElementById('categoryTitle');
+    backButton = document.getElementById('backButton');
+    
+    // Mobile menu elements
+    mobileMenuButton = document.getElementById('mobileMenuButton');
+    mobileMenu = document.getElementById('mobileMenu');
+    
+    // Log missing critical elements
+    if (!toolsGrid) console.warn('toolsContainer element not found');
+    if (!categoriesGrid) console.warn('categoriesGrid element not found');
+    if (!searchInput) console.warn('searchInput element not found');
+    if (!darkModeToggle) console.warn('darkModeToggle element not found');
+    if (!loadingSpinner) console.warn('loadingSpinner element not found');
+    if (!toolsSection) console.warn('toolsSection element not found');
+    if (!categoryTitle) console.warn('categoryTitle element not found');
+    if (!backButton) console.warn('backButton element not found');
+    if (!mobileMenuButton) console.warn('mobileMenuButton element not found');
+    if (!mobileMenu) console.warn('mobileMenu element not found');
 }
 
 // Check URL for category parameter
@@ -174,68 +207,71 @@ async function fetchTools() {
 // Set up event listeners
 function setupEventListeners() {
     try {
-        // Make sure we find the elements before adding listeners
-        const backButton = document.getElementById('backButton');
+        console.log('Setting up event listeners...');
+        
+        // Back button
         if (backButton) {
             backButton.addEventListener('click', showCategories);
+            console.log('Back button listener added');
         } else {
-            console.warn("Back button element not found");
+            console.warn('Back button element not found');
         }
 
+        // Guide link
         const guideLink = document.getElementById('guideLink');
         if (guideLink) {
             guideLink.classList.add('hidden'); // Hide by default
-        }
-
-        const toolsContainer = document.getElementById('toolsContainer');
-        if (!toolsContainer) {
-            console.warn("Tools container element not found");
-        }
-
-        // Check for other required elements
-        const categoryTitle = document.getElementById('categoryTitle');
-        const categoryDescription = document.getElementById('categoryDescription');
-        
-        if (!categoryTitle) {
-            console.warn("Category title element not found");
-        }
-        
-        if (!categoryDescription) {
-            console.warn("Category description element not found");
+            console.log('Guide link hidden by default');
+        } else {
+            console.warn('Guide link element not found');
         }
 
         // Search input
-        searchInput.addEventListener('input', (e) => {
-            searchQuery = e.target.value.toLowerCase();
-            if (currentCategory) {
-                renderTools();
-            }
-        });
+        if (searchInput) {
+            searchInput.addEventListener('input', (e) => {
+                searchQuery = e.target.value.toLowerCase();
+                if (currentCategory) {
+                    renderTools();
+                }
+            });
+            console.log('Search input listener added');
+        } else {
+            console.warn('Search input element not found');
+        }
 
         // Dark mode toggle
-        darkModeToggle.addEventListener('click', toggleDarkMode);
-
-        // Back to categories button
-        backToCategories.addEventListener('click', () => {
-            showCategories();
-        });
+        if (darkModeToggle) {
+            darkModeToggle.addEventListener('click', toggleDarkMode);
+            console.log('Dark mode toggle listener added');
+        } else {
+            console.warn('Dark mode toggle element not found');
+        }
 
         // Check for saved dark mode preference
         if (localStorage.getItem('darkMode') === 'true') {
             document.documentElement.classList.add('dark');
+            console.log('Dark mode enabled from local storage');
         }
 
         // Mobile menu functionality
-        mobileMenuButton.addEventListener('click', () => {
-            mobileMenu.classList.toggle('hidden');
-        });
-
-        // Close mobile menu when clicking outside
-        document.addEventListener('click', (e) => {
-            if (!mobileMenuButton.contains(e.target) && !mobileMenu.contains(e.target)) {
-                mobileMenu.classList.add('hidden');
-            }
-        });
+        if (mobileMenuButton && mobileMenu) {
+            mobileMenuButton.addEventListener('click', () => {
+                mobileMenu.classList.toggle('hidden');
+            });
+            console.log('Mobile menu button listener added');
+            
+            // Close mobile menu when clicking outside
+            document.addEventListener('click', (e) => {
+                if (mobileMenuButton && mobileMenu && 
+                    !mobileMenuButton.contains(e.target) && 
+                    !mobileMenu.contains(e.target)) {
+                    mobileMenu.classList.add('hidden');
+                }
+            });
+            console.log('Document click listener for mobile menu added');
+        } else {
+            console.warn('Mobile menu elements not found');
+        }
         
         // Handle browser back/forward navigation
         window.addEventListener('popstate', (event) => {
@@ -247,9 +283,12 @@ function setupEventListeners() {
                 showCategories();
             }
         });
+        console.log('Popstate listener added');
+        
+        console.log('All event listeners set up successfully');
     } catch (error) {
-        console.error("Error in setupEventListeners:", error);
-        showError("Failed to initialize event listeners. Please refresh the page and try again.");
+        console.error('Error in setupEventListeners:', error);
+        showError('Failed to initialize event listeners. Please refresh the page and try again.');
     }
 }
 
@@ -383,60 +422,61 @@ function renderTools() {
             return tool.category === currentCategory;
         });
 
+        if (!toolsGrid) {
+            console.error('Tools grid element not found');
+            return;
+        }
+
         // Add the tools HTML to the grid with the correct grid layout and center it
         toolsGrid.innerHTML = `
-            <div class="w-[90%] mx-auto">
-                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 w-full">
-                    ${filteredTools.map((tool, index) => `
-                        <div class="category-card bg-white dark:bg-gray-800 rounded-lg shadow-md overflow-hidden border border-gray-200 dark:border-gray-700 hover:shadow-lg transition-all duration-200">
-                            <div class="p-6">
-                                <div class="flex items-center mb-4">
-                                    <div class="w-20 h-20 mr-4 flex-shrink-0 rounded-lg overflow-hidden bg-gray-100 dark:bg-gray-700">
-                                        <img src="${tool.image}" 
-                                             alt="${tool.name}" 
-                                             class="w-full h-full object-contain p-1"
-                                             onerror="this.onerror=null; this.src='https://placehold.co/200x200/222/fff?text=${encodeURIComponent(tool.name.charAt(0))}'; this.classList.add('fallback-img');">
-                                    </div>
-                                    <div>
-                                        <h3 class="text-xl font-semibold text-gray-900 dark:text-white">${tool.name}</h3>
-                                        <p class="text-sm text-gray-600 dark:text-gray-300">${tool.category}</p>
-                                    </div>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 w-full">
+                ${filteredTools.map((tool, index) => `
+                    <div class="category-card bg-white dark:bg-gray-800 rounded-lg shadow-md overflow-hidden border border-gray-200 dark:border-gray-700 hover:shadow-lg transition-all duration-200">
+                        <div class="p-6">
+                            <div class="flex items-center mb-4">
+                                <div class="w-20 h-20 mr-4 flex-shrink-0 rounded-lg overflow-hidden bg-gray-100 dark:bg-gray-700">
+                                    <img src="${tool.image}" 
+                                         alt="${tool.name}" 
+                                         class="w-full h-full object-contain p-1"
+                                         onerror="this.onerror=null; this.src='https://placehold.co/200x200/222/fff?text=${encodeURIComponent(tool.name.charAt(0))}'; this.classList.add('fallback-img');">
                                 </div>
-                                <p class="text-gray-600 dark:text-gray-300 mb-4">${tool.description}</p>
-                                <div class="flex justify-between items-center">
-                                    <span class="text-sm text-gray-500 dark:text-gray-400">AI Tool</span>
-                                    <a href="${tool.link}" target="_blank" rel="noopener noreferrer" 
-                                       class="text-primary hover:text-primary-dark transition-colors">
-                                        Visit Tool →
-                                    </a>
+                                <div>
+                                    <h3 class="text-xl font-semibold text-gray-900 dark:text-white">${tool.name}</h3>
+                                    <p class="text-sm text-gray-600 dark:text-gray-300">${tool.category}</p>
                                 </div>
+                            </div>
+                            <p class="text-gray-600 dark:text-gray-300 mb-4">${tool.description}</p>
+                            <div class="flex justify-between items-center">
+                                <span class="text-sm text-gray-500 dark:text-gray-400">AI Tool</span>
+                                <a href="${tool.link}" target="_blank" rel="noopener noreferrer" 
+                                   class="text-primary hover:text-primary-dark transition-colors">
+                                    Visit Tool →
+                                </a>
                             </div>
                         </div>
-                        ${(index + 1) % 6 === 0 && index < filteredTools.length - 1 ? `
+                    </div>
+                    ${(index + 1) % 6 === 0 && index < filteredTools.length - 1 ? `
+                        </div>
+                        <div class="w-full my-2">
+                            <div class="bg-white dark:bg-gray-800 rounded-lg shadow-md overflow-hidden border border-gray-200 dark:border-gray-700 p-2">
+                                <!-- AdSense Ad -->
+                                <ins class="adsbygoogle"
+                                     style="display:block; height:60px;"
+                                     data-ad-format="horizontal"
+                                     data-ad-client="ca-pub-7154813783212995"
+                                     data-ad-slot="YOUR_AD_SLOT"></ins>
                             </div>
-                            <div class="w-full my-2">
-                                <div class="bg-white dark:bg-gray-800 rounded-lg shadow-md overflow-hidden border border-gray-200 dark:border-gray-700 p-2">
-                                    <!-- AdSense Ad -->
-                                    <ins class="adsbygoogle"
-                                         style="display:block; height:60px;"
-                                         data-ad-format="horizontal"
-                                         data-ad-client="ca-pub-7154813783212995"
-                                         data-ad-slot="YOUR_AD_SLOT"></ins>
-                                </div>
-                            </div>
-                            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 w-full">
-                        ` : ''}
-                    `).join('')}
-                </div>
+                        </div>
+                        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 w-full">
+                    ` : ''}
+                `).join('')}
             </div>
         `;
 
         if (filteredTools.length === 0) {
             toolsGrid.innerHTML = `
-                <div class="w-[90%] mx-auto">
-                    <div class="text-center py-8">
-                        <p class="text-gray-600 dark:text-gray-400">No tools found for this category${searchQuery ? ' and search query' : ''}.</p>
-                    </div>
+                <div class="text-center py-8">
+                    <p class="text-gray-600 dark:text-gray-400">No tools found for this category${searchQuery ? ' and search query' : ''}.</p>
                 </div>
             `;
         }
@@ -451,13 +491,13 @@ function renderTools() {
         }
     } catch (error) {
         console.error('Error rendering tools:', error);
-        toolsGrid.innerHTML = `
-            <div class="w-[90%] mx-auto">
+        if (toolsGrid) {
+            toolsGrid.innerHTML = `
                 <div class="text-center py-8">
                     <p class="text-red-600 dark:text-red-400">Error loading tools. Please try again later.</p>
                 </div>
-            </div>
-        `;
+            `;
+        }
     }
 }
 
