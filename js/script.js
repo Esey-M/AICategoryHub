@@ -95,8 +95,8 @@ function initializeDOMElements() {
     categoryTitle = document.getElementById('categoryTitle');
     backButton = document.getElementById('backButton');
     
-    // Mobile menu elements
-    mobileMenuButton = document.getElementById('mobileMenuButton');
+    // Mobile menu elements - update to match the actual HTML IDs
+    mobileMenuButton = document.getElementById('mobileMenuBtn');
     mobileMenu = document.getElementById('mobileMenu');
     
     // Log missing critical elements
@@ -108,7 +108,7 @@ function initializeDOMElements() {
     if (!toolsSection) console.warn('toolsSection element not found');
     if (!categoryTitle) console.warn('categoryTitle element not found');
     if (!backButton) console.warn('backButton element not found');
-    if (!mobileMenuButton) console.warn('mobileMenuButton element not found');
+    if (!mobileMenuButton) console.warn('mobileMenuBtn element not found');
     if (!mobileMenu) console.warn('mobileMenu element not found');
 }
 
@@ -260,12 +260,23 @@ function setupEventListeners() {
             });
             console.log('Mobile menu button listener added');
             
-            // Close mobile menu when clicking outside
+            // Close mobile menu when clicking outside - with improved error handling
             document.addEventListener('click', (e) => {
-                if (mobileMenuButton && mobileMenu && 
-                    !mobileMenuButton.contains(e.target) && 
-                    !mobileMenu.contains(e.target)) {
-                    mobileMenu.classList.add('hidden');
+                try {
+                    // Check that all elements still exist and e.target is valid
+                    if (!e || !e.target) return;
+                    if (!mobileMenuButton || !mobileMenu) return;
+                    
+                    // Only proceed if the mobile menu is actually visible
+                    if (mobileMenu.classList.contains('hidden')) return;
+                    
+                    // Check if click is outside menu and button
+                    if (!mobileMenuButton.contains(e.target) && !mobileMenu.contains(e.target)) {
+                        mobileMenu.classList.add('hidden');
+                    }
+                } catch (error) {
+                    console.warn('Error in mobile menu click handler:', error);
+                    // Don't show an error to the user for this non-critical feature
                 }
             });
             console.log('Document click listener for mobile menu added');
