@@ -362,6 +362,9 @@ function getCategoryDescription(category) {
 
 // Show tools for a specific category
 function showTools(category) {
+    console.log('showTools called with category:', category);
+    currentCategory = category; // Set the current category
+    
     const categoryTitle = document.getElementById('categoryTitle');
     const categoryDescription = document.getElementById('categoryDescription');
     const toolsSection = document.getElementById('toolsSection');
@@ -376,6 +379,7 @@ function showTools(category) {
 
     // Hide categories and show tools section
     categoriesSection.style.display = 'none';
+    toolsSection.classList.remove('hidden'); // Remove hidden class
     toolsSection.style.display = 'block';
 
     // Update category title and description
@@ -476,9 +480,16 @@ function createAdContainer() {
 // Render tools grid
 function renderTools() {
     try {
+        console.log('Rendering tools for category:', currentCategory);
+        console.log('Total tools available:', tools.length);
+        
         const filteredTools = tools.filter(tool => {
-            return tool.category === currentCategory;
+            const matchesCategory = tool.category === currentCategory;
+            console.log(`Tool ${tool.name}: category match = ${matchesCategory}`);
+            return matchesCategory;
         });
+
+        console.log('Filtered tools count:', filteredTools.length);
 
         if (!toolsGrid) {
             console.error('Tools grid element not found');
