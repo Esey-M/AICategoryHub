@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Comprehensive guide to AI for Education & E-Learning. Learn about AI-powered educational tools, implementation strategies, and top platforms to enhance teaching and learning experiences.">
+    <meta name="keywords" content="AI education, e-learning, educational technology, adaptive learning, personalized learning, AI tutors, intelligent tutoring systems">
+    <meta property="og:title" content="Complete Guide to AI for Education & E-Learning | AI Category Hub">
+    <meta property="og:description" content="Explore how AI is transforming education and e-learning with our comprehensive guide. Learn implementation strategies and discover top platforms.">
+    <meta property="og:url" content="https://aicategoryhub.net/guides/education.html">
+    <meta property="og:type" content="article">
+    <link rel="canonical" href="https://aicategoryhub.net/guides/education.html">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="icon" href="../favicon.ico" type="image/x-icon">
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#3B82F6',
+                        secondary: '#10B981',
+                    }
+                }
+            }
+        }
+    </script>
+    <title>Complete Guide to AI for Education & E-Learning | AI Category Hub</title>
+</head>
+<body class="min-h-screen bg-gray-50 dark:bg-gray-900 dark:text-white">
+    <!-- Header -->
+    <header class="bg-white dark:bg-gray-800 shadow">
+        <nav class="container mx-auto px-4 py-3 flex items-center justify-between">
+            <a href="../index.html" class="text-xl font-bold text-primary">AI Category Hub</a>
+            
+            <div class="hidden md:flex items-center space-x-6">
+                <a href="../index.html" class="hover:text-primary">Home</a>
+                <a href="../categories.html" class="hover:text-primary">Categories</a>
+                <a href="../about.html" class="hover:text-primary">About</a>
+                <a href="../contact.html" class="hover:text-primary">Contact</a>
+                <button id="darkModeToggle" class="p-2 rounded-full hover:bg-gray-200 dark:hover:bg-gray-700">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 dark:hidden" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z" />
+                    </svg>
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 hidden dark:block" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z" />
+                    </svg>
+                </button>
+            </div>
+            
+            <button id="mobileMenuBtn" class="md:hidden p-2 rounded-md hover:bg-gray-200 dark:hover:bg-gray-700">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+                </svg>
+            </button>
+        </nav>
+        
+        <div id="mobileMenu" class="md:hidden hidden px-4 py-3 bg-white dark:bg-gray-800 shadow-md">
+            <a href="../index.html" class="block py-2 hover:text-primary">Home</a>
+            <a href="../categories.html" class="block py-2 hover:text-primary">Categories</a>
+            <a href="../about.html" class="block py-2 hover:text-primary">About</a>
+            <a href="../contact.html" class="block py-2 hover:text-primary">Contact</a>
+            <button id="mobileDarkModeToggle" class="mt-2 p-2 rounded-full hover:bg-gray-200 dark:hover:bg-gray-700">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 dark:hidden" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z" />
+                </svg>
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 hidden dark:block" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z" />
+                </svg>
+            </button>
+        </div>
+    </header>
+
+    <!-- Breadcrumbs -->
+    <div class="container mx-auto px-4 py-2 text-sm">
+        <a href="../index.html" class="hover:text-primary">Home</a> &gt; 
+        <a href="../categories.html" class="hover:text-primary">Categories</a> &gt; 
+        <span class="text-primary">AI for Education & E-Learning</span>
+    </div>
+
+    <!-- Article Content -->
+    <main class="container mx-auto px-4 py-6 max-w-4xl">
+        <h1 class="text-3xl md:text-4xl font-bold mb-6">Complete Guide to AI for Education & E-Learning</h1>
+        
+        <div class="bg-white dark:bg-gray-800 p-6 rounded-lg shadow-md mb-8">
+            <div class="prose dark:prose-invert max-w-none">
+                <h2 class="text-2xl font-semibold mb-4">Introduction to AI in Education</h2>
+                <p class="mb-4">
+                    Artificial intelligence is revolutionizing education and e-learning by enabling personalized, adaptive, and engaging learning experiences at scale. The global AI in education market is expected to reach $20.2 billion by 2027, growing at a CAGR of 45.1% from 2021. This exponential growth reflects the transformative potential of AI technologies to address long-standing challenges in education, including personalization, accessibility, and effectiveness.
+                </p>
+                <p class="mb-4">
+                    From intelligent tutoring systems and personalized learning paths to automated grading and administrative efficiency, AI is reshaping how educators teach and how students learn. This guide explores the key applications, implementation strategies, and top tools in the AI education landscape, providing a comprehensive overview for educators, administrators, and EdTech professionals.
+                </p>
+            </div>
+        </div>
+
+        <div class="bg-white dark:bg-gray-800 p-6 rounded-lg shadow-md mb-8">
+            <div class="prose dark:prose-invert max-w-none">
+                <h2 class="text-2xl font-semibold mb-4">Key AI Applications in Education</h2>
+                
+                <h3 class="text-xl font-medium mb-3">1. Personalized & Adaptive Learning</h3>
+                <p class="mb-4">
+                    AI-powered platforms can analyze individual student performance, learning styles, and progress to deliver customized learning experiences. These systems adapt content difficulty, pacing, and instructional approaches in real-time based on student interactions, ensuring that each learner receives the right content at the right time. Research indicates that adaptive learning can improve student achievement by 30% or more compared to traditional instruction.
+                </p>
+                
+                <h3 class="text-xl font-medium mb-3">2. Intelligent Tutoring Systems</h3>
+                <p class="mb-4">
+                    AI tutors provide personalized guidance, feedback, and support to students, simulating one-on-one tutoring at scale. These systems can identify knowledge gaps, misconceptions, and learning patterns to deliver targeted interventions when students struggle. Modern AI tutors incorporate natural language processing to engage in conversational interactions, answering questions and explaining concepts in a human-like manner.
+                </p>
+                
+                <h3 class="text-xl font-medium mb-3">3. Automated Assessment & Feedback</h3>
+                <p class="mb-4">
+                    AI systems can automatically grade assignments, essays, and assessments, providing immediate feedback to students and reducing the administrative burden on educators. Beyond simple multiple-choice grading, advanced AI can evaluate written responses for content, coherence, and critical thinking, offering constructive feedback to improve student work. This immediate feedback loop accelerates learning and allows teachers to focus on high-value instructional activities.
+                </p>
+                
+                <h3 class="text-xl font-medium mb-3">4. Educational Content Creation</h3>
+                <p class="mb-4">
+                    AI tools can generate educational content including lesson plans, assessments, summaries, and explanations. These tools help educators create diverse, engaging materials tailored to specific learning objectives and student needs. Additionally, AI can transform existing content into different formats (e.g., converting text to interactive quizzes) or levels of complexity to accommodate diverse learners.
+                </p>
+            </div>
+        </div>
+
+        <div class="bg-white dark:bg-gray-800 p-6 rounded-lg shadow-md mb-8">
+            <div class="prose dark:prose-invert max-w-none">
+                <h2 class="text-2xl font-semibold mb-4">AI Techniques in Education</h2>
+                
+                <h3 class="text-xl font-medium mb-3">Machine Learning for Student Performance Prediction</h3>
+                <p class="mb-4">
+                    Machine learning models analyze historical student data to predict future performance, identifying at-risk students before they fall behind. These early warning systems enable timely interventions, improving retention and success rates. The models consider diverse factors including past performance, engagement metrics, demographic information, and learning behaviors to make accurate predictions.
+                </p>
+                
+                <h3 class="text-xl font-medium mb-3">Natural Language Processing for Content Understanding</h3>
+                <p class="mb-4">
+                    NLP enables AI systems to understand, generate, and interact with educational content in human language. Applications include automated essay grading, language learning assistants, and conversational tutors. Advanced NLP models can evaluate the semantic meaning of student responses, not just matching keywords, providing more nuanced assessment and feedback.
+                </p>
+                
+                <h3 class="text-xl font-medium mb-3">Computer Vision for Interactive Learning</h3>
+                <p class="mb-4">
+                    Computer vision technologies enable immersive, interactive learning experiences through augmented reality (AR) and virtual reality (VR). These systems can recognize physical objects, track student movements, and overlay digital information onto the real world, creating engaging hands-on learning opportunities. In remote learning, computer vision can monitor student attention and engagement, providing valuable feedback to educators.
+                </p>
+                
+                <h3 class="text-xl font-medium mb-3">Knowledge Representation for Adaptive Curriculum</h3>
+                <p class="mb-4">
+                    AI systems use knowledge graphs and semantic networks to represent educational concepts and their relationships. This structured representation enables adaptive curriculum sequencing, ensuring prerequisites are mastered before advancing to more complex topics. Knowledge representation also supports intelligent content recommendation, suggesting relevant resources based on a student's current understanding and learning goals.
+                </p>
+            </div>
+        </div>
+
+        <div class="bg-white dark:bg-gray-800 p-6 rounded-lg shadow-md mb-8">
+            <div class="prose dark:prose-invert max-w-none">
+                <h2 class="text-2xl font-semibold mb-4">Implementation Strategies</h2>
+                
+                <h3 class="text-xl font-medium mb-3">Start with Clear Learning Objectives</h3>
+                <p class="mb-4">
+                    Before implementing AI educational tools, clearly define the learning objectives and problems you're trying to solve. Whether you're addressing achievement gaps, personalizing instruction, or improving administrative efficiency, having specific goals will guide your implementation strategy and help measure success. Align AI initiatives with your institution's broader educational mission and strategic priorities.
+                </p>
+                
+                <h3 class="text-xl font-medium mb-3">Prioritize Teacher Empowerment</h3>
+                <p class="mb-4">
+                    The most successful AI implementations in education augment and empower teachers rather than replacing them. Involve educators in the selection, implementation, and refinement of AI tools, providing adequate training and support. Design workflows that leverage AI for routine tasks while preserving the essential human elements of teaching, including relationship-building, motivation, and ethical guidance.
+                </p>
+                
+                <h3 class="text-xl font-medium mb-3">Ensure Data Privacy & Ethics</h3>
+                <p class="mb-4">
+                    Educational AI systems collect and analyze sensitive student data, raising important privacy and ethical considerations. Implement robust data governance practices, including clear consent processes, data minimization, strong security measures, and compliance with regulations like FERPA and COPPA. Be transparent with stakeholders about how data is used, and establish ethical guidelines for AI implementation that prioritize student well-being.
+                </p>
+                
+                <h3 class="text-xl font-medium mb-3">Adopt an Iterative Approach</h3>
+                <p class="mb-4">
+                    Implement AI educational tools incrementally, starting with pilot programs and expanding based on evidence of effectiveness. Collect and analyze data on student outcomes, engagement, and user experience to continuously refine your approach. This iterative process allows for adjustments based on real-world feedback and minimizes disruption to the learning environment.
+                </p>
+                
+                <h3 class="text-xl font-medium mb-3">Foster Digital Literacy</h3>
+                <p class="mb-4">
+                    As AI becomes more prevalent in education, both educators and students need to develop AI literacy. This includes understanding AI capabilities and limitations, critically evaluating AI-generated content, and using AI tools effectively. Incorporate AI education into professional development for educators and digital literacy curricula for students to prepare them for an AI-infused future.
+                </p>
+            </div>
+        </div>
+
+        <div class="bg-white dark:bg-gray-800 p-6 rounded-lg shadow-md mb-8">
+            <h2 class="text-2xl font-semibold mb-4">Top AI Tools for Education & E-Learning</h2>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <div class="border dark:border-gray-700 rounded-lg p-4 hover:shadow-md transition-shadow">
+                    <div class="flex items-center mb-3">
+                        <img src="https://cdn.noredink.com/assets/favicon-43f429861ffa3b24cefef26643a84fc238cc8e4c82e57e180bdeb3220b872c49.ico" alt="NoRedInk" class="w-10 h-10 mr-3">
+                        <h3 class="text-xl font-semibold">NoRedInk</h3>
+                    </div>
+                    <p class="mb-2">Adaptive writing platform that builds stronger writers through interest-based curriculum, adaptive exercises, and actionable data. Uses AI to personalize grammar and writing instruction.</p>
+                    <a href="https://www.noredink.com/?fpr=aicategoryhub" target="_blank" rel="noopener noreferrer" class="text-primary hover:underline">Learn more →</a>
+                </div>
+                
+                <div class="border dark:border-gray-700 rounded-lg p-4 hover:shadow-md transition-shadow">
+                    <div class="flex items-center mb-3">
+                        <img src="https://www.carnegielearning.com/assets/img/favicon.png" alt="Carnegie Learning" class="w-10 h-10 mr-3">
+                        <h3 class="text-xl font-semibold">Carnegie Learning</h3>
+                    </div>
+                    <p class="mb-2">AI-powered math learning platform that provides personalized learning experiences based on student performance and learning patterns. Combines cognitive science with AI for effective math instruction.</p>
+                    <a href="https://www.carnegielearning.com/" target="_blank" rel="noopener noreferrer" class="text-primary hover:underline">Learn more →</a>
+                </div>
+                
+                <div class="border dark:border-gray-700 rounded-lg p-4 hover:shadow-md transition-shadow">
+                    <div class="flex items-center mb-3">
+                        <img src="https://static.gradescope.com/images/favicon.ico" alt="Gradescope" class="w-10 h-10 mr-3">
+                        <h3 class="text-xl font-semibold">Gradescope</h3>
+                    </div>
+                    <p class="mb-2">AI-assisted grading platform that helps instructors grade paper-based, digital, and code assignments faster and more consistently. Automates routine grading tasks while providing rich feedback.</p>
+                    <a href="https://www.gradescope.com/?fpr=aicategoryhub" target="_blank" rel="noopener noreferrer" class="text-primary hover:underline">Learn more →</a>
+                </div>
+                
+                <div class="border dark:border-gray-700 rounded-lg p-4 hover:shadow-md transition-shadow">
+                    <div class="flex items-center mb-3">
+                        <img src="https://d3lh3kd7bj2evy.cloudfront.net/img/favicon/favicon-32x32.png" alt="Duolingo" class="w-10 h-10 mr-3">
+                        <h3 class="text-xl font-semibold">Duolingo</h3>
+                    </div>
+                    <p class="mb-2">Language learning platform using AI to personalize lessons and optimize learning paths. Adapts to individual proficiency levels and learning patterns while making language acquisition engaging.</p>
+                    <a href="https://www.duolingo.com" target="_blank" rel="noopener noreferrer" class="text-primary hover:underline">Learn more →</a>
+                </div>
+                
+                <div class="border dark:border-gray-700 rounded-lg p-4 hover:shadow-md transition-shadow">
+                    <div class="flex items-center mb-3">
+                        <img src="https://cdn.century.tech/favicon-32x32.png" alt="Century Tech" class="w-10 h-10 mr-3">
+                        <h3 class="text-xl font-semibold">Century Tech</h3>
+                    </div>
+                    <p class="mb-2">AI-powered learning platform that creates personalized learning pathways for each student. Uses cognitive neuroscience and data science to optimize learning and reduce teacher workload.</p>
+                    <a href="https://www.century.tech/?fpr=aicategoryhub" target="_blank" rel="noopener noreferrer" class="text-primary hover:underline">Learn more →</a>
+                </div>
+                
+                <div class="border dark:border-gray-700 rounded-lg p-4 hover:shadow-md transition-shadow">
+                    <div class="flex items-center mb-3">
+                        <img src="https://quillbot.com/favicon.png" alt="QuillBot" class="w-10 h-10 mr-3">
+                        <h3 class="text-xl font-semibold">QuillBot</h3>
+                    </div>
+                    <p class="mb-2">AI writing assistant for students and educators to paraphrase, summarize, and enhance writing. Helps improve writing skills while maintaining academic integrity through proper citation tools.</p>
+                    <a href="https://quillbot.com/?fpr=aicategoryhub" target="_blank" rel="noopener noreferrer" class="text-primary hover:underline">Learn more →</a>
+                </div>
+            </div>
+            
+            <div class="mt-6">
+                <a href="../index.html?category=AI%20for%20Education%20%26%20E-Learning" class="text-primary hover:underline">View all AI Education & E-Learning tools →</a>
+            </div>
+        </div>
+
+        <div class="bg-white dark:bg-gray-800 p-6 rounded-lg shadow-md mb-8">
+            <div class="prose dark:prose-invert max-w-none">
+                <h2 class="text-2xl font-semibold mb-4">Future Trends in AI Education</h2>
+                
+                <h3 class="text-xl font-medium mb-3">Multimodal Learning Systems</h3>
+                <p class="mb-4">
+                    Future AI educational tools will integrate multiple modes of learning (visual, auditory, reading/writing, and kinesthetic) to accommodate diverse learning preferences. These multimodal systems will seamlessly blend text, images, videos, simulations, and interactive activities, adapting not just content difficulty but the presentation format based on individual learning styles and preferences.
+                </p>
+                
+                <h3 class="text-xl font-medium mb-3">Emotional Intelligence in Educational AI</h3>
+                <p class="mb-4">
+                    AI systems are evolving to recognize and respond to students' emotional states, incorporating affective computing to create more empathetic learning experiences. These emotionally intelligent tutors will detect frustration, boredom, or confusion and adjust their approach accordingly, providing encouragement, changing topics, or offering breaks when needed to optimize engagement and learning outcomes.
+                </p>
+                
+                <h3 class="text-xl font-medium mb-3">AI-Enhanced Immersive Learning</h3>
+                <p class="mb-4">
+                    The convergence of AI with virtual reality (VR) and augmented reality (AR) will create increasingly immersive educational experiences. From virtual field trips with AI guides to complex simulations that adapt to student actions, these technologies will enable experiential learning opportunities that were previously impossible due to practical, safety, or cost constraints.
+                </p>
+                
+                <h3 class="text-xl font-medium mb-3">Lifelong Learning Companions</h3>
+                <p class="mb-4">
+                    As AI becomes more sophisticated, we'll see the emergence of AI learning companions that support individuals throughout their educational journey, from early childhood through professional development. These systems will build comprehensive learner profiles over time, providing continuity across educational transitions and personalizing recommendations for courses, resources, and career paths.
+                </p>
+            </div>
+        </div>
+
+        <div class="bg-white dark:bg-gray-800 p-6 rounded-lg shadow-md mb-8">
+            <div class="prose dark:prose-invert max-w-none">
+                <h2 class="text-2xl font-semibold mb-4">Challenges & Considerations</h2>
+                
+                <h3 class="text-xl font-medium mb-3">Digital Equity & Access</h3>
+                <p class="mb-4">
+                    As education becomes increasingly AI-enabled, ensuring equitable access to these technologies is crucial. The digital divide affects not just device and internet access but also digital literacy and support systems. Educational institutions and policymakers must work to ensure that AI benefits all learners, regardless of socioeconomic status, geographic location, or ability level.
+                </p>
+                
+                <h3 class="text-xl font-medium mb-3">Algorithmic Bias & Fairness</h3>
+                <p class="mb-4">
+                    AI systems can perpetuate or amplify existing biases if not carefully designed and monitored. Educational AI must be rigorously tested for fairness across different demographic groups, with ongoing evaluation to identify and address algorithmic bias. Diverse development teams and inclusive data collection strategies are essential to creating equitable AI educational tools.
+                </p>
+                
+                <h3 class="text-xl font-medium mb-3">Human Connection in Learning</h3>
+                <p class="mb-4">
+                    While AI can personalize content delivery and automate administrative tasks, the human elements of education—including motivation, mentorship, and social-emotional development—remain essential. The challenge is balancing technological efficiency with meaningful human connections, using AI to enhance rather than replace the crucial relationships between educators and learners.
+                </p>
+                
+                <h3 class="text-xl font-medium mb-3">Assessment Evolution</h3>
+                <p class="mb-4">
+                    As AI transforms how students learn, traditional assessment methods may become inadequate or misaligned. Educational institutions must evolve assessment practices to evaluate the higher-order thinking skills, creativity, and collaboration that AI-enhanced learning aims to develop. This may include more project-based assessments, portfolio evaluation, and real-world problem-solving tasks.
+                </p>
+            </div>
+        </div>
+
+        <div class="bg-white dark:bg-gray-800 p-6 rounded-lg shadow-md">
+            <div class="prose dark:prose-invert max-w-none">
+                <h2 class="text-2xl font-semibold mb-4">Conclusion</h2>
+                <p class="mb-4">
+                    Artificial intelligence is fundamentally transforming education and e-learning, offering unprecedented opportunities to personalize learning, enhance engagement, and improve outcomes at scale. From adaptive learning platforms and intelligent tutoring systems to automated assessment and content creation, AI technologies are addressing long-standing challenges in education while creating new possibilities for learners and educators alike.
+                </p>
+                <p class="mb-4">
+                    As with any transformative technology, the implementation of AI in education requires thoughtful consideration of ethical implications, equity concerns, and the essential human dimensions of teaching and learning. By addressing these challenges proactively and adopting a balanced approach that leverages AI's strengths while preserving meaningful human connections, we can harness the full potential of AI to create more effective, accessible, and engaging educational experiences.
+                </p>
+                <p>
+                    The future of AI in education will likely be characterized by increasingly sophisticated, multimodal learning environments that adapt not just to students' cognitive needs but also their emotional states and learning preferences. As these technologies continue to evolve, they promise to support truly personalized lifelong learning journeys, empowering individuals to develop the knowledge, skills, and competencies needed to thrive in a rapidly changing world.
+                </p>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-white dark:bg-gray-800 shadow mt-12 py-6">
+        <div class="container mx-auto px-4">
+            <div class="flex flex-col md:flex-row justify-between items-center">
+                <div class="mb-4 md:mb-0">
+                    <p>&copy; 2024 AI Category Hub. All rights reserved.</p>
+                </div>
+                <div class="flex space-x-4">
+                    <a href="../about.html" class="hover:text-primary">About</a>
+                    <a href="../contact.html" class="hover:text-primary">Contact</a>
+                    <a href="../privacy.html" class="hover:text-primary">Privacy Policy</a>
+                    <a href="../terms.html" class="hover:text-primary">Terms of Service</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile menu toggle
+        document.getElementById('mobileMenuBtn').addEventListener('click', function() {
+            document.getElementById('mobileMenu').classList.toggle('hidden');
+        });
+        
+        // Dark mode toggle
+        function setDarkMode(isDark) {
+            if (isDark) {
+                document.documentElement.classList.add('dark');
+                localStorage.setItem('darkMode', 'enabled');
+            } else {
+                document.documentElement.classList.remove('dark');
+                localStorage.setItem('darkMode', 'disabled');
+            }
+        }
+        
+        // Check for saved dark mode preference
+        if (localStorage.getItem('darkMode') === 'enabled' || 
+            (localStorage.getItem('darkMode') === null && 
+             window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+            setDarkMode(true);
+        }
+        
+        // Dark mode toggle event listeners
+        document.getElementById('darkModeToggle').addEventListener('click', function() {
+            setDarkMode(!document.documentElement.classList.contains('dark'));
+        });
+        
+        document.getElementById('mobileDarkModeToggle').addEventListener('click', function() {
+            setDarkMode(!document.documentElement.classList.contains('dark'));
+        });
+    </script>
+</body>
+</html> 
