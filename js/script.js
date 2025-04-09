@@ -529,7 +529,7 @@ function renderTools() {
                                 <span class="text-sm text-gray-500 dark:text-gray-400">AI Tool</span>
                                 <a href="${tool.link}" target="_blank" rel="noopener noreferrer" 
                                    class="text-primary hover:underline">
-                                    Visit Tool →
+                                    Use Tool →
                                 </a>
                             </div>
                         </div>
@@ -542,7 +542,7 @@ function renderTools() {
                                 <ins class="adsbygoogle"
                                      style="display:block"
                                      data-ad-format="horizontal"
-                                     data-ad-client="ca-pub-7154813783212995"
+                                     data-ad-client=""
                                      data-ad-slot="YOUR_AD_SLOT"></ins>
                             </div>
                         </div>
