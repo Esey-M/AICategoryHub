@@ -1,5 +1,6 @@
-// Dark mode functionality
+// Dark mode and mobile menu functionality
 document.addEventListener('DOMContentLoaded', function() {
+    // Dark Mode Toggle
     const darkModeToggle = document.getElementById('darkModeToggle');
     
     if (darkModeToggle) {
@@ -33,5 +34,15 @@ document.addEventListener('DOMContentLoaded', function() {
                 setDarkMode(!document.documentElement.classList.contains('dark'));
             });
         }
+    }
+    
+    // Mobile Menu Toggle
+    const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+    const mobileMenu = document.getElementById('mobileMenu');
+    
+    if (mobileMenuBtn && mobileMenu) {
+        mobileMenuBtn.addEventListener('click', function() {
+            mobileMenu.classList.toggle('hidden');
+        });
     }
 }); 
