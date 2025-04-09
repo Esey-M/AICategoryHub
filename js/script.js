@@ -328,16 +328,40 @@ function renderCategories() {
         "Ethical AI & Bias Detection": "fas fa-balance-scale"
     };
     
+    const iconColors = {
+        "Video Editing & Generation": "#ef4444",
+        "Chatbots & Conversational AI": "#3b82f6",
+        "Image Generation & Editing": "#10b981",
+        "Text Generation & Writing Assistance": "#8b5cf6",
+        "Speech Recognition & Synthesis": "#f59e0b",
+        "Code Generation & Development Assistance": "#6366f1",
+        "Marketing & SEO": "#ec4899",
+        "Data Analysis & Visualization": "#14b8a6",
+        "Predictive Analytics & Forecasting": "#84cc16",
+        "Virtual Reality & Augmented Reality": "#9333ea",
+        "Healthcare & Medicine": "#ef4444",
+        "Voice Assistants & Automation": "#0ea5e9",
+        "Robotics & Automation": "#3b82f6",
+        "Finance & Trading": "#f59e0b",
+        "Sentiment Analysis & Opinion Mining": "#ec4899",
+        "Language Translation & Localization": "#6366f1",
+        "Facial Recognition & Computer Vision": "#10b981",
+        "AI for Education & E-Learning": "#3b82f6",
+        "AI for Cybersecurity & Fraud Detection": "#ef4444",
+        "Ethical AI & Bias Detection": "#8b5cf6"
+    };
+    
     const categoryCards = categories.map(category => {
         const toolCount = tools.filter(tool => tool.category === category).length;
         const iconClass = categoryIcons[category] || "fas fa-cube";
+        const iconColor = iconColors[category] || "#3b82f6";
         
         return `
             <div class="category-card bg-white dark:bg-gray-800 rounded-lg shadow-md overflow-hidden border border-gray-200 dark:border-gray-700 cursor-pointer hover:shadow-lg transition-shadow duration-200"
                  data-category="${category}">
                 <div class="p-6">
-                    <div class="text-center mb-4">
-                        <i class="${iconClass} fa-3x text-primary"></i>
+                    <div class="text-center mb-4" style="min-height: 60px; display: flex; align-items: center; justify-content: center;">
+                        <i class="${iconClass} fa-3x" style="color: ${iconColor}; font-size: 48px;"></i>
                     </div>
                     <h3 class="text-xl font-semibold text-gray-900 dark:text-white mb-2">${category}</h3>
                     <p class="text-gray-600 dark:text-gray-300 mb-4">${getCategoryDescription(category)}</p>

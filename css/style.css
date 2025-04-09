@@ -241,6 +241,65 @@ body {
 .fa-3x {
     color: #3b82f6;
     margin-bottom: 1rem;
+    font-size: 3em;
+}
+
+.text-primary {
+    color: #3b82f6 !important;
+}
+
+/* Additional icon styles for specific icons */
+.fa-video, .fa-film {
+    color: #ef4444;
+}
+
+.fa-robot {
+    color: #3b82f6;
+}
+
+.fa-image {
+    color: #10b981;
+}
+
+.fa-pen-fancy {
+    color: #8b5cf6;
+}
+
+.fa-microphone {
+    color: #f59e0b;
+}
+
+.fa-code {
+    color: #6366f1;
+}
+
+.fa-bullhorn {
+    color: #ec4899;
+}
+
+.fa-chart-bar, .fa-chart-column {
+    color: #14b8a6;
+}
+
+.fa-chart-line {
+    color: #84cc16;
+}
+
+.fa-vr-cardboard {
+    color: #9333ea;
+}
+
+.fa-heartbeat, .fa-heart-pulse {
+    color: #ef4444;
+}
+
+.fa-microphone-alt {
+    color: #0ea5e9;
+}
+
+.dark .fa-3x {
+    /* Make icons brighter in dark mode */
+    filter: brightness(1.2);
 }
 
 /* Responsive Adjustments */
