@@ -1,4 +1,4 @@
-/* Custom styles to complement Tailwind CSS */
+/* Custom styles to complement Tailwind CSS and Bootstrap */
 
 /* Tool Card Hover Effects */
 .tool-card {
@@ -138,6 +138,56 @@ body {
     line-height: 1.6;
 }
 
+/* Bootstrap Dark Mode Support */
+.dark {
+    background-color: #111827;
+    color: #f9fafb;
+}
+
+.dark .bg-light {
+    background-color: #1f2937 !important;
+}
+
+.dark .bg-white {
+    background-color: #1f2937 !important;
+}
+
+.dark .navbar {
+    background-color: #111827 !important;
+}
+
+.dark .navbar-light .navbar-brand,
+.dark .navbar-light .nav-link {
+    color: #f9fafb !important;
+}
+
+.dark .card {
+    background-color: #1f2937;
+    border-color: #374151;
+}
+
+.dark .card-title {
+    color: #f9fafb;
+}
+
+.dark .card-text {
+    color: #d1d5db;
+}
+
+.dark .text-gray-600 {
+    color: #9ca3af !important;
+}
+
+.dark .btn-primary {
+    background-color: #3b82f6;
+    border-color: #3b82f6;
+}
+
+.dark .btn-primary:hover {
+    background-color: #2563eb;
+    border-color: #2563eb;
+}
+
 /* Card Styles */
 .hover-card {
     transition: transform 0.3s ease, box-shadow 0.3s ease;
@@ -249,93 +299,82 @@ footer a:hover {
     color: #3b82f6;
 }
 
-/* Dark Mode Styles */
-@media (prefers-color-scheme: dark) {
-    body {
-        background-color: #1a202c;
-        color: #e2e8f0;
-    }
-
-    .card {
-        background-color: #2d3748;
-    }
-
-    .card-title {
-        color: #e2e8f0;
-    }
-
-    .card-text {
-        color: #a0aec0;
-    }
-
-    .navbar {
-        background-color: #2d3748;
-    }
-
-    .navbar-brand {
-        color: #e2e8f0;
-    }
-
-    .nav-link {
-        color: #a0aec0;
-    }
-
-    .nav-link:hover {
-        color: #60a5fa;
-    }
-
-    footer {
-        background-color: #2d3748;
-    }
-
-    footer h5 {
-        color: #e2e8f0;
-    }
-
-    footer a {
-        color: #a0aec0;
-    }
-
-    footer a:hover {
-        color: #60a5fa;
-    }
+/* Ensure dark mode for Bootstrap */
+.dark footer {
+    background-color: #111827 !important;
+    border-top: 1px solid #374151;
 }
 
+.dark footer h5 {
+    color: #f9fafb;
+}
+
+.dark footer a {
+    color: #d1d5db;
+}
+
+.dark footer a:hover {
+    color: #3b82f6;
+}
+
+/* Back Button Styles */
 #backButton {
-    display: inline-block;
-    cursor: pointer;
-    padding: 0.5rem 1rem;
-    background-color: #3B82F6;
+    background-color: #3b82f6;
     color: white;
+    padding: 0.5rem 1.25rem;
     border-radius: 0.375rem;
     font-weight: 500;
-    transition: background-color 0.2s;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
 }
 
 #backButton:hover {
-    background-color: #2563EB;
+    background-color: #2563eb;
 }
 
+/* Guide Link Styles */
 #guideLink {
-    color: #3B82F6;
+    color: #3b82f6;
+    font-weight: 500;
     text-decoration: none;
-    cursor: pointer;
 }
 
 #guideLink:hover {
     text-decoration: underline;
 }
 
+/* Guide Container Styles */
 .guide-container {
-    margin-bottom: 2rem;
-    padding: 1rem;
-    background-color: #EFF6FF;
+    background-color: #f3f4f6;
     border-radius: 0.5rem;
-    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
+    padding: 1.5rem;
+    margin-bottom: 2rem;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
 }
 
-@media (prefers-color-scheme: dark) {
-    .guide-container {
-        background-color: #1E3A8A;
-    }
+.dark .guide-container {
+    background-color: #1f2937;
+    border: 1px solid #374151;
+}
+
+/* Dark Button Toggle */
+#darkModeToggle {
+    color: #4a5568;
+    transition: color 0.3s ease;
+}
+
+.dark #darkModeToggle {
+    color: #f9fafb;
+}
+
+#darkModeToggle:hover {
+    color: #3b82f6;
+}
+
+#darkModeToggle:focus {
+    box-shadow: none;
+}
+
+.btn-link {
+    text-decoration: none;
 } 
