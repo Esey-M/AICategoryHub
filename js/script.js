@@ -476,7 +476,21 @@ function showTools(category) {
             "Text Generation & Writing Assistance": "text-generation",
             "Speech Recognition & Synthesis": "speech-recognition",
             "Code Generation & Development Assistance": "code-generation",
-            "Video Editing & Generation": "video-editing"
+            "Video Editing & Generation": "video-editing",
+            "Marketing & SEO": "marketing-seo",
+            "Data Analysis & Visualization": "data-analysis",
+            "Predictive Analytics & Forecasting": "predictive-analytics",
+            "Virtual Reality & Augmented Reality": "virtual-reality",
+            "Healthcare & Medicine": "healthcare-medicine",
+            "Voice Assistants & Automation": "voice-assistants",
+            "Robotics & Automation": "robotics-automation",
+            "Finance & Trading": "finance-trading",
+            "Sentiment Analysis & Opinion Mining": "sentiment-analysis",
+            "Language Translation & Localization": "language-translation",
+            "Facial Recognition & Computer Vision": "facial-recognition",
+            "AI for Education & E-Learning": "education",
+            "AI for Cybersecurity & Fraud Detection": "cybersecurity",
+            "Ethical AI & Bias Detection": "ethical-ai"
         };
 
         const guideSlug = guideMap[category];
