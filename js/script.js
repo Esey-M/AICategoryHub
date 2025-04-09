@@ -173,11 +173,22 @@ async function fetchTools() {
         tools = data.tools;
         categories = data.categories || [];
         
+        // Reorder categories to make "Video Editing & Generation" appear first
+        if (categories.includes("Video Editing & Generation")) {
+            // Remove the category from its current position
+            categories = categories.filter(cat => cat !== "Video Editing & Generation");
+            // Add it at the beginning
+            categories.unshift("Video Editing & Generation");
+        }
+        
         console.log(`Successfully loaded ${tools.length} tools and ${categories.length} categories`);
         
         // Save to localStorage as a backup for future loads
         try {
-            localStorage.setItem('toolsData', JSON.stringify(data));
+            localStorage.setItem('toolsData', JSON.stringify({
+                tools: tools,
+                categories: categories
+            }));
             console.log('Saved tools data to localStorage');
         } catch (storageError) {
             console.warn('Failed to save tools data to localStorage:', storageError);
@@ -193,6 +204,15 @@ async function fetchTools() {
                 const data = JSON.parse(cachedData);
                 tools = data.tools;
                 categories = data.categories || [];
+                
+                // Reorder categories to make "Video Editing & Generation" appear first
+                if (categories.includes("Video Editing & Generation")) {
+                    // Remove the category from its current position
+                    categories = categories.filter(cat => cat !== "Video Editing & Generation");
+                    // Add it at the beginning
+                    categories.unshift("Video Editing & Generation");
+                }
+                
                 console.log(`Loaded ${tools.length} tools and ${categories.length} categories from localStorage`);
                 return;
             }
