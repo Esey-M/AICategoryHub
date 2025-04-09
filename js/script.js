@@ -305,12 +305,40 @@ function setupEventListeners() {
 
 // Render category cards
 function renderCategories() {
+    const categoryIcons = {
+        "Video Editing & Generation": "fas fa-video",
+        "Chatbots & Conversational AI": "fas fa-robot",
+        "Image Generation & Editing": "fas fa-image",
+        "Text Generation & Writing Assistance": "fas fa-pen-fancy",
+        "Speech Recognition & Synthesis": "fas fa-microphone",
+        "Code Generation & Development Assistance": "fas fa-code",
+        "Marketing & SEO": "fas fa-bullhorn",
+        "Data Analysis & Visualization": "fas fa-chart-bar",
+        "Predictive Analytics & Forecasting": "fas fa-chart-line",
+        "Virtual Reality & Augmented Reality": "fas fa-vr-cardboard",
+        "Healthcare & Medicine": "fas fa-heartbeat",
+        "Voice Assistants & Automation": "fas fa-microphone-alt",
+        "Robotics & Automation": "fas fa-robot",
+        "Finance & Trading": "fas fa-coins",
+        "Sentiment Analysis & Opinion Mining": "fas fa-smile",
+        "Language Translation & Localization": "fas fa-language",
+        "Facial Recognition & Computer Vision": "fas fa-eye",
+        "AI for Education & E-Learning": "fas fa-graduation-cap",
+        "AI for Cybersecurity & Fraud Detection": "fas fa-shield-alt",
+        "Ethical AI & Bias Detection": "fas fa-balance-scale"
+    };
+    
     const categoryCards = categories.map(category => {
         const toolCount = tools.filter(tool => tool.category === category).length;
+        const iconClass = categoryIcons[category] || "fas fa-cube";
+        
         return `
             <div class="category-card bg-white dark:bg-gray-800 rounded-lg shadow-md overflow-hidden border border-gray-200 dark:border-gray-700 cursor-pointer hover:shadow-lg transition-shadow duration-200"
                  data-category="${category}">
                 <div class="p-6">
+                    <div class="text-center mb-4">
+                        <i class="${iconClass} fa-3x text-primary"></i>
+                    </div>
                     <h3 class="text-xl font-semibold text-gray-900 dark:text-white mb-2">${category}</h3>
                     <p class="text-gray-600 dark:text-gray-300 mb-4">${getCategoryDescription(category)}</p>
                     <div class="flex justify-between items-center">
