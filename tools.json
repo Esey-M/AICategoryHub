@@ -504,22 +504,32 @@
       "image": "https://whatthediff.ai/images/favicon.png",
       "link": "https://whatthediff.ai/?ref=aicategoryhub"
     },
-    {
-      "id": "37",
-      "name": "Synthesia",
-      "description": "AI-powered platform for creating videos with avatars",
+     {
+      "id": "537",
+      "name": "InVideo",
+      "description": "Online video editor with templates and AI-assisted editing tools",
       "category": "Video Editing & Generation",
-      "image": "https://assets-global.website-files.com/61dc0796f359b6145bc06ea6/6526beae7e98bafe9e9edc40_synthesia-logo-square.png",
-      "link": "https://www.synthesia.io/partners/affiliate?via=aicategoryhub"
+      "image": "https://invideo.io/favicon.ico",
+      "link": "https://invideo.sjv.io/c/6165094/883681/12258"
     },
-    {
-      "id": "434",
-      "name": "D-ID",
-      "description": "AI technology that creates talking avatars from still photos",
+     {
+      "id": "541",
+      "name": "Fliki",
+      "description": "AI-powered text to video generator with natural voices",
       "category": "Video Editing & Generation",
-      "image": "https://www.d-id.com/wp-content/uploads/2023/05/D-ID-favicon.png",
-      "link": "https://www.d-id.com/?ref=aicategoryhub"
+      "image": "https://fliki.ai/favicon.ico",
+      "link": "https://fliki.ai?via=simon-mhretab"
     },
+
+     {
+      "id": "544",
+      "name": "Elai.io",
+      "description": "AI video generation platform from text with digital human presenters",
+      "category": "Video Editing & Generation",
+      "image": "https://elai.io/favicon.ico",
+      "link": "https://elai.io/?via=simon-mhretab"
+    },
+    
     {
       "id": "435",
       "name": "Descript",
@@ -528,22 +538,8 @@
       "image": "https://assets-global.website-files.com/616a981883ab8f6b9e32843c/6193c301cd5e195f25eb9b3d_Descript-favicon-2021-72x72.png",
       "link": "https://www.descript.com/?lmref=aicategoryhub"
     },
-    {
-      "id": "537",
-      "name": "InVideo",
-      "description": "Online video editor with templates and AI-assisted editing tools",
-      "category": "Video Editing & Generation",
-      "image": "https://invideo.io/favicon.ico",
-      "link": "https://invideo.sjv.io/c/6165094/883681/12258"
-    },
-    {
-      "id": "538",
-      "name": "Runway",
-      "description": "AI-powered creative tools for video editing and generation",
-      "category": "Video Editing & Generation",
-      "image": "https://runwayml.com/icons/icon-512x512.png",
-      "link": "https://runwayml.com/affiliates?ref=aicategoryhub"
-    },
+  
+  
     {
       "id": "539",
       "name": "Pictory",
@@ -552,22 +548,8 @@
       "image": "https://pictory.ai/wp-content/uploads/2022/06/pictory-favicon-300x300.png",
       "link": "https://pictory.ai/?ref=aicategoryhub"
     },
-    {
-      "id": "540",
-      "name": "Lumen5",
-      "description": "Video maker that turns text into engaging videos",
-      "category": "Video Editing & Generation",
-      "image": "https://storage.googleapis.com/lumen5-site-images/favicon/favicon-96x96.png",
-      "link": "https://lumen5.com/partner/?ref=aicategoryhub"
-    },
-    {
-      "id": "541",
-      "name": "Fliki",
-      "description": "AI-powered text to video generator with natural voices",
-      "category": "Video Editing & Generation",
-      "image": "https://fliki.ai/favicon.ico",
-      "link": "https://fliki.ai?via=simon-mhretab"
-    },
+
+   
     {
       "id": "542",
       "name": "Kapwing",
@@ -576,46 +558,7 @@
       "image": "https://cdn-useast.kapwing.com/favicon.ico",
       "link": "https://www.kapwing.com/affiliates?ref=aicategoryhub"
     },
-    {
-      "id": "543",
-      "name": "Wisecut",
-      "description": "Automatic video editing software with AI assistant",
-      "category": "Video Editing & Generation",
-      "image": "https://wisecut.video/favicon.ico",
-      "link": "https://www.wisecut.video/affiliate?ref=aicategoryhub"
-    },
-    {
-      "id": "544",
-      "name": "Elai.io",
-      "description": "AI video generation platform from text with digital human presenters",
-      "category": "Video Editing & Generation",
-      "image": "https://elai.io/favicon.ico",
-      "link": "https://elai.io/?via=simon-mhretab"
-    },
-    {
-      "id": "545",
-      "name": "VEED.IO",
-      "description": "Online video editor with subtitles and effects",
-      "category": "Video Editing & Generation",
-      "image": "https://www.veed.io/favicon.ico",
-      "link": "https://www.veed.io/affiliates?ref=aicategoryhub"
-    },
-    {
-      "id": "546",
-      "name": "Filmora",
-      "description": "Easy-to-use video editor with AI effects and transitions",
-      "category": "Video Editing & Generation",
-      "image": "https://filmora.wondershare.com/favicon.ico",
-      "link": "https://filmora.wondershare.com/affiliate-program.html?ref=aicategoryhub"
-    },
-    {
-      "id": "547",
-      "name": "Magisto",
-      "description": "AI video editor that creates professional videos automatically",
-      "category": "Video Editing & Generation",
-      "image": "https://www.magisto.com/favicon.ico",
-      "link": "https://www.magisto.com/affiliate?ref=aicategoryhub"
-    },
+   
     {
       "id": "548",
       "name": "Steve AI",
@@ -624,14 +567,7 @@
       "image": "https://www.steve.ai/favicon.ico",
       "link": "https://www.steve.ai/?ref=aicategoryhub"
     },
-    {
-      "id": "549",
-      "name": "Flexclip",
-      "description": "Online video maker with templates and stock media",
-      "category": "Video Editing & Generation",
-      "image": "https://assets-global.website-files.com/5f6bc60e665f544c3a1e52a7/5f6bc60e665f54270a1e5319_logo-mark.svg",
-      "link": "https://www.flexclip.com/affiliate.html?ref=aicategoryhub"
-    },
+   
     {
       "id": "550",
       "name": "Moovly",
@@ -639,22 +575,6 @@
       "category": "Video Editing & Generation",
       "image": "https://www.moovly.com/wp-content/uploads/2023/03/cropped-favicon-150x150.png",
       "link": "https://www.moovly.com/affiliate-program?ref=aicategoryhub"
-    },
-    {
-      "id": "551",
-      "name": "Clipchamp",
-      "description": "Online video editor acquired by Microsoft with free version",
-      "category": "Video Editing & Generation",
-      "image": "https://clipchamp.com/favicon.ico",
-      "link": "https://clipchamp.com/en/affiliate-program/?ref=aicategoryhub"
-    },
-    {
-      "id": "552",
-      "name": "Animaker",
-      "description": "DIY video animation software with character builder",
-      "category": "Video Editing & Generation",
-      "image": "https://www.animaker.com/favicon.ico",
-      "link": "https://www.animaker.com/affiliate-program?ref=aicategoryhub"
     },
     {
       "id": "553",
