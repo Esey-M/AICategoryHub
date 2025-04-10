@@ -53,7 +53,62 @@ async function init() {
             setupEventListeners();
             renderCategories();
             
-            // Check URL for category parameter
+            // Check for direct navigation via 404.html redirect first
+            const requestedCategory = sessionStorage.getItem('requested_category');
+            if (requestedCategory) {
+                // Clear it so we don't reuse it on refresh
+                sessionStorage.removeItem('requested_category');
+                
+                // Find category matching the slug
+                const categoryMap = {
+                    "chatbots-conversational-ai": "Chatbots & Conversational AI",
+                    "image-generation-editing": "Image Generation & Editing",
+                    "text-generation-writing-assistance": "Text Generation & Writing Assistance",
+                    "speech-recognition-synthesis": "Speech Recognition & Synthesis",
+                    "code-generation-development-assistance": "Code Generation & Development Assistance",
+                    "video-editing-generation": "Video Editing & Generation",
+                    "marketing-seo": "Marketing & SEO",
+                    "data-analysis-visualization": "Data Analysis & Visualization",
+                    "predictive-analytics-forecasting": "Predictive Analytics & Forecasting",
+                    "virtual-reality-augmented-reality": "Virtual Reality & Augmented Reality",
+                    "healthcare-medicine": "Healthcare & Medicine",
+                    "voice-assistants-automation": "Voice Assistants & Automation",
+                    "robotics-automation": "Robotics & Automation",
+                    "finance-trading": "Finance & Trading",
+                    "sentiment-analysis-opinion-mining": "Sentiment Analysis & Opinion Mining",
+                    "language-translation-localization": "Language Translation & Localization",
+                    "facial-recognition-computer-vision": "Facial Recognition & Computer Vision",
+                    "ai-for-education-e-learning": "AI for Education & E-Learning",
+                    "ai-for-cybersecurity-fraud-detection": "AI for Cybersecurity & Fraud Detection",
+                    "ethical-ai-bias-detection": "Ethical AI & Bias Detection"
+                };
+                
+                // Try exact match first
+                let matchingCategory = categoryMap[requestedCategory];
+                
+                // If not found, try normalizing the slug by replacing multiple dashes with single dash
+                if (!matchingCategory) {
+                    const normalizedSlug = requestedCategory.replace(/-+/g, '-');
+                    
+                    // Find a key in categoryMap where the normalized key matches the normalized slug
+                    const normalizedCategoryMap = {};
+                    for (const [key, value] of Object.entries(categoryMap)) {
+                        normalizedCategoryMap[key.replace(/-+/g, '-')] = value;
+                    }
+                    
+                    matchingCategory = normalizedCategoryMap[normalizedSlug];
+                }
+                
+                if (matchingCategory && categories.includes(matchingCategory)) {
+                    console.log(`Loading category from sessionStorage: ${matchingCategory}`);
+                    setTimeout(() => showTools(matchingCategory), 100); // small delay to ensure UI is ready
+                    return;
+                } else {
+                    console.warn(`Category slug in sessionStorage not found: ${requestedCategory}`);
+                }
+            }
+            
+            // If no direct navigation, check URL for category parameter
             checkUrlForCategory();
             
             generateStructuredData(tools);
