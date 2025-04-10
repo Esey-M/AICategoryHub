@@ -117,38 +117,86 @@
     </url>
     <!-- Category URLs -->
     <url>
-        <loc>https://aicategoryhub.net/?category=Chatbots%20%26%20Conversational%20AI</loc>
-        <lastmod>2024-03-14T00:00:00+00:00</lastmod>
+        <loc>https://aicategoryhub.net/category/chatbots-conversational-ai</loc>
+        <lastmod>2025-04-10</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.8</priority>
     </url>
     <url>
-        <loc>https://aicategoryhub.net/?category=Image%20Generation%20%26%20Editing</loc>
-        <lastmod>2024-03-14T00:00:00+00:00</lastmod>
+        <loc>https://aicategoryhub.net/category/image-generation-editing</loc>
+        <lastmod>2025-04-10</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.8</priority>
     </url>
     <url>
-        <loc>https://aicategoryhub.net/?category=Text%20Generation%20%26%20Writing%20Assistance</loc>
-        <lastmod>2024-03-14T00:00:00+00:00</lastmod>
+        <loc>https://aicategoryhub.net/category/text-generation-writing-assistance</loc>
+        <lastmod>2025-04-10</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.8</priority>
     </url>
     <url>
-        <loc>https://aicategoryhub.net/?category=Speech%20Recognition%20%26%20Synthesis</loc>
-        <lastmod>2024-03-14T00:00:00+00:00</lastmod>
+        <loc>https://aicategoryhub.net/category/speech-recognition-synthesis</loc>
+        <lastmod>2025-04-10</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.8</priority>
     </url>
     <url>
-        <loc>https://aicategoryhub.net/?category=Code%20Generation%20%26%20Development%20Assistance</loc>
-        <lastmod>2024-03-14T00:00:00+00:00</lastmod>
+        <loc>https://aicategoryhub.net/category/code-generation-development-assistance</loc>
+        <lastmod>2025-04-10</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.8</priority>
     </url>
     <url>
-        <loc>https://aicategoryhub.net/?category=Marketing%20%26%20SEO</loc>
-        <lastmod>2024-03-14T00:00:00+00:00</lastmod>
+        <loc>https://aicategoryhub.net/category/video-editing-generation</loc>
+        <lastmod>2025-04-10</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>https://aicategoryhub.net/category/marketing-seo</loc>
+        <lastmod>2025-04-10</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>https://aicategoryhub.net/category/data-analysis-visualization</loc>
+        <lastmod>2025-04-10</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>https://aicategoryhub.net/category/predictive-analytics-forecasting</loc>
+        <lastmod>2025-04-10</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>https://aicategoryhub.net/category/virtual-reality-augmented-reality</loc>
+        <lastmod>2025-04-10</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>https://aicategoryhub.net/category/healthcare-medicine</loc>
+        <lastmod>2025-04-10</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>https://aicategoryhub.net/category/voice-assistants-automation</loc>
+        <lastmod>2025-04-10</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>https://aicategoryhub.net/category/robotics-automation</loc>
+        <lastmod>2025-04-10</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>https://aicategoryhub.net/category/finance-trading</loc>
+        <lastmod>2025-04-10</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.8</priority>
     </url>

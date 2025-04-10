@@ -1,7 +1,73 @@
+# Enable URL rewriting
+RewriteEngine On
+
+# Set the base directory for rewrites
+RewriteBase /
+
+# Redirect old category URLs to new format
+RewriteCond %{QUERY_STRING} ^category=([^&]+)$ [NC]
+RewriteRule ^index\.html$ /category/%1? [R=301,L]
+
+# Don't rewrite requests for actual files or directories
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+
+# Handle /category/* route - rewrite to index.html
+RewriteRule ^category/([a-z0-9-]+)/?$ index.html [L]
+
+# Optimize caching
 <IfModule mod_expires.c>
   ExpiresActive On
-  ExpiresByType image/jpg "access plus 1 year"
-  ExpiresByType image/webp "access plus 1 year"
-  ExpiresByType text/css "access plus 1 month"
-  ExpiresByType application/javascript "access plus 1 month"
+  
+  # Cache HTML for 1 hour
+  ExpiresByType text/html "access plus 1 hour"
+  
+  # Cache CSS for 1 week
+  ExpiresByType text/css "access plus 1 week"
+  
+  # Cache JavaScript for 1 week
+  ExpiresByType application/javascript "access plus 1 week"
+  
+  # Cache images for 1 month
+  ExpiresByType image/webp "access plus 1 month"
+  ExpiresByType image/jpeg "access plus 1 month"
+  ExpiresByType image/png "access plus 1 month"
+  ExpiresByType image/svg+xml "access plus 1 month"
+  ExpiresByType image/gif "access plus 1 month"
+  
+  # Cache fonts for 1 year
+  ExpiresByType font/woff "access plus 1 year"
+  ExpiresByType font/woff2 "access plus 1 year"
+  ExpiresByType application/font-woff "access plus 1 year"
+  ExpiresByType application/font-woff2 "access plus 1 year"
+  
+  # Cache favicon for 1 week
+  ExpiresByType image/x-icon "access plus 1 week"
+</IfModule>
+
+# Compress files with gzip
+<IfModule mod_deflate.c>
+  AddOutputFilterByType DEFLATE text/html
+  AddOutputFilterByType DEFLATE text/css
+  AddOutputFilterByType DEFLATE application/javascript
+  AddOutputFilterByType DEFLATE application/x-javascript
+  AddOutputFilterByType DEFLATE text/plain
+  AddOutputFilterByType DEFLATE text/xml
+  AddOutputFilterByType DEFLATE application/xml
+  AddOutputFilterByType DEFLATE application/json
+  AddOutputFilterByType DEFLATE image/svg+xml
+  AddOutputFilterByType DEFLATE font/woff
+  AddOutputFilterByType DEFLATE font/woff2
+  AddOutputFilterByType DEFLATE application/font-woff
+  AddOutputFilterByType DEFLATE application/font-woff2
+</IfModule>
+
+# Add security headers
+<IfModule mod_headers.c>
+  # Security headers
+  Header set X-Content-Type-Options "nosniff"
+  Header set X-XSS-Protection "1; mode=block"
+  Header set X-Frame-Options "SAMEORIGIN"
+  Header set Referrer-Policy "strict-origin-when-cross-origin"
+  Header set Permissions-Policy "geolocation=(), microphone=(), camera=()"
 </IfModule>

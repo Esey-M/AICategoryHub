@@ -112,8 +112,50 @@ function initializeDOMElements() {
     if (!mobileMenu) console.warn('mobileMenu element not found');
 }
 
-// Check URL for category parameter
+// Check URL for category parameter or path
 function checkUrlForCategory() {
+    // First check if we're on a /category/slug-name path
+    const path = window.location.pathname;
+    const categoryPathMatch = path.match(/\/category\/([a-z0-9-]+)/i);
+    
+    if (categoryPathMatch) {
+        const categorySlug = categoryPathMatch[1];
+        // Convert slug back to category name
+        const categoryMap = {
+            "chatbots-conversational-ai": "Chatbots & Conversational AI",
+            "image-generation-editing": "Image Generation & Editing",
+            "text-generation-writing-assistance": "Text Generation & Writing Assistance",
+            "speech-recognition-synthesis": "Speech Recognition & Synthesis",
+            "code-generation-development-assistance": "Code Generation & Development Assistance",
+            "video-editing-generation": "Video Editing & Generation",
+            "marketing-seo": "Marketing & SEO",
+            "data-analysis-visualization": "Data Analysis & Visualization",
+            "predictive-analytics-forecasting": "Predictive Analytics & Forecasting",
+            "virtual-reality-augmented-reality": "Virtual Reality & Augmented Reality",
+            "healthcare-medicine": "Healthcare & Medicine",
+            "voice-assistants-automation": "Voice Assistants & Automation",
+            "robotics-automation": "Robotics & Automation",
+            "finance-trading": "Finance & Trading",
+            "sentiment-analysis-opinion-mining": "Sentiment Analysis & Opinion Mining",
+            "language-translation-localization": "Language Translation & Localization",
+            "facial-recognition-computer-vision": "Facial Recognition & Computer Vision",
+            "ai-for-education-e-learning": "AI for Education & E-Learning",
+            "ai-for-cybersecurity-fraud-detection": "AI for Cybersecurity & Fraud Detection",
+            "ethical-ai-bias-detection": "Ethical AI & Bias Detection"
+        };
+        
+        const matchingCategory = categoryMap[categorySlug];
+        
+        if (matchingCategory && categories.includes(matchingCategory)) {
+            console.log(`Loading category from URL path: ${matchingCategory}`);
+            showTools(matchingCategory);
+            return;
+        } else {
+            console.warn(`Category slug in URL not found: ${categorySlug}`);
+        }
+    }
+    
+    // Fall back to the old query parameter approach
     const urlParams = new URLSearchParams(window.location.search);
     const categoryParam = urlParams.get('category');
     
@@ -126,13 +168,22 @@ function checkUrlForCategory() {
         );
         
         if (matchingCategory) {
-            console.log(`Loading category from URL: ${matchingCategory}`);
+            console.log(`Loading category from URL parameter: ${matchingCategory}`);
             showTools(matchingCategory);
         } else {
-            console.warn(`Category in URL not found: ${categoryParam}`);
+            console.warn(`Category in URL parameter not found: ${categoryParam}`);
             // Stay on the categories page if the category isn't valid
         }
     }
+}
+
+// Convert category name to URL slug
+function categoryToSlug(category) {
+    return category
+        .toLowerCase()
+        .replace(/&/g, '-')
+        .replace(/[^\w\s-]/g, '')
+        .replace(/\s+/g, '-');
 }
 
 // Fetch tools data from tools.json
@@ -459,10 +510,9 @@ function showTools(category) {
     categoryTitle.textContent = category;
     categoryDescription.textContent = getCategoryDescription(category);
 
-    // Update URL with category parameter
-    const urlParams = new URLSearchParams(window.location.search);
-    urlParams.set('category', encodeURIComponent(category));
-    const newUrl = `${window.location.pathname}?${urlParams.toString()}`;
+    // Create SEO-friendly URL with the category slug
+    const categorySlug = categoryToSlug(category);
+    const newUrl = `/category/${categorySlug}`;
     history.pushState({ category }, '', newUrl);
 
     // Update page title
@@ -539,8 +589,8 @@ function showCategories() {
     toolsSection.style.display = 'none';
     categoriesSection.style.display = 'block';
 
-    // Reset URL
-    history.pushState({}, '', window.location.pathname);
+    // Reset URL to homepage
+    history.pushState({}, '', '/');
 
     // Reset page title
     document.title = 'AI Category Hub';
