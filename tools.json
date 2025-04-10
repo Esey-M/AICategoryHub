@@ -17,30 +17,6 @@
       "link": "https://www.chatbot.com/?a=qLRBFx0Ng&utm_campaign=pp_chatbot-default&utm_source=PP"
     },
     {
-      "id": "3",
-      "name": "ManyChat",
-      "description": "Chat marketing platform for Facebook Messenger and SMS",
-      "category": "Chatbots & Conversational AI",
-      "image": "https://manychat.com/images/logo.svg",
-      "link": "https://www.manychat.com"
-    },
-    {
-      "id": "4",
-      "name": "Tidio",
-      "description": "Live chat and chatbot platform for customer communication",
-      "category": "Chatbots & Conversational AI",
-      "image": "https://www.tidio.com/wp-content/uploads/tidio-symbol-blue-square.png",
-      "link": "https://www.tidio.com"
-    },
-    {
-      "id": "5",
-      "name": "MobileMonkey",
-      "description": "Omnichannel chatbot platform for marketing and customer support",
-      "category": "Chatbots & Conversational AI",
-      "image": "https://mobilemonkey.com/wp-content/uploads/2020/09/mm-circle-logo.png",
-      "link": "https://www.mobilemonkey.com"
-    },
-    {
       "id": "6",
       "name": "Botsify",
       "description": "AI chatbot platform for websites and messaging apps",
@@ -55,30 +31,6 @@
       "category": "Chatbots & Conversational AI",
       "image": "https://avatars.githubusercontent.com/u/26473895",
       "link": "https://botpress.com/?fpr=aicategoryhub"
-    },
-    {
-      "id": "402",
-      "name": "Landbot",
-      "description": "No-code chatbot builder for lead generation and customer service",
-      "category": "Chatbots & Conversational AI",
-      "image": "https://assets-global.website-files.com/605a3cacba514a77ca2e831c/6086d9b8e7f1dee8d9108eb8_landbot%20logo%20square.png",
-      "link": "https://landbot.io/?fp_ref=aicategoryhub"
-    },
-    {
-      "id": "403",
-      "name": "Intercom",
-      "description": "Customer messaging platform with chatbot automation features",
-      "category": "Chatbots & Conversational AI",
-      "image": "https://static.intercomassets.com/assets/cdn/avatars/intercom_icon-16da6e37e12905314275cc9b8a46474c42e239b70ca820a27e1fd5d0c4442c9f.png",
-      "link": "https://www.intercom.com/partner/?ref=aicategoryhub"
-    },
-    {
-      "id": "404",
-      "name": "Drift",
-      "description": "Conversational marketing platform with AI chatbots for businesses",
-      "category": "Chatbots & Conversational AI",
-      "image": "https://theme.zdassets.com/theme_assets/9066695/721fb23291e5199aec0dd796439c5d126bcea557.svg",
-      "link": "https://www.drift.com/partner-program/?ref=aicategoryhub"
     },
     {
       "id": "7",
