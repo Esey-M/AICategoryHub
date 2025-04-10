@@ -144,7 +144,21 @@ function checkUrlForCategory() {
             "ethical-ai-bias-detection": "Ethical AI & Bias Detection"
         };
         
-        const matchingCategory = categoryMap[categorySlug];
+        // Try exact match first
+        let matchingCategory = categoryMap[categorySlug];
+        
+        // If not found, try normalizing the slug by replacing multiple dashes with single dash
+        if (!matchingCategory) {
+            const normalizedSlug = categorySlug.replace(/-+/g, '-');
+            
+            // Find a key in categoryMap where the normalized key matches the normalized slug
+            const normalizedCategoryMap = {};
+            for (const [key, value] of Object.entries(categoryMap)) {
+                normalizedCategoryMap[key.replace(/-+/g, '-')] = value;
+            }
+            
+            matchingCategory = normalizedCategoryMap[normalizedSlug];
+        }
         
         if (matchingCategory && categories.includes(matchingCategory)) {
             console.log(`Loading category from URL path: ${matchingCategory}`);
@@ -183,7 +197,8 @@ function categoryToSlug(category) {
         .toLowerCase()
         .replace(/&/g, '-')
         .replace(/[^\w\s-]/g, '')
-        .replace(/\s+/g, '-');
+        .replace(/\s+/g, '-')
+        .replace(/-+/g, '-'); // Replace multiple dashes with a single dash
 }
 
 // Fetch tools data from tools.json
@@ -809,33 +824,39 @@ function generateStructuredData(tools) {
     const breadcrumbsData = {
         "@context": "https://schema.org",
         "@type": "BreadcrumbList",
-        "itemListElement": Object.keys(categories).map((category, index) => ({
-            "@type": "ListItem",
-            "position": index + 1,
-            "name": category,
-            "item": `https://aicategoryhub.net/?category=${encodeURIComponent(category)}`
-        }))
+        "itemListElement": Object.keys(categories).map((category, index) => {
+            const categorySlug = categoryToSlug(category);
+            return {
+                "@type": "ListItem",
+                "position": index + 1,
+                "name": category,
+                "item": `https://aicategoryhub.net/category/${categorySlug}`
+            };
+        })
     };
 
     // Category list structured data
     const structuredData = {
         "@context": "https://schema.org",
         "@type": "ItemList",
-        "itemListElement": Object.entries(categories).map(([category, tools], index) => ({
-            "@type": "ListItem",
-            "position": index + 1,
-            "item": {
-                "@type": "CategoryCode",
-                "name": category,
-                "description": `AI tools for ${category.toLowerCase()}`,
-                "url": `https://aicategoryhub.net/?category=${encodeURIComponent(category)}`,
-                "hasOfferCatalog": {
-                    "@type": "OfferCatalog",
-                    "name": `${category} AI Tools`,
-                    "itemListElement": tools
+        "itemListElement": Object.entries(categories).map(([category, tools], index) => {
+            const categorySlug = categoryToSlug(category);
+            return {
+                "@type": "ListItem",
+                "position": index + 1,
+                "item": {
+                    "@type": "CategoryCode",
+                    "name": category,
+                    "description": `AI tools for ${category.toLowerCase()}`,
+                    "url": `https://aicategoryhub.net/category/${categorySlug}`,
+                    "hasOfferCatalog": {
+                        "@type": "OfferCatalog",
+                        "name": `${category} AI Tools`,
+                        "itemListElement": tools
+                    }
                 }
-            }
-        }))
+            };
+        })
     };
 
     // Organization structured data
