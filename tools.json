@@ -1016,14 +1016,7 @@
       "image": "https://www.trade-ideas.com/wp-content/uploads/2021/03/trade-ideas-logo.svg",
       "link": "https://www.trade-ideas.com"
     },
-    {
-      "id": "488",
-      "name": "Alpaca",
-      "description": "API for commission-free stock trading with AI capabilities",
-      "category": "Finance & Trading",
-      "image": "https://alpaca.markets/themes/alpaca-theme/favicon.svg",
-      "link": "https://alpaca.markets/partnerships?ref=aicategoryhub"
-    },
+    
     {
       "id": "489",
       "name": "QuantConnect",
@@ -1038,7 +1031,7 @@
       "description": "AI investment platform with predictive analytics",
       "category": "Finance & Trading",
       "image": "https://assets-global.website-files.com/62692ed0df070f6e3bb8bf42/62c50521bc0c9df78d82bd60_1.svg",
-      "link": "https://www.kavout.com/?ref=aicategoryhub"
+      "link": "https://www.kavout.com/pricing-plans?fpr=simon"
     },
     {
       "id": "491",
