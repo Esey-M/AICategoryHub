@@ -591,7 +591,7 @@ function renderCategories() {
                     <p class="text-gray-600 dark:text-gray-300 mb-4">${getCategoryDescription(category)}</p>
                     <div class="flex justify-between items-center">
                         <span class="text-sm text-gray-500 dark:text-gray-400">${toolCount} tools</span>
-                        <span class="text-primary">View Tools →</span>
+                        <span class="text-primary dark:text-blue-400">View Tools →</span>
                     </div>
                 </div>
             </div>

@@ -493,6 +493,28 @@ footer a:hover {
     color: #cbd5e1 !important;
 }
 
+/* Fix site title color in dark mode */
+.dark .text-gray-800,
+.dark .text-gray-900,
+.dark a.text-gray-800 {
+    color: #f8fafc !important;
+}
+
+/* Fix category title color in dark mode */
+.dark .category-card h3.text-gray-900 {
+    color: #f8fafc !important;
+}
+
+/* Make category text lighter in dark mode */
+.dark .category-card .text-xl {
+    color: #f8fafc !important;
+}
+
+/* Make sure site title is clearly visible */
+.dark a.text-2xl.font-bold {
+    color: #f8fafc !important;
+}
+
 /* Enhance dark mode blue box */
 .dark .bg-blue-50 {
     background-color: #172554 !important;
