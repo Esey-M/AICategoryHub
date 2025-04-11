@@ -1008,24 +1008,7 @@
       "image": "https://laiye.com/themes/system/assets/images/default/logo-sq@2x.png",
       "link": "https://laiye.com/en/partners/?ref=aicategoryhub"
     },
-    {
-      "id": "79",
-      "name": "Trade Ideas",
-      "description": "AI-powered stock market analysis and trading bot",
-      "category": "Finance & Trading",
-      "image": "https://www.trade-ideas.com/wp-content/uploads/2021/03/trade-ideas-logo.svg",
-      "link": "https://www.trade-ideas.com"
-    },
-    
-    {
-      "id": "489",
-      "name": "QuantConnect",
-      "description": "Algorithmic trading platform with AI tools for strategy development",
-      "category": "Finance & Trading",
-      "image": "https://cdn.quantconnect.com/web/i/favicon.ico",
-      "link": "https://www.quantconnect.com/brokerages?ref=aicategoryhub"
-    },
-    {
+     {
       "id": "490",
       "name": "Kavout",
       "description": "AI investment platform with predictive analytics",
@@ -1042,21 +1025,13 @@
       "link": "http://www.tickeron.com?via=simon"
     },
   
-    {
-      "id": "493",
-      "name": "AlgoBulls",
-      "description": "Algorithmic trading platform with AI strategy builder",
+        {
+      "id": "79",
+      "name": "Trade Ideas",
+      "description": "AI-powered stock market analysis and trading bot",
       "category": "Finance & Trading",
-      "image": "https://algobulls.com/favicon.ico",
-      "link": "https://algobulls.com/affiliate?ref=aicategoryhub"
-    },
-    {
-      "id": "494",
-      "name": "Auquan",
-      "description": "Data science platform for investment strategies with AI",
-      "category": "Finance & Trading",
-      "image": "https://www.auquan.com/hubfs/Auquan-favicons/favicon-196x196.png",
-      "link": "https://www.auquan.com/partners/?ref=aicategoryhub"
+      "image": "https://www.trade-ideas.com/wp-content/uploads/2021/03/trade-ideas-logo.svg",
+      "link": "https://www.trade-ideas.com"
     },
     {
       "id": "85",
