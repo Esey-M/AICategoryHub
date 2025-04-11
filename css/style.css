@@ -525,7 +525,7 @@ html.dark header a[href="/"] {
 /* Fix site title color in light mode */
 html:not(.dark) header a.text-2xl,
 html:not(.dark) header a[href="/"] {
-    color: #111827 !important;
+    color: #1f2937 !important;
 }
 
 /* Fix category title color in dark mode - even more specific selector */
@@ -536,12 +536,12 @@ html.dark .category-card h3 {
 
 /* Fix category title color in light mode */
 html:not(.dark) .category-card h3 {
-    color: #111827 !important;
+    color: #1f2937 !important;
 }
 
 /* Force proper text coloring for category elements in light mode */
 html:not(.dark) #categoriesGrid h3 {
-    color: #111827 !important;
+    color: #1f2937 !important;
 }
 
 /* Force proper text coloring for category elements in dark mode */
@@ -607,4 +607,9 @@ html.dark header a.text-2xl {
 html.dark .category-card h3 {
     color: #f3f4f6 !important;
     text-shadow: 0px 0px 2px rgba(255, 255, 255, 0.5);
+}
+
+/* Ensure text inside category cards is visible in light mode */
+html:not(.dark) .category-card p {
+    color: #374151 !important;
 } 
