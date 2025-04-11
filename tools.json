@@ -1024,8 +1024,39 @@
       "image": "https://tickeron.com/images/favicon.ico",
       "link": "http://www.tickeron.com?via=simon"
     },
-  
-        {
+  {
+  "id": "492",
+  "name": "Vestinda",
+  "description": "AI-powered platform for automating and optimizing trading strategies",
+  "category": "Finance & Trading",
+  "image": "https://www.vestinda.com/wp-content/uploads/2021/11/vestinda-logo.svg",
+  "link": "https://www.vestinda.com?ref=simon"
+},
+{
+  "id": "493",
+  "name": "Stealth Trader",
+  "description": "Real-time sentiment trading platform powered by AI",
+  "category": "Finance & Trading",
+  "image": "https://www.stealthtrader.com/assets/images/logo.png",
+  "link": "https://www.stealthtrader.com/partners?ref=simon"
+},
+{
+  "id": "494",
+  "name": "TradesAI",
+  "description": "Advanced AI tools for enhancing trading experiences",
+  "category": "Finance & Trading",
+  "image": "https://www.tradesai.com/assets/images/logo.png",
+  "link": "https://www.tradesai.com/affiliates?ref=simon"
+},
+    {
+  "id": "496",
+  "name": "ZuluTrade",
+  "description": "Social trading platform enabling AI-powered strategy sharing and copy trading",
+  "category": "Finance & Trading",
+  "image": "https://www.zulutrade.com/images/logo.png",
+  "link": "https://www.zulutrade.com/affiliates?ref=simon"
+},
+    {
       "id": "79",
       "name": "Trade Ideas",
       "description": "AI-powered stock market analysis and trading bot",
