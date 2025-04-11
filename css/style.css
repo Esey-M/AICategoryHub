@@ -522,10 +522,31 @@ html.dark header a[href="/"] {
     text-shadow: 0px 0px 1px rgba(255, 255, 255, 0.3);
 }
 
+/* Fix site title color in light mode */
+html:not(.dark) header a.text-2xl,
+html:not(.dark) header a[href="/"] {
+    color: #111827 !important;
+}
+
 /* Fix category title color in dark mode - even more specific selector */
 html.dark .category-card h3 {
     color: #f3f4f6 !important;
     text-shadow: 0px 0px 1px rgba(255, 255, 255, 0.2);
+}
+
+/* Fix category title color in light mode */
+html:not(.dark) .category-card h3 {
+    color: #111827 !important;
+}
+
+/* Force proper text coloring for category elements in light mode */
+html:not(.dark) #categoriesGrid h3 {
+    color: #111827 !important;
+}
+
+/* Force proper text coloring for category elements in dark mode */
+html.dark #categoriesGrid h3 {
+    color: #f3f4f6 !important;
 }
 
 /* Apply light colored text to any element with text-gray classes in dark mode */

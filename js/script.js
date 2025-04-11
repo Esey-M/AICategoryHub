@@ -587,7 +587,7 @@ function renderCategories() {
                     <div class="text-center mb-4" style="min-height: 60px; display: flex; align-items: center; justify-content: center;">
                         <i class="${iconClass} fa-3x" style="color: ${iconColor}; font-size: 48px;"></i>
                     </div>
-                    <h3 class="text-xl font-semibold text-gray-50 dark:text-yellow-50 mb-2">${category}</h3>
+                    <h3 class="text-xl font-semibold text-gray-900 dark:text-yellow-50 mb-2">${category}</h3>
                     <p class="text-gray-600 dark:text-gray-300 mb-4">${getCategoryDescription(category)}</p>
                     <div class="flex justify-between items-center">
                         <span class="text-sm text-gray-500 dark:text-gray-400">${toolCount} tools</span>
