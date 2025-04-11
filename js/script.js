@@ -457,11 +457,13 @@ function setupEventListeners() {
 
         // Guide link
         const guideLink = document.getElementById('guideLink');
-        if (guideLink) {
-            guideLink.classList.add('hidden'); // Hide by default
+        const guideContainer = document.querySelector('.mb-8.p-4.bg-blue-50');
+        if (guideLink && guideContainer) {
+            guideLink.classList.add('hidden');
+            guideContainer.style.display = 'none';
             console.log('Guide link hidden by default');
         } else {
-            console.warn('Guide link element not found');
+            console.warn('Guide link or container element not found');
         }
 
         // Search input
@@ -579,6 +581,7 @@ function renderCategories() {
         const toolCount = tools.filter(tool => tool.category === category).length;
         const iconClass = categoryIcons[category] || "fas fa-cube";
         const iconColor = iconColors[category] || "#3b82f6";
+        const categorySlug = categoryToSlug(category);
         
         return `
             <div class="category-card bg-white dark:bg-gray-800 rounded-lg shadow-md overflow-hidden border border-gray-200 dark:border-gray-700 cursor-pointer hover:shadow-lg transition-shadow duration-200"
@@ -591,7 +594,7 @@ function renderCategories() {
                     <p class="text-gray-600 dark:text-gray-300 mb-4">${getCategoryDescription(category)}</p>
                     <div class="flex justify-between items-center">
                         <span class="text-sm text-gray-500 dark:text-gray-400">${toolCount} tools</span>
-                        <span class="text-primary dark:text-blue-400">View Tools →</span>
+                        <a href="/category/${categorySlug}" class="text-primary dark:text-blue-400 view-tools-link">View Tools →</a>
                     </div>
                 </div>
             </div>
@@ -600,10 +603,18 @@ function renderCategories() {
 
     categoriesGrid.innerHTML = categoryCards;
 
-    // Add click event listeners to category cards
+    // Add click event listeners to category cards and link elements
     document.querySelectorAll('.category-card').forEach(card => {
-        card.addEventListener('click', () => {
-            const category = card.dataset.category;
+        card.addEventListener('click', function(e) {
+            // If the click is on the View Tools link, let the default behavior happen (follow the href)
+            if (e.target.classList.contains('view-tools-link') || e.target.closest('.view-tools-link')) {
+                // Don't do anything - let the normal link behavior proceed
+                return;
+            }
+            
+            // For clicks elsewhere on the card, use the JavaScript navigation
+            const category = this.dataset.category;
+            e.preventDefault();
             showTools(category);
         });
     });
@@ -646,6 +657,7 @@ function showTools(category) {
     const toolsSection = document.getElementById('toolsSection');
     const categoriesSection = document.getElementById('categoriesSection');
     const guideLink = document.getElementById('guideLink');
+    const guideContainer = document.querySelector('.mb-8.p-4.bg-blue-50');
     const backButton = document.getElementById('backButton');
 
     if (!categoryTitle || !categoryDescription || !toolsSection || !categoriesSection) {
@@ -672,7 +684,7 @@ function showTools(category) {
     document.title = `${category} - AI Category Hub`;
 
     // Show or hide guide link based on category
-    if (guideLink) {
+    if (guideLink && guideContainer) {
         const guideMap = {
             "Chatbots & Conversational AI": "chatbots",
             "Image Generation & Editing": "image-generation",
@@ -698,18 +710,26 @@ function showTools(category) {
 
         const guideSlug = guideMap[category];
         if (guideSlug) {
-            guideLink.href = `guides/${guideSlug}.html`;
+            const guidePath = `/guides/${guideSlug}.html`;
+            guideLink.href = guidePath;
             guideLink.textContent = `Read our comprehensive guide on ${category}`;
-            guideLink.style.display = 'inline-block';
-            guideLink.parentElement.parentElement.style.display = 'block';
+            guideLink.classList.remove('hidden');
+            guideContainer.style.display = 'block';
+            
+            // Ensure guide link opens in the same window and doesn't use JavaScript navigation
+            guideLink.onclick = function(e) {
+                window.location.href = guidePath;
+                return false;
+            };
+            
             console.log('Guide link updated:', guideLink.href);
         } else {
-            guideLink.style.display = 'none';
-            guideLink.parentElement.parentElement.style.display = 'none';
+            guideLink.classList.add('hidden');
+            guideContainer.style.display = 'none';
             console.log('Guide link hidden for category:', category);
         }
     } else {
-        console.error('Guide link element not found');
+        console.error('Guide link or container element not found');
     }
 
     // Ensure back button is visible and clickable
@@ -732,6 +752,7 @@ function showCategories() {
     const toolsSection = document.getElementById('toolsSection');
     const categoriesSection = document.getElementById('categoriesSection');
     const guideLink = document.getElementById('guideLink');
+    const guideContainer = document.querySelector('.mb-8.p-4.bg-blue-50');
 
     if (!toolsSection || !categoriesSection) {
         console.error('Required sections not found');
@@ -749,10 +770,12 @@ function showCategories() {
     document.title = 'AI Category Hub';
 
     // Hide guide link container
-    if (guideLink) {
-        guideLink.style.display = 'none';
-        guideLink.parentElement.parentElement.style.display = 'none';
+    if (guideLink && guideContainer) {
+        guideLink.classList.add('hidden');
+        guideContainer.style.display = 'none';
         console.log('Guide link hidden');
+    } else {
+        console.warn('Guide link or container element not found');
     }
 
     // Reset current category
