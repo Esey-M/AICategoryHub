@@ -515,6 +515,42 @@ footer a:hover {
     color: #f8fafc !important;
 }
 
+/* Fix site title color in dark mode - more specific selector */
+html.dark header a.text-2xl,
+html.dark header a[href="/"] {
+    color: #f3f4f6 !important;
+    text-shadow: 0px 0px 1px rgba(255, 255, 255, 0.3);
+}
+
+/* Fix category title color in dark mode - even more specific selector */
+html.dark .category-card h3 {
+    color: #f3f4f6 !important;
+    text-shadow: 0px 0px 1px rgba(255, 255, 255, 0.2);
+}
+
+/* Apply light colored text to any element with text-gray classes in dark mode */
+html.dark .text-gray-600,
+html.dark .text-gray-700,
+html.dark .text-gray-800,
+html.dark .text-gray-900 {
+    color: #f3f4f6 !important;
+}
+
+/* Fix color of text inside category cards */
+html.dark .category-card p {
+    color: #e5e7eb !important;
+}
+
+/* Make View Tools link more visible */
+html.dark .text-primary {
+    color: #60a5fa !important;
+}
+
+/* Ensure dark category cards have proper background */
+html.dark #categoriesGrid > div {
+    background-color: #1e293b !important;
+}
+
 /* Enhance dark mode blue box */
 .dark .bg-blue-50 {
     background-color: #172554 !important;
