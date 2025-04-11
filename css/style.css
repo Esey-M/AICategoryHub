@@ -612,4 +612,16 @@ html.dark .category-card h3 {
 /* Ensure text inside category cards is visible in light mode */
 html:not(.dark) .category-card p {
     color: #374151 !important;
+}
+
+/* Set category card background and text color in light mode */
+html:not(.dark) #categoriesGrid > div {
+    background-color: #f3f4f6 !important;
+    color: #1f2937 !important;
+}
+
+/* Ensure text inside category cards is dark in light mode */
+html:not(.dark) .category-card h3,
+html:not(.dark) .category-card p {
+    color: #1f2937 !important;
 } 
