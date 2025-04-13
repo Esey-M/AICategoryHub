@@ -93,7 +93,7 @@
             </div>
         </div>
         <nav class="container mx-auto px-4 py-4 flex justify-between items-center">
-            <a href="/" class="text-2xl font-bold text-primary dark:text-primary hover:text-primary-dark dark:hover:text-primary-dark transition-colors">AI Category Hub</a>
+            <a href="/" class="text-2xl font-bold text-gray-900 dark:text-yellow-50 hover:text-primary dark:hover:text-primary transition-colors">AI Category Hub</a>
             <div class="flex items-center space-x-6">
                 <div class="hidden md:flex items-center space-x-6">
                     <a href="/about" class="text-gray-600 dark:text-gray-300 hover:text-primary dark:hover:text-primary transition-colors">About Us</a>
@@ -101,27 +101,36 @@
                     <a href="/privacy" class="text-gray-600 dark:text-gray-300 hover:text-primary dark:hover:text-primary transition-colors">Privacy</a>
                     <a href="/terms" class="text-gray-600 dark:text-gray-300 hover:text-primary dark:hover:text-primary transition-colors">Terms</a>
                 </div>
-                <button id="darkModeToggle" class="p-2 rounded-lg hover:bg-gray-100 dark:hover:bg-gray-700">
-                    <svg class="w-6 h-6 text-gray-800 dark:text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <button id="darkModeToggle" class="p-2 rounded-full flex items-center justify-center bg-gray-100 dark:bg-gray-700 hover:bg-gray-200 dark:hover:bg-gray-600 transition-all duration-200 border border-gray-200 dark:border-gray-600">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 text-gray-800 dark:hidden" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z"></path>
+                    </svg>
+                    <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 text-yellow-400 hidden dark:block" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z" />
                     </svg>
                 </button>
                 <!-- Mobile menu button -->
-                <button id="mobileMenuBtn" class="md:hidden p-2 rounded-lg hover:bg-gray-100 dark:hover:bg-gray-700">
-                    <svg class="w-6 h-6 text-gray-800 dark:text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                <div id="mobileMenuBtn" class="md:hidden p-2 rounded-md hover:bg-gray-200 dark:hover:bg-gray-700">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
                     </svg>
-                </button>
+                </div>
             </div>
         </nav>
         <!-- Mobile menu -->
-        <div id="mobileMenu" class="md:hidden hidden bg-white dark:bg-gray-800 border-t border-gray-200 dark:border-gray-700">
-            <div class="container mx-auto px-4 py-2">
-                <a href="/about" class="block py-2 text-gray-600 dark:text-gray-300 hover:text-primary dark:hover:text-primary">About Us</a>
-                <a href="/contact" class="block py-2 text-gray-600 dark:text-gray-300 hover:text-primary dark:hover:text-primary">Contact</a>
-                <a href="/privacy" class="block py-2 text-gray-600 dark:text-gray-300 hover:text-primary dark:hover:text-primary">Privacy</a>
-                <a href="/terms" class="block py-2 text-gray-600 dark:text-gray-300 hover:text-primary dark:hover:text-primary">Terms</a>
-            </div>
+        <div id="mobileMenu" class="md:hidden hidden px-4 py-3 bg-white dark:bg-gray-800 shadow-md">
+            <a href="index.html" class="block py-2 hover:text-primary">Home</a>
+            <a href="index.html" class="block py-2 hover:text-primary">Categories</a>
+            <a href="about.html" class="block py-2 hover:text-primary">About</a>
+            <a href="contact.html" class="block py-2 hover:text-primary">Contact</a>
+            <button id="mobileDarkModeToggle" class="mt-2 p-3 rounded-full flex items-center justify-center bg-gray-100 dark:bg-gray-700 hover:bg-gray-200 dark:hover:bg-gray-600 transition-all duration-200 border border-gray-200 dark:border-gray-600">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-gray-800 dark:hidden" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z" />
+                </svg>
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-yellow-400 hidden dark:block" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z" />
+                </svg>
+            </button>
         </div>
     </header>
 
@@ -153,7 +162,7 @@
     <!-- Tools Section -->
     <section id="toolsSection" class="container mx-auto px-4 py-12 hidden">
         <div class="flex justify-between items-center mb-8">
-            <h2 id="categoryTitle" class="text-3xl font-bold text-gray-900 dark:text-white">Loading...</h2>
+            <h2 id="categoryTitle" class="text-3xl font-bold">Loading...</h2>
             <button id="backButton" class="bg-primary hover:bg-blue-600 text-white px-4 py-2 rounded-md transition">
                 Back to Categories
             </button>
@@ -162,14 +171,14 @@
         <div id="categoryDescription" class="mb-6 text-lg text-gray-700 dark:text-gray-300">Loading description...</div>
         
         <!-- Link to in-depth guide if available -->
-        <div id="guideLink" class="mb-8 p-4 bg-blue-50 dark:bg-blue-900 rounded-lg shadow-sm hidden">
-            <p class="text-lg text-gray-900 dark:text-white">
+        <div class="mb-8 p-4 bg-blue-50 dark:bg-blue-900 rounded-lg shadow-sm">
+            <p class="text-lg text-gray-800 dark:text-gray-200">
                 <span class="font-bold">Want to learn more?</span> 
-                <a id="categoryGuideLink" href="#" class="text-primary dark:text-blue-400 hover:text-blue-700 dark:hover:text-blue-300 ml-2">Check out our in-depth guide to this category</a>
+                <a href="#" id="guideLink" class="text-primary dark:text-blue-400 hover:underline ml-2">Read our comprehensive guide on this category</a>
             </p>
         </div>
         
-        <div id="toolsContainer" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div id="toolsContainer" class="mx-auto" style="width: 90%;">
             <!-- Tools will be loaded here -->
             <div class="animate-pulse bg-white dark:bg-gray-800 rounded-lg shadow-md p-6">
                 <div class="h-4 bg-gray-200 dark:bg-gray-700 rounded w-3/4 mb-2"></div>
