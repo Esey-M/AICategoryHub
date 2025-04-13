@@ -590,11 +590,11 @@ function renderCategories() {
                     <div class="text-center mb-4" style="min-height: 60px; display: flex; align-items: center; justify-content: center;">
                         <i class="${iconClass} fa-3x" style="color: ${iconColor}; font-size: 48px;"></i>
                     </div>
-                    <h3 class="text-xl font-semibold text-gray-900 dark:text-yellow-50 mb-2">${category}</h3>
+                    <h3 class="text-xl font-semibold text-gray-900 dark:text-white mb-2">${category}</h3>
                     <p class="text-gray-600 dark:text-gray-300 mb-4">${getCategoryDescription(category)}</p>
                     <div class="flex justify-between items-center">
                         <span class="text-sm text-gray-500 dark:text-gray-400">${toolCount} tools</span>
-                        <a href="/category/${categorySlug}" class="text-primary dark:text-blue-400 view-tools-link">View Tools →</a>
+                        <a href="/category/${categorySlug}" class="text-primary dark:text-blue-400 hover:text-blue-700 dark:hover:text-blue-300 view-tools-link">View Tools →</a>
                     </div>
                 </div>
             </div>
@@ -840,7 +840,7 @@ function renderTools() {
                             <div class="flex justify-between items-center w-full">
                                 <span class="text-sm text-gray-500 dark:text-gray-400">AI Tool</span>
                                 <a href="${tool.link}" target="_blank" rel="noopener noreferrer" 
-                                   class="text-primary hover:underline">
+                                   class="text-primary dark:text-blue-400 hover:text-blue-700 dark:hover:text-blue-300">
                                     Use Tool →
                                 </a>
                             </div>
