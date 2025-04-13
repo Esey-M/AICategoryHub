@@ -818,11 +818,11 @@ function renderTools() {
             return;
         }
 
-        // Add the tools HTML to the grid - since we already have a 90% width container
+        // Add the tools HTML to the grid with original styling
         toolsGrid.innerHTML = `
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
                 ${filteredTools.map((tool, index) => `
-                    <div class="category-card bg-white dark:bg-gray-800 rounded-lg shadow-md overflow-hidden border border-gray-200 dark:border-gray-700 hover:shadow-lg transition-shadow duration-200">
+                    <div class="bg-white dark:bg-gray-800 rounded-lg shadow-md overflow-hidden border border-gray-200 dark:border-gray-700 hover:shadow-lg transition-shadow duration-200">
                         <div class="p-6">
                             <div class="flex items-center mb-4">
                                 <div class="w-16 h-16 mr-4 flex-shrink-0 rounded-lg overflow-hidden bg-gray-100 dark:bg-gray-700">
@@ -837,7 +837,7 @@ function renderTools() {
                                 </div>
                             </div>
                             <p class="text-gray-600 dark:text-gray-300 mb-4">${tool.description}</p>
-                            <div class="flex justify-between items-center w-full">
+                            <div class="flex justify-between items-center">
                                 <span class="text-sm text-gray-500 dark:text-gray-400">AI Tool</span>
                                 <a href="${tool.link}" target="_blank" rel="noopener noreferrer" 
                                    class="text-primary dark:text-blue-400 hover:text-blue-700 dark:hover:text-blue-300">
