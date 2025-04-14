@@ -10,47 +10,102 @@
     box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
 }
 
-/* Fix for tool cards in the tools container (after clicking a category) - light mode */
-#toolsContainer .category-card {
+/* Fix for entire tools page (after clicking a category) - light mode */
+html:not(.dark) body.has-category-open {
+    background-color: white !important;
+    color: black !important;
+}
+
+html:not(.dark) body.has-category-open main {
     background-color: white !important;
 }
 
-#toolsContainer .category-card h3 {
+html:not(.dark) body.has-category-open > div {
+    background-color: white !important;
+}
+
+html:not(.dark) #toolsSection {
+    background-color: white !important;
+}
+
+html:not(.dark) #toolsSection h1, 
+html:not(.dark) #toolsSection h2,
+html:not(.dark) #toolsSection h3,
+html:not(.dark) #toolsSection p,
+html:not(.dark) #toolsSection span,
+html:not(.dark) #toolsSection a:not(.text-primary),
+html:not(.dark) #toolsSection div.text-gray-600,
+html:not(.dark) #toolsSection div.text-gray-700,
+html:not(.dark) #toolsSection #categoryTitle,
+html:not(.dark) #toolsSection #categoryDescription {
     color: black !important;
 }
 
-#toolsContainer .category-card p.text-sm {
+html:not(.dark) .want-to-learn-more {
+    background-color: white !important;
+    color: black !important;
+    border: 1px solid #e5e7eb !important;
+}
+
+html:not(.dark) #toolsContainer .category-card {
+    background-color: white !important;
+    border: 1px solid #e5e7eb !important;
+}
+
+html:not(.dark) #toolsContainer .category-card h3 {
     color: black !important;
 }
 
-#toolsContainer .category-card p.text-gray-600 {
+html:not(.dark) #toolsContainer .category-card p {
     color: black !important;
 }
 
-#toolsContainer .category-card span.text-sm {
+html:not(.dark) #toolsContainer .category-card span {
     color: black !important;
+}
+
+/* Preserve the blue color for use tool links */
+html:not(.dark) #toolsContainer a.text-primary {
+    color: #3B82F6 !important;
 }
 
 /* Dark mode keeps existing styling */
+.dark #toolsSection {
+    background-color: #1f2937 !important;
+}
+
+.dark #toolsSection h1, 
+.dark #toolsSection h2,
+.dark #toolsSection h3,
+.dark #toolsSection p,
+.dark #toolsSection span,
+.dark #toolsSection a:not(.text-primary),
+.dark #toolsSection div.text-gray-600,
+.dark #toolsSection div.text-gray-700,
+.dark #toolsSection #categoryTitle,
+.dark #toolsSection #categoryDescription {
+    color: white !important;
+}
+
 .dark #toolsContainer .category-card {
     background-color: #1e293b !important;
+    border-color: #374151 !important;
 }
 
 .dark #toolsContainer .category-card h3 {
     color: white !important;
 }
 
-.dark #toolsContainer .category-card p.text-sm {
-    color: #cbd5e1 !important;
-}
-
-.dark #toolsContainer .category-card p.text-gray-600,
-.dark #toolsContainer .category-card p.text-gray-300 {
+.dark #toolsContainer .category-card p {
     color: #e2e8f0 !important;
 }
 
-.dark #toolsContainer .category-card span.text-sm {
+.dark #toolsContainer .category-card span {
     color: #cbd5e1 !important;
+}
+
+.dark #toolsContainer a.text-primary {
+    color: #60a5fa !important;
 }
 
 /* Category Filter Button Styles */
@@ -561,14 +616,24 @@ footer a:hover {
 /* Fix site title color in dark mode - more specific selector */
 html.dark header a.text-2xl,
 html.dark header a[href="/"] {
-    color: #f3f4f6 !important;
+    color: white !important;
     text-shadow: 0px 0px 1px rgba(255, 255, 255, 0.3);
 }
 
 /* Fix site title color in light mode */
 html:not(.dark) header a.text-2xl,
 html:not(.dark) header a[href="/"] {
-    color: #1f2937 !important;
+    color: white !important;
+    text-shadow: 0px 0px 1px rgba(0, 0, 0, 0.1);
+}
+
+/* Add background contrast for logo in light mode */
+html:not(.dark) header {
+    background-color: #000000 !important;
+}
+
+html.dark header {
+    background-color: #1e293b !important;
 }
 
 /* Fix category title color in dark mode - even more specific selector */
@@ -691,4 +756,817 @@ html:not(.dark) #darkModeToggle:hover,
 html:not(.dark) #mobileDarkModeToggle:hover {
     color: #2563eb;
     background-color: #e2e8f0;
+}
+
+/* Make the "Want to learn more" box white in light mode */
+html:not(.dark) body.has-category-open .p-4.bg-blue-50 {
+    background-color: white !important;
+    border: 1px solid #e5e7eb !important;
+}
+
+html:not(.dark) body.has-category-open .p-4.bg-blue-50 p {
+    color: black !important;
+}
+
+html:not(.dark) body.has-category-open .p-4.bg-blue-50 a {
+    color: #3B82F6 !important;
+}
+
+/* Fix the "Want to learn more" section in dark mode */
+.dark body.has-category-open .p-4.bg-blue-50,
+.dark body.has-category-open .p-4.bg-blue-900 {
+    background-color: #172554 !important;
+    border: 1px solid #334155 !important;
+}
+
+.dark body.has-category-open .p-4.bg-blue-50 p,
+.dark body.has-category-open .p-4.bg-blue-900 p {
+    color: white !important;
+}
+
+.dark body.has-category-open .p-4.bg-blue-50 a,
+.dark body.has-category-open .p-4.bg-blue-900 a {
+    color: #60a5fa !important;
+}
+
+/* Other light mode fixes for the tools page */
+html:not(.dark) #toolsSection {
+    background-color: white !important;
+}
+
+html:not(.dark) #toolsSection h1, 
+html:not(.dark) #toolsSection h2,
+html:not(.dark) #toolsSection h3,
+html:not(.dark) #toolsSection p,
+html:not(.dark) #toolsSection span,
+html:not(.dark) #toolsSection a:not(.text-primary),
+html:not(.dark) #toolsSection div.text-gray-600,
+html:not(.dark) #toolsSection div.text-gray-700,
+html:not(.dark) #toolsSection #categoryTitle,
+html:not(.dark) #toolsSection #categoryDescription {
+    color: black !important;
+}
+
+html:not(.dark) #toolsContainer .category-card {
+    background-color: white !important;
+    border: 1px solid #e5e7eb !important;
+}
+
+html:not(.dark) #toolsContainer .category-card h3 {
+    color: black !important;
+}
+
+html:not(.dark) #toolsContainer .category-card p {
+    color: black !important;
+}
+
+html:not(.dark) #toolsContainer .category-card span {
+    color: black !important;
+}
+
+/* Preserve the blue color for use tool links */
+html:not(.dark) #toolsContainer a.text-primary {
+    color: #3B82F6 !important;
+}
+
+/* Dark mode keeps existing styling */
+.dark #toolsSection {
+    background-color: #1f2937 !important;
+}
+
+.dark #toolsSection h1, 
+.dark #toolsSection h2,
+.dark #toolsSection h3,
+.dark #toolsSection p,
+.dark #toolsSection span,
+.dark #toolsSection a:not(.text-primary),
+.dark #toolsSection div.text-gray-600,
+.dark #toolsSection div.text-gray-700,
+.dark #toolsSection #categoryTitle,
+.dark #toolsSection #categoryDescription {
+    color: white !important;
+}
+
+.dark #toolsContainer .category-card {
+    background-color: #1e293b !important;
+    border-color: #374151 !important;
+}
+
+.dark #toolsContainer .category-card h3 {
+    color: white !important;
+}
+
+.dark #toolsContainer .category-card p {
+    color: #e2e8f0 !important;
+}
+
+.dark #toolsContainer .category-card span {
+    color: #cbd5e1 !important;
+}
+
+.dark #toolsContainer a.text-primary {
+    color: #60a5fa !important;
+}
+
+/* Category Filter Button Styles */
+.category-filter {
+    transition: all 0.2s ease-in-out;
+}
+
+.category-filter.active {
+    background-color: #3B82F6;
+    color: white;
+}
+
+/* Search Input Focus Effect */
+#searchInput:focus {
+    box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1);
+}
+
+/* Dark Mode Transitions */
+.dark .tool-card {
+    background-color: #1F2937;
+    border-color: #374151;
+}
+
+.dark .tool-card:hover {
+    background-color: #374151;
+}
+
+/* Loading Spinner Animation */
+@keyframes spin {
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+.animate-spin {
+    animation: spin 1s linear infinite;
+}
+
+/* Admin Panel Form Styles */
+.form-input:focus {
+    border-color: #3B82F6;
+    box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1);
+}
+
+/* JSON Output Styles */
+#jsonOutput {
+    font-family: 'Monaco', 'Menlo', 'Ubuntu Mono', 'Consolas', 'source-code-pro', monospace;
+    white-space: pre-wrap;
+    word-wrap: break-word;
+}
+
+/* Ad Container Styles */
+.ad-container {
+    min-height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #f8fafc;
+    border-radius: 0.5rem;
+    margin: 1rem 0;
+}
+
+.dark .ad-container {
+    background-color: #1f2937;
+}
+
+/* Responsive Ad Styles */
+@media (max-width: 640px) {
+    .ad-container {
+        min-height: 50px;
+    }
+}
+
+@media (min-width: 641px) and (max-width: 1024px) {
+    .ad-container {
+        min-height: 90px;
+    }
+}
+
+/* Responsive Adjustments */
+@media (max-width: 640px) {
+    .tool-card {
+        margin-bottom: 1rem;
+    }
+    
+    .category-filter {
+        font-size: 0.875rem;
+        padding: 0.375rem 0.75rem;
+    }
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: #f1f1f1;
+    border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #888;
+    border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #555;
+}
+
+/* Dark Mode Scrollbar */
+.dark ::-webkit-scrollbar-track {
+    background: #374151;
+}
+
+.dark ::-webkit-scrollbar-thumb {
+    background: #4B5563;
+}
+
+.dark ::-webkit-scrollbar-thumb:hover {
+    background: #6B7280;
+}
+
+/* General Styles */
+body {
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    line-height: 1.6;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Bootstrap Dark Mode Support */
+.dark {
+    background-color: #0f172a !important;
+    color: #f9fafb;
+}
+
+.dark .bg-light {
+    background-color: #1e293b !important;
+}
+
+.dark .bg-white {
+    background-color: #1e293b !important;
+}
+
+.dark .bg-gray-50 {
+    background-color: #0f172a !important;
+}
+
+.dark .bg-gray-100 {
+    background-color: #1e293b !important;
+}
+
+.dark .bg-gray-200 {
+    background-color: #334155 !important;
+}
+
+.dark .navbar {
+    background-color: #1e293b !important;
+}
+
+.dark .navbar-light .navbar-brand,
+.dark .navbar-light .nav-link {
+    color: #f9fafb !important;
+}
+
+.dark .card {
+    background-color: #1e293b;
+    border-color: #334155;
+}
+
+.dark .card-title {
+    color: #f9fafb;
+}
+
+.dark .card-text {
+    color: #e2e8f0;
+}
+
+.dark .text-gray-600, 
+.dark .text-gray-700 {
+    color: #e2e8f0 !important;
+}
+
+.dark .text-gray-800, 
+.dark .text-gray-900 {
+    color: #f8fafc !important;
+}
+
+.dark .btn-primary {
+    background-color: #3b82f6;
+    border-color: #3b82f6;
+}
+
+.dark .btn-primary:hover {
+    background-color: #2563eb;
+    border-color: #2563eb;
+}
+
+/* Card Styles */
+.hover-card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border: none;
+}
+
+.hover-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15) !important;
+}
+
+.card {
+    border-radius: 1rem;
+    overflow: hidden;
+}
+
+.card-body {
+    padding: 1.5rem;
+}
+
+.card-title {
+    font-size: 1.25rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+    color: #2d3748;
+}
+
+.card-text {
+    color: #4a5568;
+    font-size: 0.95rem;
+    margin-bottom: 1.5rem;
+}
+
+/* Button Styles */
+.btn-primary {
+    background-color: #3b82f6;
+    border-color: #3b82f6;
+    padding: 0.5rem 1.5rem;
+    border-radius: 0.5rem;
+    font-weight: 500;
+    transition: all 0.3s ease;
+}
+
+.btn-primary:hover {
+    background-color: #2563eb;
+    border-color: #2563eb;
+    transform: translateY(-2px);
+}
+
+/* Icon Styles */
+.fa-3x {
+    color: #3b82f6;
+    margin-bottom: 1rem;
+    font-size: 3em;
+}
+
+.text-primary {
+    color: #3b82f6 !important;
+}
+
+/* Additional icon styles for specific icons */
+.fa-video, .fa-film {
+    color: #ef4444;
+}
+
+.fa-robot {
+    color: #3b82f6;
+}
+
+.fa-image {
+    color: #10b981;
+}
+
+.fa-pen-fancy {
+    color: #8b5cf6;
+}
+
+.fa-microphone {
+    color: #f59e0b;
+}
+
+.fa-code {
+    color: #6366f1;
+}
+
+.fa-bullhorn {
+    color: #ec4899;
+}
+
+.fa-chart-bar, .fa-chart-column {
+    color: #14b8a6;
+}
+
+.fa-chart-line {
+    color: #84cc16;
+}
+
+.fa-vr-cardboard {
+    color: #9333ea;
+}
+
+.fa-heartbeat, .fa-heart-pulse {
+    color: #ef4444;
+}
+
+.fa-microphone-alt {
+    color: #0ea5e9;
+}
+
+.dark .fa-3x {
+    /* Make icons brighter in dark mode */
+    filter: brightness(1.2);
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .card-body {
+        padding: 1.25rem;
+    }
+    
+    .card-title {
+        font-size: 1.1rem;
+    }
+    
+    .card-text {
+        font-size: 0.9rem;
+    }
+}
+
+/* Navigation Styles */
+.navbar {
+    padding: 1rem 0;
+}
+
+.navbar-brand {
+    font-weight: 700;
+    font-size: 1.5rem;
+    color: #2d3748;
+}
+
+.nav-link {
+    font-weight: 500;
+    color: #4a5568;
+    transition: color 0.3s ease;
+}
+
+.nav-link:hover {
+    color: #3b82f6;
+}
+
+/* Footer Styles */
+footer {
+    background-color: #f8fafc;
+}
+
+footer h5 {
+    color: #2d3748;
+    font-weight: 600;
+    margin-bottom: 1rem;
+}
+
+footer a {
+    color: #4a5568;
+    transition: color 0.3s ease;
+}
+
+footer a:hover {
+    color: #3b82f6;
+}
+
+/* Ensure dark mode for Bootstrap */
+.dark footer {
+    background-color: #1e293b !important;
+    border-top: 1px solid #334155;
+}
+
+.dark footer h5 {
+    color: #f9fafb;
+}
+
+.dark footer a {
+    color: #e2e8f0;
+}
+
+.dark footer a:hover {
+    color: #3b82f6;
+}
+
+/* Back Button Styles */
+#backButton {
+    background-color: #3b82f6;
+    color: white;
+    padding: 0.5rem 1.25rem;
+    border-radius: 0.375rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+
+#backButton:hover {
+    background-color: #2563eb;
+}
+
+/* Guide Link Styles */
+#guideLink {
+    color: #3b82f6;
+    font-weight: 500;
+    text-decoration: none;
+}
+
+.dark #guideLink {
+    color: #60a5fa;
+}
+
+#guideLink:hover {
+    text-decoration: underline;
+}
+
+/* Guide Container Styles */
+.guide-container {
+    background-color: #f3f4f6;
+    border-radius: 0.5rem;
+    padding: 1.5rem;
+    margin-bottom: 2rem;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+}
+
+.dark .guide-container {
+    background-color: #1e293b;
+    border: 1px solid #334155;
+}
+
+/* Dark Button Toggle */
+#darkModeToggle, #mobileDarkModeToggle {
+    color: #4a5568;
+    transition: all 0.3s ease;
+    background-color: #f3f4f6;
+    border-radius: 50%;
+    padding: 0.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 2.5rem;
+    height: 2.5rem;
+    border: 1px solid #e2e8f0;
+}
+
+.dark #darkModeToggle, .dark #mobileDarkModeToggle {
+    color: #f9fafb;
+    background-color: #334155;
+    border-color: #475569;
+}
+
+#darkModeToggle:hover, #mobileDarkModeToggle:hover {
+    color: #3b82f6;
+    transform: scale(1.05);
+}
+
+#darkModeToggle:focus, #mobileDarkModeToggle:focus {
+    box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.3);
+    outline: none;
+}
+
+.btn-link {
+    text-decoration: none;
+}
+
+/* Category card styles for dark mode */
+.dark #categoriesGrid .bg-white {
+    background-color: #1e293b !important;
+}
+
+/* Fix dark mode card text colors */
+.dark .card p {
+    color: #e2e8f0;
+}
+
+/* Enhance dark mode text contrast */
+.dark .text-gray-300 {
+    color: #e2e8f0 !important;
+}
+
+.dark .text-gray-400 {
+    color: #cbd5e1 !important;
+}
+
+/* Fix site title color in dark mode */
+.dark .text-gray-800,
+.dark .text-gray-900,
+.dark a.text-gray-800 {
+    color: #f8fafc !important;
+}
+
+/* Fix category title color in dark mode */
+.dark .category-card h3.text-gray-900 {
+    color: #f8fafc !important;
+}
+
+/* Make category text lighter in dark mode */
+.dark .category-card .text-xl {
+    color: #f8fafc !important;
+}
+
+/* Make sure site title is clearly visible */
+.dark a.text-2xl.font-bold {
+    color: #f8fafc !important;
+}
+
+/* Fix site title color in dark mode - more specific selector */
+html.dark header a.text-2xl,
+html.dark header a[href="/"] {
+    color: white !important;
+    text-shadow: 0px 0px 1px rgba(255, 255, 255, 0.3);
+}
+
+/* Fix site title color in light mode */
+html:not(.dark) header a.text-2xl,
+html:not(.dark) header a[href="/"] {
+    color: white !important;
+    text-shadow: 0px 0px 1px rgba(0, 0, 0, 0.1);
+}
+
+/* Add background contrast for logo in light mode */
+html:not(.dark) header {
+    background-color: #000000 !important;
+}
+
+html.dark header {
+    background-color: #1e293b !important;
+}
+
+/* Fix category title color in dark mode - even more specific selector */
+html.dark .category-card h3 {
+    color: #f3f4f6 !important;
+    text-shadow: 0px 0px 1px rgba(255, 255, 255, 0.2);
+}
+
+/* Fix category title color in light mode */
+html:not(.dark) .category-card h3 {
+    color: #1f2937 !important;
+}
+
+/* Force proper text coloring for category elements in light mode */
+html:not(.dark) #categoriesGrid h3 {
+    color: #1f2937 !important;
+}
+
+/* Force proper text coloring for category elements in dark mode */
+html.dark #categoriesGrid h3 {
+    color: #f3f4f6 !important;
+}
+
+/* Apply light colored text to any element with text-gray classes in dark mode */
+html.dark .text-gray-600,
+html.dark .text-gray-700,
+html.dark .text-gray-800,
+html.dark .text-gray-900 {
+    color: #f3f4f6 !important;
+}
+
+/* Fix color of text inside category cards */
+html.dark .category-card p {
+    color: #e5e7eb !important;
+}
+
+/* Make View Tools link more visible */
+html.dark .text-primary {
+    color: #60a5fa !important;
+}
+
+/* Ensure dark category cards have proper background */
+html.dark #categoriesGrid > div {
+    background-color: #1e293b !important;
+}
+
+/* Enhance dark mode blue box */
+.dark .bg-blue-50 {
+    background-color: #172554 !important;
+}
+
+.dark .bg-blue-900 {
+    background-color: #1e3a8a !important;
+}
+
+/* Category card styles */
+#categoriesGrid .bg-white {
+    border-radius: 1rem;
+    transition: all 0.3s ease;
+}
+
+#categoriesGrid .dark\:bg-gray-800 {
+    background-color: #1e293b !important;
+}
+
+/* Make sure tooltips are visible in dark mode */
+.dark [data-tooltip]:hover:after {
+    background-color: #334155;
+    color: #f9fafb;
+}
+
+/* Ensure site title is clearly visible in dark mode */
+html.dark header a.text-2xl {
+    color: #f3f4f6 !important;
+    text-shadow: 0px 0px 2px rgba(255, 255, 255, 0.5);
+}
+
+/* Ensure category names are clearly visible in dark mode */
+html.dark .category-card h3 {
+    color: #f3f4f6 !important;
+    text-shadow: 0px 0px 2px rgba(255, 255, 255, 0.5);
+}
+
+/* Ensure text inside category cards is visible in light mode */
+html:not(.dark) .category-card p {
+    color: #374151 !important;
+}
+
+/* Category card styles for light mode */
+html:not(.dark) #categoriesGrid > div {
+    background-color: #f3f4f6 !important;
+    border: 1px solid #e5e7eb;
+}
+
+/* Ensure text inside category cards is dark in light mode */
+html:not(.dark) .category-card h3 {
+    color: #1f2937 !important;
+}
+
+html:not(.dark) .category-card p {
+    color: #374151 !important;
+}
+
+/* Enhance card hover effect in light mode */
+html:not(.dark) #categoriesGrid > div:hover {
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+    transform: translateY(-4px);
+}
+
+/* Dark Button Toggle - Fix for light mode */
+html:not(.dark) #darkModeToggle, 
+html:not(.dark) #mobileDarkModeToggle {
+    color: #4a5568;
+    background-color: #f3f4f6;
+    border: 1px solid #cbd5e1;
+}
+
+/* Dark Button Toggle - Hover state in light mode */
+html:not(.dark) #darkModeToggle:hover, 
+html:not(.dark) #mobileDarkModeToggle:hover {
+    color: #2563eb;
+    background-color: #e2e8f0;
+}
+
+/* Make entire tools page white in light mode */
+body.light-mode #toolsSection,
+body.light-mode #toolsContainer,
+body.light-mode .tools-page {
+    background-color: white !important;
+    color: black !important;
+}
+
+body.light-mode #toolsSection .container,
+body.light-mode #toolsContainer .container {
+    background-color: white !important;
+}
+
+body.light-mode #toolsSection h1, 
+body.light-mode #toolsSection h2,
+body.light-mode #toolsSection p,
+body.light-mode #toolsContainer h1,
+body.light-mode #toolsContainer h2,
+body.light-mode #toolsContainer p {
+    color: black !important;
+}
+
+body.light-mode .notification-banner {
+    background-color: white !important;
+    color: black !important;
+    border: 1px solid #e5e7eb;
+}
+
+body.light-mode .notification-banner p {
+    color: black !important;
+}
+
+body.light-mode .notification-banner a {
+    color: #3b82f6 !important;
+}
+
+/* Preserve dark mode styles */
+body.dark-mode #toolsSection,
+body.dark-mode #toolsContainer,
+body.dark-mode .tools-page {
+    background-color: #1f2937 !important;
+    color: white !important;
+}
+
+body.dark-mode .notification-banner {
+    background-color: #3b82f6 !important;
+    color: white !important;
+}
+
+body.dark-mode .notification-banner p {
+    color: white !important;
 } 

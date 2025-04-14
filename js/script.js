@@ -666,6 +666,9 @@ function showTools(category) {
         return;
     }
 
+    // Add class to body for styling when category is open
+    document.body.classList.add('has-category-open');
+
     // Hide categories and show tools section
     categoriesSection.style.display = 'none';
     toolsSection.classList.remove('hidden');
@@ -749,13 +752,16 @@ function showTools(category) {
 function showCategories() {
     console.log('showCategories called');
     
+    // Remove body class for styling
+    document.body.classList.remove('has-category-open');
+    
+    // Find required elements
     const toolsSection = document.getElementById('toolsSection');
     const categoriesSection = document.getElementById('categoriesSection');
-    const guideLink = document.getElementById('guideLink');
-    const guideContainer = document.querySelector('.mb-8.p-4.bg-blue-50');
-
+    
     if (!toolsSection || !categoriesSection) {
-        console.error('Required sections not found');
+        console.error('Required elements not found');
+        showError('Error loading categories view');
         return;
     }
 
@@ -765,18 +771,9 @@ function showCategories() {
 
     // Reset URL to homepage
     history.pushState({}, '', '/');
-
-    // Reset page title
-    document.title = 'AI Category Hub';
-
-    // Hide guide link container
-    if (guideLink && guideContainer) {
-        guideLink.classList.add('hidden');
-        guideContainer.style.display = 'none';
-        console.log('Guide link hidden');
-    } else {
-        console.warn('Guide link or container element not found');
-    }
+    
+    // Reset document title
+    document.title = 'AI Category Hub - Your Comprehensive AI Tools Directory';
 
     // Reset current category
     currentCategory = null;
