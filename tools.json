@@ -500,7 +500,22 @@
       "image": "https://pictory.ai/wp-content/uploads/2022/06/pictory-favicon-300x300.png",
       "link": "https://pictory.ai?ref=simon75"
     },
-
+     {
+    "id": "591",
+    "name": "Synthesys",
+    "description": "AI video generation tool that creates spokesperson videos with synthesized voices",
+    "category": "Video Editing & Generation",
+    "image": "https://synthesys.io/favicon.ico",
+    "link": "https://synthesys.io?fpr=aicategoryhub"
+  },
+  {
+    "id": "571",
+    "name": "Kaiber",
+    "description": "AI-driven platform for transforming text into dynamic videos",
+    "category": "Video Editing & Generation",
+    "image": "https://www.kaiber.ai/favicon.ico",
+    "link": "https://kaiber.ai?via=aicategoryhub"
+  },
    
     {
       "id": "542",
@@ -536,95 +551,13 @@
       "image": "https://assets-global.website-files.com/63b454a6cf2d95a15ce787e6/63b5877243445e780a101e11_heygen-logo-icon.svg",
       "link": "https://www.heygen.com/?affiliate=aicategoryhub"
     },
-    
-  {
-    "id": "570",
-    "name": "FlexClip",
-    "description": "Online video maker with AI-powered templates and tools",
-    "category": "Video Editing & Generation",
-    "image": "https://www.flexclip.com/favicon.ico",
-    "link": "https://www.flexclip.com/affiliate-program.html?ref=aicategoryhub"
-  },
-  {
-    "id": "571",
-    "name": "Kaiber",
-    "description": "AI-driven platform for transforming text into dynamic videos",
-    "category": "Video Editing & Generation",
-    "image": "https://www.kaiber.ai/favicon.ico",
-    "link": "https://www.kaiber.ai/affiliate?ref=aicategoryhub"
-  },
-  {
-    "id": "572",
-    "name": "Type Studio",
-    "description": "AI-powered video editor with automatic transcription and subtitles",
-    "category": "Video Editing & Generation",
-    "image": "https://www.typestudio.co/favicon.ico",
-    "link": "https://www.typestudio.co/affiliate?ref=aicategoryhub"
-  },
-  {
-    "id": "573",
-    "name": "Quinvio AI",
-    "description": "AI tool for creating engaging video presentations from text",
-    "category": "Video Editing & Generation",
-    "image": "https://www.quinvio.ai/favicon.ico",
-    "link": "https://www.quinvio.ai/affiliate?ref=aicategoryhub"
-  },
-  {
-    "id": "574",
-    "name": "Movio",
-    "description": "AI video creation platform with customizable avatars",
-    "category": "Video Editing & Generation",
-    "image": "https://www.movio.la/favicon.ico",
-    "link": "https://www.movio.la/affiliate?ref=aicategoryhub"
-  },
-  {
-    "id": "575",
-    "name": "Genmo",
-    "description": "AI tool for generating videos from text prompts",
-    "category": "Video Editing & Generation",
-    "image": "https://www.genmo.ai/favicon.ico",
-    "link": "https://www.genmo.ai/affiliate?ref=aicategoryhub"
-  },
-  {
-    "id": "576",
-    "name": "Motionit",
-    "description": "AI-powered platform for creating animated videos effortlessly",
-    "category": "Video Editing & Generation",
-    "image": "https://www.motionit.ai/favicon.ico",
-    "link": "https://www.motionit.ai/affiliate?ref=aicategoryhub"
-  },
-  {
-    "id": "577",
-    "name": "Neural Actors",
-    "description": "AI service for generating realistic 3D human avatars",
-    "category": "Video Editing & Generation",
-    "image": "https://www.neuralactors.com/favicon.ico",
-    "link": "https://www.neuralactors.com/affiliate?ref=aicategoryhub"
-  },
-  {
-    "id": "578",
-    "name": "Aug X Labs",
-    "description": "AI platform for creating videos with augmented reality elements",
-    "category": "Video Editing & Generation",
-    "image": "https://www.augxlabs.com/favicon.ico",
-    "link": "https://www.augxlabs.com/affiliate?ref=aicategoryhub"
-  },
-  {
-    "id": "579",
-    "name": "Yepic AI",
-    "description": "AI video creation tool with multilingual support and avatars",
-    "category": "Video Editing & Generation",
-    "image": "https://www.yepic.ai/favicon.ico",
-    "link": "https://www.yepic.ai/affiliate?ref=aicategoryhub"
-  },
-
   {
     "id": "584",
     "name": "Wave.video",
     "description": "Online video platform offering AI-powered video creation and hosting solutions",
     "category": "Video Editing & Generation",
     "image": "https://wave.video/favicon.ico",
-    "link": "https://wave.video/affiliate-program?ref=aicategoryhub"
+    "link": "https://wave.video"
   },
   {
     "id": "585",
@@ -632,7 +565,7 @@
     "description": "AI video synthesis platform specializing in creating human-like avatars for videos",
     "category": "Video Editing & Generation",
     "image": "https://www.deepbrain.io/favicon.ico",
-    "link": "https://www.deepbrain.io/affiliate?ref=aicategoryhub"
+    "link": "https://www.aistudios.com/?via=aicategoryhub"
   },
   {
     "id": "586",
@@ -642,78 +575,7 @@
     "image": "https://animoto.com/favicon.ico",
     "link": "https://animoto.com/affiliate-program?ref=aicategoryhub"
   },
-  {
-    "id": "587",
-    "name": "Designs.ai Videomaker",
-    "description": "AI-powered tool that transforms text into engaging videos with voiceovers and animations",
-    "category": "Video Editing & Generation",
-    "image": "https://designs.ai/favicon.ico",
-    "link": "https://designs.ai/affiliate?ref=aicategoryhub"
-  },
-  {
-    "id": "588",
-    "name": "Wisecut",
-    "description": "AI video editor that automatically removes silences and adds subtitles for faster editing",
-    "category": "Video Editing & Generation",
-    "image": "https://wisecut.video/favicon.ico",
-    "link": "https://wisecut.video/affiliate-program?ref=aicategoryhub"
-  },
-  {
-    "id": "589",
-    "name": "Magisto",
-    "description": "AI-driven video editing app that creates polished videos from raw footage",
-    "category": "Video Editing & Generation",
-    "image": "https://www.magisto.com/favicon.ico",
-    "link": "https://www.magisto.com/affiliate?ref=aicategoryhub"
-  },
-  {
-    "id": "590",
-    "name": "Rephrase.ai",
-    "description": "Platform that uses AI to create personalized video messages at scale",
-    "category": "Video Editing & Generation",
-    "image": "https://www.rephrase.ai/favicon.ico",
-    "link": "https://www.rephrase.ai/affiliate?ref=aicategoryhub"
-  },
-  {
-    "id": "591",
-    "name": "Synthesys",
-    "description": "AI video generation tool that creates spokesperson videos with synthesized voices",
-    "category": "Video Editing & Generation",
-    "image": "https://synthesys.io/favicon.ico",
-    "link": "https://synthesys.io/affiliate-program?ref=aicategoryhub"
-  },
-  {
-    "id": "592",
-    "name": "Lumen5",
-    "description": "AI-powered video creation platform that turns blog posts into engaging videos",
-    "category": "Video Editing & Generation",
-    "image": "https://lumen5.com/favicon.ico",
-    "link": "https://lumen5.com/affiliate-program?ref=aicategoryhub"
-  },
-  {
-    "id": "593",
-    "name": "Peech",
-    "description": "AI video editing platform designed for marketing teams to create branded content",
-    "category": "Video Editing & Generation",
-    "image": "https://www.peech-ai.com/favicon.ico",
-    "link": "https://www.peech-ai.com/affiliate?ref=aicategoryhub"
-  },
-  {
-    "id": "601",
-    "name": "DeepMotion",
-    "description": "AI-powered animation tool for creating realistic motion capture from video inputs.",
-    "category": "Video Editing & Generation",
-    "image": "https://www.deepmotion.com/favicon.ico",
-    "link": "https://www.deepmotion.com/affiliate"
-  },
-  {
-    "id": "602",
-    "name": "Lumen5",
-    "description": "AI video creation platform that turns blog posts into engaging videos.",
-    "category": "Video Editing & Generation",
-    "image": "https://lumen5.com/favicon.ico",
-    "link": "https://www.lumen5.com/affiliate-program"
-  },
+
   {
     "id": "603",
     "name": "Runway",
@@ -723,44 +585,12 @@
     "link": "https://runwayml.com/affiliate"
   },
   {
-    "id": "604",
-    "name": "Wibbitz",
-    "description": "Automated video creation platform with AI-driven video templates for fast production.",
-    "category": "Video Editing & Generation",
-    "image": "https://www.wibbitz.com/favicon.ico",
-    "link": "https://www.wibbitz.com/affiliate"
-  },
-  {
     "id": "605",
     "name": "Rocketium",
     "description": "AI-powered video creation platform for marketing, brand building, and automation.",
     "category": "Video Editing & Generation",
     "image": "https://rocketium.com/favicon.ico",
-    "link": "https://www.rocketium.com/affiliate"
-  },
-  {
-    "id": "606",
-    "name": "Tyle",
-    "description": "AI tool to automatically create videos from text and media.",
-    "category": "Video Editing & Generation",
-    "image": "https://www.tyle.io/favicon.ico",
-    "link": "https://www.tyle.io/affiliate"
-  },
-  {
-    "id": "607",
-    "name": "Pexels Video Editor",
-    "description": "AI-powered online tool for creating professional-looking videos with stock footage.",
-    "category": "Video Editing & Generation",
-    "image": "https://www.pexels.com/favicon.ico",
-    "link": "https://www.pexels.com/affiliate"
-  },
-  {
-    "id": "608",
-    "name": "Vidooly",
-    "description": "AI-driven video editing and monetization platform with social media integration.",
-    "category": "Video Editing & Generation",
-    "image": "https://vidooly.com/favicon.ico",
-    "link": "https://vidooly.com/affiliate"
+    "link": "https://www.rocketium.com"
   },
   {
     "id": "609",
@@ -771,100 +601,12 @@
     "link": "https://www.veed.io/affiliate"
   },
   {
-    "id": "610",
-    "name": "Synthesia",
-    "description": "AI video generation platform that turns text into video using virtual avatars.",
-    "category": "Video Editing & Generation",
-    "image": "https://www.synthesia.io/favicon.ico",
-    "link": "https://www.synthesia.io/affiliate-program"
-  },
-  {
-    "id": "611",
-    "name": "Zubtitle",
-    "description": "AI video captioning tool that automatically adds subtitles and captions.",
-    "category": "Video Editing & Generation",
-    "image": "https://zubtitle.com/favicon.ico",
-    "link": "https://zubtitle.com/affiliate"
-  },
-  {
-    "id": "612",
-    "name": "Veed.io",
-    "description": "AI-driven tool for creating and editing professional videos quickly with templates.",
-    "category": "Video Editing & Generation",
-    "image": "https://www.veed.io/favicon.ico",
-    "link": "https://www.veed.io/affiliate"
-  },
-  {
-    "id": "613",
-    "name": "Vize.ai",
-    "description": "AI-based platform for training and deploying custom computer vision models for video recognition.",
-    "category": "Video Editing & Generation",
-    "image": "https://www.vize.ai/favicon.ico",
-    "link": "https://www.vize.ai/affiliate"
-  },
-  {
-    "id": "614",
-    "name": "Clipchamp",
-    "description": "Easy-to-use AI video editing tool with automated features and templates.",
-    "category": "Video Editing & Generation",
-    "image": "https://www.clipchamp.com/favicon.ico",
-    "link": "https://www.clipchamp.com/affiliate"
-  },
-  {
-    "id": "615",
-    "name": "Magisto",
-    "description": "AI video editing app for creating social media videos from raw footage.",
-    "category": "Video Editing & Generation",
-    "image": "https://www.magisto.com/favicon.ico",
-    "link": "https://www.magisto.com/affiliate"
-  },
-  {
-    "id": "616",
-    "name": "Animotica",
-    "description": "AI-powered video editor for creating high-quality videos with professional templates.",
-    "category": "Video Editing & Generation",
-    "image": "https://animotica.com/favicon.ico",
-    "link": "https://animotica.com/affiliate"
-  },
-  {
     "id": "617",
     "name": "Offeo",
     "description": "AI-powered video and animation creation platform with marketing templates.",
     "category": "Video Editing & Generation",
     "image": "https://www.offeo.com/favicon.ico",
-    "link": "https://www.offeo.com/affiliate"
-  },
-  {
-    "id": "618",
-    "name": "Crello",
-    "description": "AI video maker for designing creative videos with motion graphics and templates.",
-    "category": "Video Editing & Generation",
-    "image": "https://crello.com/favicon.ico",
-    "link": "https://crello.com/affiliate"
-  },
-  {
-    "id": "619",
-    "name": "Designhill Video Maker",
-    "description": "AI tool that allows users to make animated videos for their business or personal projects.",
-    "category": "Video Editing & Generation",
-    "image": "https://www.designhill.com/favicon.ico",
-    "link": "https://www.designhill.com/affiliate"
-  },
-  {
-    "id": "620",
-    "name": "Storyblocks Video Editor",
-    "description": "AI-driven video editing software with integrated stock footage and music.",
-    "category": "Video Editing & Generation",
-    "image": "https://www.storyblocks.com/favicon.ico",
-    "link": "https://www.storyblocks.com/affiliate"
-  },
-     {
-    "id": "627",
-    "name": "Promo",
-    "description": "AI-driven video creation platform to produce promotional and marketing videos.",
-    "category": "Video Editing & Generation",
-    "image": "https://promo.com/favicon.ico",
-    "link": "https://promo.com/affiliate"
+    "link": "https://offeo.com/ltd?ref=aicategoryhub"
   },
   {
     "id": "628",
@@ -874,22 +616,23 @@
     "image": "https://www.biteable.com/favicon.ico",
     "link": "https://www.biteable.com/affiliate"
   },
-  {
-    "id": "629",
-    "name": "Shotcut",
-    "description": "AI-powered open-source video editor with advanced editing tools and effects.",
+     {
+    "id": "577",
+    "name": "Neural Actors",
+    "description": "AI service for generating realistic 3D human avatars",
     "category": "Video Editing & Generation",
-    "image": "https://www.shotcut.org/favicon.ico",
-    "link": "https://www.shotcut.org/affiliate"
+    "image": "https://www.neuralactors.com/favicon.ico",
+    "link": "https://neuralactors.com"
   },
-  {
-    "id": "630",
-    "name": "Clideo",
-    "description": "AI video editing platform for merging, resizing, and adding effects to videos.",
+      {
+    "id": "579",
+    "name": "Yepic AI",
+    "description": "AI video creation tool with multilingual support and avatars",
     "category": "Video Editing & Generation",
-    "image": "https://clideo.com/favicon.ico",
-    "link": "https://clideo.com/affiliate"
+    "image": "https://www.yepic.ai/favicon.ico",
+    "link": "https://www.yepic.ai"
   },
+
     {
       "id": "31",
       "name": "Surfer SEO",
