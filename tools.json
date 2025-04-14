@@ -32,10 +32,11 @@
       "image": "https://avatars.githubusercontent.com/u/26473895",
       "link": "https://try.botpress.com/hzfu7z7jcbmy"
     },
+
   {
     "id": "620",
     "name": "Imagine AI",
-    "description": "AI image generator offering a 50% commission per sale.",
+    "description": "Generate stunning AI-powered images easily for your personal or business projects.",
     "category": "Image Generation & Editing",
     "image": "https://www.imagine.art/favicon.ico",
     "link": "https://www.imagine.art"
@@ -43,7 +44,7 @@
   {
     "id": "621",
     "name": "PhotoAI",
-    "description": "Create AI-generated photos with a 33% commission per sale.",
+    "description": "Create high-quality AI-generated photos for any use, from marketing to social media content.",
     "category": "Image Generation & Editing",
     "image": "https://www.photoai.me/favicon.ico",
     "link": "https://www.photoai.me"
