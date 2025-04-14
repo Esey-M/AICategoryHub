@@ -38,7 +38,7 @@
     "description": "AI image generator offering a 50% commission per sale.",
     "category": "Image Generation & Editing",
     "image": "https://www.imagine.art/favicon.ico",
-    "link": "https://www.imagine.art/affiliate-program"
+    "link": "https://www.imagine.art"
   },
   {
     "id": "621",
@@ -46,127 +46,15 @@
     "description": "Create AI-generated photos with a 33% commission per sale.",
     "category": "Image Generation & Editing",
     "image": "https://www.photoai.me/favicon.ico",
-    "link": "https://www.photoai.me/affiliate-program"
+    "link": "https://www.photoai.me"
   },
   {
-    "id": "622",
-    "name": "Civitai",
-    "description": "Generative AI platform and marketplace for AI-generated images and models.",
-    "category": "Image Generation & Editing",
-    "image": "https://civitai.com/favicon.ico",
-    "link": "https://civitai.com"
-  },
-  {
-    "id": "623",
-    "name": "Everneed AI",
-    "description": "AI-powered content-generating tool offering text and image generation.",
-    "category": "Image Generation & Editing",
-    "image": "https://www.everneed.ai/favicon.ico",
-    "link": "https://www.everneed.ai"
-  },
-  {
-    "id": "624",
-    "name": "Zeen",
-    "description": "Platform for creating shoppable collages with affiliate links.",
-    "category": "Image Generation & Editing",
-    "image": "https://www.zeen.com/favicon.ico",
-    "link": "https://www.zeen.com"
-  },
-  {
-    "id": "626",
-    "name": "Designify",
-    "description": "AI-powered tool for background removal and image enhancement.",
-    "category": "Image Generation & Editing",
-    "image": "https://www.designify.com/favicon.ico",
-    "link": "https://www.designify.com"
-  },
-  {
-    "id": "627",
-    "name": "Deep Dream Generator",
-    "description": "Generative art tool that uses deep learning to create unique images.",
-    "category": "Image Generation & Editing",
-    "image": "https://deepdreamgenerator.com/favicon.ico",
-    "link": "https://deepdreamgenerator.com"
-  },
-  {
-    "id": "629",
-    "name": "Artbreeder",
-    "description": "Collaborative platform for creating and exploring images using AI.",
-    "category": "Image Generation & Editing",
-    "image": "https://www.artbreeder.com/favicon.ico",
-    "link": "https://www.artbreeder.com"
-  },
-  {
-    "id": "630",
-    "name": "NightCafe",
-    "description": "AI art generator that creates artworks from text prompts.",
-    "category": "Image Generation & Editing",
-    "image": "https://creator.nightcafe.studio/favicon.ico",
-    "link": "https://creator.nightcafe.studio"
-  },
-  {
-    "id": "631",
-    "name": "DeepAI",
-    "description": "Provides AI tools for image generation and enhancement.",
-    "category": "Image Generation & Editing",
-    "image": "https://deepai.org/favicon.ico",
-    "link": "https://deepai.org"
-  },
-  {
-    "id": "632",
-    "name": "Artstation",
-    "description": "Platform for artists to showcase and sell their digital artworks.",
-    "category": "Image Generation & Editing",
-    "image": "https://www.artstation.com/favicon.ico",
-    "link": "https://www.artstation.com"
-  },
-  {
-    "id": "634",
-    "name": "DALL·E 2",
-    "description": "OpenAI's image generation model that creates images from text prompts.",
-    "category": "Image Generation & Editing",
-    "image": "https://openai.com/favicon.ico",
-    "link": "https://openai.com/dall-e-2"
-  },
-  {
-    "id": "635",
-    "name": "Stable Diffusion",
-    "description": "Open-source AI model for generating images from text descriptions.",
-    "category": "Image Generation & Editing",
-    "image": "https://stability.ai/favicon.ico",
-    "link": "https://stability.ai"
-  },
-  {
-    "id": "636",
-    "name": "DeepArt",
-    "description": "Transforms your photos into artworks using AI.",
-    "category": "Image Generation & Editing",
-    "image": "https://www.deepart.io/favicon.ico",
-    "link": "https://www.deepart.io"
-  },
-  {
-    "id": "637",
-    "name": "AI Picasso",
-    "description": "Generates Picasso-style artworks from your photos.",
-    "category": "Image Generation & Editing",
-    "image": "https://www.aipicasso.com/favicon.ico",
-    "link": "https://www.aipicasso.com"
-  },
-  {
-    "id": "638",
-    "name": "Artisto",
-    "description": "AI-powered app that turns your photos into artworks.",
-    "category": "Image Generation & Editing",
-    "image": "https://artisto.net/favicon.ico",
-    "link": "https://artisto.net"
-  },
- {
     "id": "639",
     "name": "PaintsChainer",
     "description": "AI-powered tool that automatically turns your sketches into paintings.",
     "category": "Image Generation & Editing",
     "image": "https://paintschainer.com/favicon.ico",
-    "link": "https://paintschainer.com/affiliate"
+    "link": "https://paintschainer.com"
   },
   {
     "id": "640",
@@ -174,7 +62,7 @@
     "description": "AI photo editor that enhances images with automatic adjustments and edits.",
     "category": "Image Generation & Editing",
     "image": "https://skylum.com/favicon.ico",
-    "link": "https://skylum.com/affiliate"
+    "link": "https://skylum.com"
   },
   {
     "id": "641",
@@ -182,7 +70,7 @@
     "description": "Online photo editor with advanced editing features, similar to Photoshop.",
     "category": "Image Generation & Editing",
     "image": "https://www.photopea.com/favicon.ico",
-    "link": "https://www.photopea.com/affiliate"
+    "link": "https://www.photopea.com"
   },
   {
     "id": "642",
@@ -190,7 +78,7 @@
     "description": "AI-powered photo enhancer, colorizer, and retouch tool.",
     "category": "Image Generation & Editing",
     "image": "https://www.vanceai.com/favicon.ico",
-    "link": "https://www.vanceai.com/affiliate"
+    "link": "https://www.vanceai.com"
   },
   {
     "id": "643",
@@ -198,7 +86,7 @@
     "description": "AI app for enhancing and editing portraits, including aging and gender-swapping effects.",
     "category": "Image Generation & Editing",
     "image": "https://www.faceapp.com/favicon.ico",
-    "link": "https://www.faceapp.com/affiliate"
+    "link": "https://www.faceapp.com"
   },
   {
     "id": "644",
@@ -206,7 +94,7 @@
     "description": "AI-powered editing tool to enhance and retouch images with one click.",
     "category": "Image Generation & Editing",
     "image": "https://www.fotor.com/favicon.ico",
-    "link": "https://www.fotor.com/affiliate"
+    "link": "https://www.fotor.com"
   },
   {
     "id": "645",
@@ -214,7 +102,7 @@
     "description": "Generative tool that creates dream-like, surreal artworks using AI.",
     "category": "Image Generation & Editing",
     "image": "https://deepdream.studio/favicon.ico",
-    "link": "https://deepdream.studio/affiliate"
+    "link": "https://deepdream.studio"
   },
   {
     "id": "646",
@@ -222,7 +110,7 @@
     "description": "AI tool for creative image generation and editing for professionals.",
     "category": "Image Generation & Editing",
     "image": "https://runwayml.com/favicon.ico",
-    "link": "https://runwayml.com/affiliate"
+    "link": "https://runwayml.com"
   },
   {
     "id": "647",
@@ -230,7 +118,7 @@
     "description": "AI-powered tool for creating stunning and unique images.",
     "category": "Image Generation & Editing",
     "image": "https://www.supermachine.art/favicon.ico",
-    "link": "https://www.supermachine.art/affiliate"
+    "link": "https://www.supermachine.art"
   },
   {
     "id": "648",
@@ -238,15 +126,15 @@
     "description": "AI art generator that turns your selfies into Renaissance-style portraits.",
     "category": "Image Generation & Editing",
     "image": "https://ai-art.tokyo/en/favicon.ico",
-    "link": "https://ai-art.tokyo/en/affiliate"
+    "link": "https://ai-art.tokyo/en"
   },
-     {
+  {
     "id": "649",
     "name": "Artbreeder",
     "description": "AI-powered platform for creating and editing images through collaborative genetic algorithms.",
     "category": "Image Generation & Editing",
     "image": "https://www.artbreeder.com/favicon.ico",
-    "link": "https://www.artbreeder.com/affiliate"
+    "link": "https://www.artbreeder.com"
   },
   {
     "id": "650",
@@ -254,7 +142,7 @@
     "description": "AI tool that transforms your photos into cartoon-style images.",
     "category": "Image Generation & Editing",
     "image": "https://toonme.com/favicon.ico",
-    "link": "https://toonme.com/affiliate"
+    "link": "https://toonme.com"
   },
   {
     "id": "651",
@@ -262,7 +150,7 @@
     "description": "AI-based image generator that turns photos into artworks in the style of famous artists.",
     "category": "Image Generation & Editing",
     "image": "https://www.deepart.io/favicon.ico",
-    "link": "https://www.deepart.io/affiliate"
+    "link": "https://www.deepart.io"
   },
   {
     "id": "652",
@@ -270,7 +158,7 @@
     "description": "AI-powered photo editing app that transforms your photos into art using the styles of famous artists.",
     "category": "Image Generation & Editing",
     "image": "https://prisma-ai.com/favicon.ico",
-    "link": "https://prisma-ai.com/affiliate"
+    "link": "https://prisma-ai.com"
   },
   {
     "id": "653",
@@ -278,7 +166,7 @@
     "description": "AI tool that creates artistic renderings of your photos in the style of Picasso.",
     "category": "Image Generation & Editing",
     "image": "https://aipicasso.com/favicon.ico",
-    "link": "https://aipicasso.com/affiliate"
+    "link": "https://aipicasso.com"
   },
   {
     "id": "654",
@@ -286,7 +174,7 @@
     "description": "AI-powered art generator that lets you create artworks in different styles, including surrealism, cubism, and more.",
     "category": "Image Generation & Editing",
     "image": "https://creator.nightcafe.studio/favicon.ico",
-    "link": "https://creator.nightcafe.studio/affiliate"
+    "link": "https://creator.nightcafe.studio"
   },
   {
     "id": "655",
@@ -294,7 +182,7 @@
     "description": "AI-powered image upscaling and noise reduction tool.",
     "category": "Image Generation & Editing",
     "image": "https://bigjpg.com/favicon.ico",
-    "link": "https://bigjpg.com/affiliate"
+    "link": "https://bigjpg.com"
   },
   {
     "id": "656",
@@ -302,7 +190,7 @@
     "description": "AI tool that generates surreal, dream-like images from your photos.",
     "category": "Image Generation & Editing",
     "image": "https://deepdreamgenerator.com/favicon.ico",
-    "link": "https://deepdreamgenerator.com/affiliate"
+    "link": "https://deepdreamgenerator.com"
   },
   {
     "id": "657",
@@ -310,7 +198,7 @@
     "description": "AI tool that automatically edits images, making them more professional by removing backgrounds and enhancing details.",
     "category": "Image Generation & Editing",
     "image": "https://www.designify.com/favicon.ico",
-    "link": "https://www.designify.com/affiliate"
+    "link": "https://www.designify.com"
   },
   {
     "id": "658",
@@ -318,7 +206,7 @@
     "description": "AI tool that generates logos and branding materials from simple text inputs.",
     "category": "Image Generation & Editing",
     "image": "https://www.logoai.com/favicon.ico",
-    "link": "https://www.logoai.com/affiliate"
+    "link": "https://www.logoai.com"
   },
     {
       "id": "13",
