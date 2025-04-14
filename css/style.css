@@ -10,6 +10,49 @@
     box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
 }
 
+/* Fix for tool cards in the tools container (after clicking a category) - light mode */
+#toolsContainer .category-card {
+    background-color: white !important;
+}
+
+#toolsContainer .category-card h3 {
+    color: black !important;
+}
+
+#toolsContainer .category-card p.text-sm {
+    color: black !important;
+}
+
+#toolsContainer .category-card p.text-gray-600 {
+    color: black !important;
+}
+
+#toolsContainer .category-card span.text-sm {
+    color: black !important;
+}
+
+/* Dark mode keeps existing styling */
+.dark #toolsContainer .category-card {
+    background-color: #1e293b !important;
+}
+
+.dark #toolsContainer .category-card h3 {
+    color: white !important;
+}
+
+.dark #toolsContainer .category-card p.text-sm {
+    color: #cbd5e1 !important;
+}
+
+.dark #toolsContainer .category-card p.text-gray-600,
+.dark #toolsContainer .category-card p.text-gray-300 {
+    color: #e2e8f0 !important;
+}
+
+.dark #toolsContainer .category-card span.text-sm {
+    color: #cbd5e1 !important;
+}
+
 /* Category Filter Button Styles */
 .category-filter {
     transition: all 0.2s ease-in-out;
