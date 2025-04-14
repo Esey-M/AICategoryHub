@@ -12,202 +12,220 @@
 </script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Comprehensive guide to AI tools and applications in healthcare and medicine - AI Category Hub">
-    <meta name="keywords" content="AI in healthcare, medical AI tools, AI diagnosis, healthcare technology, predictive healthcare, medical imaging AI">
-    <title>AI in Healthcare & Medicine Guide | AI Category Hub</title>
+    <meta name="description" content="Discover the best AI tools for healthcare and medicine. Compare top AI solutions for medical diagnosis, patient care, drug discovery, and healthcare management.">
+    <meta name="keywords" content="AI healthcare, medical AI, healthcare automation, medical diagnosis, patient care, drug discovery, healthcare management">
+    <meta property="og:title" content="Healthcare & Medicine AI Tools Guide | AI Category Hub">
+    <meta property="og:description" content="Discover the best AI tools for healthcare and medicine. Compare top AI solutions for medical diagnosis, patient care, drug discovery, and healthcare management.">
+    <meta property="og:url" content="https://aicategoryhub.net/guides/healthcare-medicine.html">
+    <meta property="og:type" content="article">
+    <link rel="canonical" href="https://aicategoryhub.net/guides/healthcare-medicine.html">
+    <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="../css/style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="icon" href="../favicon.ico" type="image/x-icon">
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#3B82F6',
+                        secondary: '#10B981',
+                    }
+                }
+            }
+        }
+    </script>
+    <title>Healthcare & Medicine AI Tools Guide | AI Category Hub</title>
 </head>
-<body>
-    <header>
-        <div class="container">
-            <div class="logo">
-                <a href="../index.html">AI Category Hub</a>
+<body class="min-h-screen bg-gray-50 dark:bg-gray-900 dark:text-white">
+    <!-- Header -->
+    <header class="bg-white dark:bg-gray-800 shadow">
+        <nav class="container mx-auto px-4 py-3 flex items-center justify-between">
+            <a href="../index.html" class="text-xl font-bold text-primary">AI Category Hub</a>
+            
+            <div class="hidden md:flex items-center space-x-6">
+                <a href="../index.html" class="hover:text-primary">Home</a>
+                <a href="../index.html" class="hover:text-primary">Categories</a>
+                <a href="../about.html" class="hover:text-primary">About</a>
+                <a href="../contact.html" class="hover:text-primary">Contact</a>
+                <button id="darkModeToggle" class="p-2 rounded-full hover:bg-gray-200 dark:hover:bg-gray-700">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 dark:hidden" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z" />
+                    </svg>
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 hidden dark:block" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z" />
+                    </svg>
+                </button>
             </div>
-            <nav>
-                <ul>
-                    <li><a href="../index.html">Home</a></li>
-                    <li><a href="../about.html">About</a></li>
-                    <li><a href="../contact.html">Contact</a></li>
-                </ul>
-            </nav>
-            <div class="toggle-container">
-                <span>Light</span>
-                <label class="switch">
-                    <input type="checkbox" id="darkModeToggle">
-                    <span class="slider round"></span>
-                </label>
-                <span>Dark</span>
-            </div>
+            
+            <button id="mobileMenuBtn" class="md:hidden p-2 rounded-md hover:bg-gray-200 dark:hover:bg-gray-700">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+                </svg>
+            </button>
+        </nav>
+        
+        <div id="mobileMenu" class="md:hidden hidden px-4 py-3 bg-white dark:bg-gray-800 shadow-md">
+            <a href="../index.html" class="block py-2 hover:text-primary">Home</a>
+            <a href="../index.html" class="block py-2 hover:text-primary">Categories</a>
+            <a href="../about.html" class="block py-2 hover:text-primary">About</a>
+            <a href="../contact.html" class="block py-2 hover:text-primary">Contact</a>
+            <button id="mobileDarkModeToggle" class="mt-2 p-2 rounded-full hover:bg-gray-200 dark:hover:bg-gray-700">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 dark:hidden" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z" />
+                </svg>
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 hidden dark:block" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z" />
+                </svg>
+            </button>
         </div>
     </header>
 
-    <div class="breadcrumb">
-        <div class="container">
-            <a href="../index.html">Home</a> &gt; <a href="../index.html?category=Healthcare+%26+Medicine">Healthcare & Medicine</a> &gt; <span>Guide</span>
-        </div>
+    <!-- Breadcrumbs -->
+    <div class="container mx-auto px-4 py-2 text-sm">
+        <a href="../index.html" class="hover:text-primary">Home</a> &gt; 
+        <a href="../index.html" class="hover:text-primary">Categories</a> &gt; 
+        <span class="text-primary">Healthcare & Medicine</span>
     </div>
 
-    <main class="guide-content">
-        <div class="container">
-            <h1>AI in Healthcare & Medicine: Comprehensive Guide</h1>
+    <!-- Article Content -->
+    <main class="container mx-auto px-4 py-6 max-w-4xl">
+        <h1 class="text-3xl md:text-4xl font-bold mb-6">Healthcare & Medicine AI Tools Guide</h1>
+        
+        <div class="bg-white dark:bg-gray-800 p-6 rounded-lg shadow-md mb-8">
+            <div class="prose dark:prose-invert max-w-none">
+                <h2 class="text-2xl font-semibold mb-4">Introduction to AI in Healthcare & Medicine</h2>
+                <p class="mb-4">
+                    Artificial Intelligence is revolutionizing healthcare and medicine, enabling faster diagnoses, more accurate treatments, and improved patient outcomes. From medical imaging analysis to drug discovery, AI tools are becoming essential components of modern healthcare delivery.
+                </p>
+                <p class="mb-4">
+                    The global AI in healthcare market is experiencing rapid growth, with applications spanning across diagnosis, treatment planning, patient monitoring, and administrative tasks. These technologies are helping healthcare providers deliver more efficient, accurate, and personalized care.
+                </p>
+            </div>
+        </div>
 
-            <section class="guide-section">
-                <h2>Introduction to AI in Healthcare</h2>
-                <p>Artificial Intelligence is transforming healthcare and medicine, offering unprecedented opportunities to improve patient outcomes, reduce costs, and enhance the efficiency of healthcare delivery. The global AI in healthcare market is projected to reach $188 billion by 2030, growing at a CAGR of over 37% from 2022.</p>
-                <p>Healthcare systems worldwide are embracing AI technologies to address challenges ranging from early disease detection and diagnosis to treatment optimization and operational efficiency. AI's ability to analyze complex medical data at scale is enabling more personalized, proactive, and accessible healthcare services.</p>
-            </section>
-
-            <section class="guide-section">
-                <h2>Key AI Applications in Healthcare</h2>
+        <div class="bg-white dark:bg-gray-800 p-6 rounded-lg shadow-md mb-8">
+            <div class="prose dark:prose-invert max-w-none">
+                <h2 class="text-2xl font-semibold mb-4">Popular Healthcare & Medicine AI Tools</h2>
                 
-                <h3>Medical Imaging & Diagnostics</h3>
-                <p>AI systems now interpret medical images with accuracy comparable to or exceeding human radiologists in specific tasks. Deep learning algorithms can detect abnormalities in X-rays, MRIs, CT scans, and ultrasounds, helping identify conditions such as cancer, cardiovascular diseases, and neurological disorders at earlier stages.</p>
-                
-                <h3>Clinical Decision Support</h3>
-                <p>AI-powered decision support systems analyze patient data against medical knowledge bases to suggest diagnosis possibilities, treatment options, and potential contraindications. These systems help reduce medical errors and standardize care protocols while incorporating the latest research findings.</p>
-                
-                <h3>Drug Discovery & Development</h3>
-                <p>AI is dramatically accelerating pharmaceutical research by predicting how different chemical compounds will behave and interact with biological targets. Machine learning models can identify promising drug candidates, predict their efficacy and potential side effects, and optimize molecular structures—reducing the time and cost of bringing new therapies to market.</p>
-                
-                <h3>Predictive Analytics & Preventive Care</h3>
-                <p>Healthcare AI systems analyze patient data to predict disease progression, identify high-risk individuals, and recommend preventive interventions. These predictive capabilities enable more proactive healthcare approaches, shifting focus from treatment to prevention and early intervention.</p>
-            </section>
-
-            <section class="guide-section">
-                <h2>Core AI Technologies in Healthcare</h2>
-                
-                <h3>Machine Learning for Clinical Prediction</h3>
-                <p>Supervised and unsupervised learning algorithms analyze patient data to predict disease onset, progression, and treatment response. These models incorporate diverse data sources including electronic health records, genomic information, and wearable device data to identify patterns human clinicians might miss.</p>
-                
-                <h3>Computer Vision in Medical Imaging</h3>
-                <p>Convolutional neural networks and other deep learning architectures analyze medical images to detect and classify abnormalities. These systems provide consistent, objective analysis across large volumes of imaging data, reducing interpretation variability and increasing throughput.</p>
-                
-                <h3>Natural Language Processing for Medical Text</h3>
-                <p>NLP technologies extract meaningful information from unstructured clinical notes, medical literature, and patient communications. Applications include automated coding of medical records, clinical documentation improvement, and systematic literature reviews for evidence-based medicine.</p>
-                
-                <h3>Robotics & Precision Surgery</h3>
-                <p>AI-enhanced surgical robots enable minimally invasive procedures with greater precision and consistency. Computer vision and machine learning algorithms help surgeons navigate complex anatomical structures and adjust in real-time based on tissue feedback.</p>
-            </section>
-
-            <section class="guide-section">
-                <h2>Implementation Strategies</h2>
-                
-                <h3>Clinical Workflow Integration</h3>
-                <p>Successful AI implementation requires seamless integration into existing clinical workflows. Systems should complement healthcare workers' routines rather than disrupting them, with intuitive interfaces that present AI insights at the point of care.</p>
-                
-                <h3>Data Quality & Governance</h3>
-                <p>Healthcare AI depends on high-quality, representative data. Organizations must establish robust data governance frameworks addressing privacy, security, bias mitigation, and ensuring that training data reflects diverse patient populations.</p>
-                
-                <h3>Regulatory Compliance</h3>
-                <p>Healthcare AI solutions must navigate complex regulatory landscapes including FDA approval processes, HIPAA compliance, and emerging AI-specific regulations. Organizations should establish compliance protocols and engage with regulatory bodies early in development.</p>
-                
-                <h3>Clinician Adoption & Training</h3>
-                <p>Healthcare professionals need appropriate training to effectively use and interpret AI tools. Implementation strategies should address potential resistance by demonstrating value, providing education, and involving clinicians in design and evaluation processes.</p>
-            </section>
-
-            <section class="guide-section">
-                <h2>Top AI Tools for Healthcare & Medicine</h2>
-                <div class="tools-grid">
-                    <div class="tool-card">
-                        <h3>Ada Health</h3>
-                        <p>AI-powered symptom assessment and care navigation platform that helps patients understand their symptoms and find appropriate care.</p>
-                        <a href="https://ada.com/" target="_blank" class="learn-more">Learn More</a>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <div class="border dark:border-gray-700 rounded-lg p-4">
+                        <h3 class="text-xl font-medium mb-2">Ada Health</h3>
+                        <p class="text-gray-600 dark:text-gray-300 mb-4">
+                            AI-powered symptom assessment and care navigation platform that helps patients understand their symptoms and find appropriate care.
+                        </p>
+                        <a href="https://ada.com/" target="_blank" class="text-primary hover:text-primary-dark">Learn More →</a>
                     </div>
-                    <div class="tool-card">
-                        <h3>Babylon Health</h3>
-                        <p>Digital health service combining AI diagnostics with telemedicine to provide accessible healthcare consultations and continuous health monitoring.</p>
-                        <a href="https://www.babylonhealth.com/" target="_blank" class="learn-more">Learn More</a>
+                    
+                    <div class="border dark:border-gray-700 rounded-lg p-4">
+                        <h3 class="text-xl font-medium mb-2">Babylon Health</h3>
+                        <p class="text-gray-600 dark:text-gray-300 mb-4">
+                            Digital healthcare platform combining AI diagnostics with telemedicine to provide accessible, affordable healthcare services.
+                        </p>
+                        <a href="https://www.babylonhealth.com/" target="_blank" class="text-primary hover:text-primary-dark">Learn More →</a>
                     </div>
-                    <div class="tool-card">
-                        <h3>Aidoc</h3>
-                        <p>AI-powered medical imaging analysis platform that helps radiologists prioritize and diagnose acute abnormalities across multiple imaging modalities.</p>
-                        <a href="https://www.aidoc.com/" target="_blank" class="learn-more">Learn More</a>
+                    
+                    <div class="border dark:border-gray-700 rounded-lg p-4">
+                        <h3 class="text-xl font-medium mb-2">Diagnoss</h3>
+                        <p class="text-gray-600 dark:text-gray-300 mb-4">
+                            AI medical coding and documentation assistant that helps healthcare providers improve accuracy and efficiency in medical billing.
+                        </p>
+                        <a href="https://diagnoss.com/" target="_blank" class="text-primary hover:text-primary-dark">Learn More →</a>
                     </div>
-                    <div class="tool-card">
-                        <h3>Atomwise</h3>
-                        <p>AI-driven drug discovery platform that uses deep learning to predict how compounds will interact with target proteins, accelerating pharmaceutical research.</p>
-                        <a href="https://www.atomwise.com/" target="_blank" class="learn-more">Learn More</a>
-                    </div>
-                    <div class="tool-card">
-                        <h3>Tempus</h3>
-                        <p>AI platform that analyzes clinical and molecular data to deliver precision medicine insights, particularly in oncology treatment selection.</p>
-                        <a href="https://www.tempus.com/" target="_blank" class="learn-more">Learn More</a>
-                    </div>
-                    <div class="tool-card">
-                        <h3>Viz.ai</h3>
-                        <p>Clinical decision support platform using AI to identify suspected large vessel occlusion strokes in CT scans and automatically notify specialists.</p>
-                        <a href="https://www.viz.ai/" target="_blank" class="learn-more">Learn More</a>
+                    
+                    <div class="border dark:border-gray-700 rounded-lg p-4">
+                        <h3 class="text-xl font-medium mb-2">Eko</h3>
+                        <p class="text-gray-600 dark:text-gray-300 mb-4">
+                            AI-powered cardiac screening and monitoring tools that help clinicians detect and monitor heart conditions with greater accuracy.
+                        </p>
+                        <a href="https://www.ekohealth.com/" target="_blank" class="text-primary hover:text-primary-dark">Learn More →</a>
                     </div>
                 </div>
-            </section>
+            </div>
+        </div>
 
-            <section class="guide-section">
-                <h2>Case Studies & Real-World Applications</h2>
+        <div class="bg-white dark:bg-gray-800 p-6 rounded-lg shadow-md mb-8">
+            <div class="prose dark:prose-invert max-w-none">
+                <h2 class="text-2xl font-semibold mb-4">Key Features to Consider</h2>
                 
-                <h3>Early Detection of Diabetic Retinopathy</h3>
-                <p>Google Health's deep learning system can detect diabetic retinopathy in retinal photographs with over 90% accuracy, comparable to ophthalmologists. This technology enables screening in underserved areas where specialist access is limited, potentially preventing blindness through early intervention.</p>
+                <h3 class="text-xl font-medium mb-3">Diagnostic Accuracy</h3>
+                <p class="mb-4">
+                    Look for tools with high sensitivity and specificity in their diagnostic capabilities, backed by clinical validation studies and real-world evidence.
+                </p>
                 
-                <h3>Precision Oncology</h3>
-                <p>IBM Watson for Oncology analyzes patient medical information against a vast knowledge base of medical literature to suggest evidence-based treatment options for cancer patients. The system helps oncologists keep pace with rapidly evolving cancer research and identify targeted therapies based on individual patient characteristics.</p>
+                <h3 class="text-xl font-medium mb-3">Integration Capabilities</h3>
+                <p class="mb-4">
+                    Ensure the AI tool can integrate seamlessly with existing healthcare systems, including Electronic Health Records (EHR) and other clinical workflows.
+                </p>
                 
-                <h3>Hospital Operations Optimization</h3>
-                <p>Healthcare systems like Cleveland Clinic use AI to predict patient flow, optimize staff scheduling, and manage resource allocation. These applications have reduced emergency department wait times, improved operating room utilization, and enhanced overall hospital efficiency.</p>
+                <h3 class="text-xl font-medium mb-3">Regulatory Compliance</h3>
+                <p class="mb-4">
+                    Verify that the tool meets relevant healthcare regulations and standards, including HIPAA, GDPR, and FDA requirements where applicable.
+                </p>
                 
-                <h3>Remote Patient Monitoring</h3>
-                <p>AI-powered remote monitoring platforms analyze data from wearable devices and in-home sensors to detect deterioration in chronic disease patients. These systems enable earlier interventions for conditions like heart failure and COPD, reducing hospital readmissions and improving quality of life.</p>
-            </section>
+                <h3 class="text-xl font-medium mb-3">Data Security</h3>
+                <p class="mb-4">
+                    Evaluate the tool's data security measures, including encryption, access controls, and audit trails to protect sensitive patient information.
+                </p>
+            </div>
+        </div>
 
-            <section class="guide-section">
-                <h2>Challenges & Ethical Considerations</h2>
+        <div class="bg-white dark:bg-gray-800 p-6 rounded-lg shadow-md mb-8">
+            <div class="prose dark:prose-invert max-w-none">
+                <h2 class="text-2xl font-semibold mb-4">Benefits of AI in Healthcare</h2>
                 
-                <h3>Bias & Health Disparities</h3>
-                <p>AI systems trained on historical healthcare data may perpetuate or amplify existing disparities if training data lacks diversity or reflects biased care patterns. Developers must implement fairness-aware algorithms and validate performance across demographic groups.</p>
+                <h3 class="text-xl font-medium mb-3">Improved Diagnosis</h3>
+                <p class="mb-4">
+                    AI tools can analyze medical images, lab results, and patient data to assist in faster and more accurate diagnosis of conditions.
+                </p>
                 
-                <h3>Privacy & Data Security</h3>
-                <p>Healthcare AI requires access to sensitive patient information, raising significant privacy concerns. Organizations must implement robust security measures, transparent data usage policies, and compliance with regulations like HIPAA and GDPR.</p>
+                <h3 class="text-xl font-medium mb-3">Enhanced Patient Care</h3>
+                <p class="mb-4">
+                    AI-powered monitoring and predictive analytics help healthcare providers deliver more personalized and proactive patient care.
+                </p>
                 
-                <h3>Clinical Validation & Trust</h3>
-                <p>Healthcare AI tools require rigorous clinical validation through prospective studies to demonstrate safety and efficacy. Building clinician trust requires transparency about how AI systems reach conclusions and clear communication about their limitations.</p>
-                
-                <h3>Liability & Responsibility</h3>
-                <p>As AI takes on increasingly important roles in diagnosis and treatment decisions, questions arise about responsibility for errors. Healthcare organizations must establish clear frameworks for human oversight, decision authority, and accountability.</p>
-            </section>
-
-            <section class="guide-section">
-                <h2>Future Trends in Healthcare AI</h2>
-                
-                <h3>Multimodal Learning & Holistic Analysis</h3>
-                <p>Future AI systems will integrate diverse data types—genomics, imaging, clinical notes, social determinants—to develop more comprehensive patient understanding and personalized care recommendations.</p>
-                
-                <h3>Federated Learning</h3>
-                <p>Privacy-preserving approaches like federated learning will enable AI models to learn from distributed datasets without centralizing sensitive patient information, facilitating larger-scale collaborations while protecting privacy.</p>
-                
-                <h3>Ambient Clinical Intelligence</h3>
-                <p>AI systems will increasingly operate in the background of clinical encounters, automatically documenting conversations, suggesting relevant information, and supporting clinical decision-making without disrupting provider-patient interactions.</p>
-                
-                <h3>Digital Twins for Personalized Medicine</h3>
-                <p>Computational models of individual patients will enable physicians to simulate treatment responses and disease progression, facilitating truly personalized medicine approaches tailored to each patient's unique characteristics.</p>
-            </section>
-
-            <section class="guide-section">
-                <h2>Conclusion</h2>
-                <p>AI is fundamentally transforming healthcare and medicine, offering powerful tools to enhance diagnosis, treatment, and care delivery. While challenges remain in areas like data quality, algorithm transparency, and equitable implementation, the potential benefits for patient outcomes and healthcare system sustainability are substantial.</p>
-                <p>The most successful healthcare AI implementations will be those that thoughtfully integrate technology with human expertise, prioritize ethical considerations, and focus on delivering measurable improvements in care quality, accessibility, and efficiency. As these technologies continue to evolve, ongoing collaboration between healthcare professionals, technologists, patients, and policymakers will be essential to realize AI's full potential in advancing human health.</p>
-            </section>
+                <h3 class="text-xl font-medium mb-3">Operational Efficiency</h3>
+                <p class="mb-4">
+                    Automation of administrative tasks and workflow optimization leads to improved healthcare delivery and reduced operational costs.
+                </p>
+            </div>
         </div>
     </main>
 
-    <footer>
-        <div class="container">
-            <p>&copy; 2023 AI Category Hub. All rights reserved.</p>
-            <div class="footer-links">
-                <a href="../privacy.html">Privacy Policy</a>
-                <a href="../terms.html">Terms of Service</a>
+    <footer class="bg-white dark:bg-gray-800 shadow mt-8">
+        <div class="container mx-auto px-4 py-6">
+            <div class="text-center text-gray-600 dark:text-gray-400">
+                <p>&copy; 2025 AI Category Hub. All rights reserved.</p>
             </div>
         </div>
     </footer>
 
-    <script src="../js/dark-mode.js"></script>
+    <script>
+        // Dark mode toggle
+        const darkModeToggles = [document.getElementById('darkModeToggle'), document.getElementById('mobileDarkModeToggle')];
+        darkModeToggles.forEach(toggle => {
+            if (toggle) {
+                toggle.addEventListener('click', () => {
+                    document.documentElement.classList.toggle('dark');
+                    localStorage.setItem('darkMode', document.documentElement.classList.contains('dark'));
+                });
+            }
+        });
+
+        // Check for saved dark mode preference
+        if (localStorage.getItem('darkMode') === 'true' || 
+            (!localStorage.getItem('darkMode') && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+            document.documentElement.classList.add('dark');
+        }
+
+        // Mobile menu toggle
+        const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+        const mobileMenu = document.getElementById('mobileMenu');
+        if (mobileMenuBtn && mobileMenu) {
+            mobileMenuBtn.addEventListener('click', () => {
+                mobileMenu.classList.toggle('hidden');
+            });
+        }
+    </script>
 </body>
 </html> 
