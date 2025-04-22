@@ -2,6 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta name="robots" content="index, follow">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Finance & Trading - AI Category Hub</title>
     <meta name="description" content="Discover the best AI tools for finance and trading. Compare top solutions for algorithmic trading, financial analysis, risk management, and investment strategies.">
@@ -21,7 +22,6 @@
     sessionStorage.setItem('requested_category', 'finance-trading');
     
     // Redirect to the main page which will handle showing the right category
-    window.location.replace('/');
     </script>
 </head>
 <body>
@@ -31,7 +31,7 @@
     <p>Redirecting to <a href="/">AI Category Hub</a>...</p>
     
     <!-- Include basic content for search engines -->
-    <div style="display:none">
+    <div style="display:block" class="seo-content">
         <h2>Popular Finance & Trading AI Tools</h2>
         <ul>
             <li>Alpaca - API-first platform for algorithmic trading</li>
