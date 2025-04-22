@@ -20,8 +20,11 @@
     <script>
     // Store the category to show
     sessionStorage.setItem('requested_category', 'video-editing-generation');
-    
-    // Redirect to the main page which will handle showing the right category
+    // Bot detection to avoid redirecting search engines
+    var isBot = /bot|googlebot|crawler|spider|robot|crawling/i.test(navigator.userAgent);
+    if (!isBot) {
+        window.location.replace("/");
+    }
     </script>
 </head>
 <body>
