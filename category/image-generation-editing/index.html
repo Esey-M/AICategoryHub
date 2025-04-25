@@ -2,75 +2,58 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="robots" content="index, follow">
+    <meta name="robots" content="index, follow, noarchive, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
+    <meta name="googlebot" content="index, follow, noarchive">
+    <meta name="googlebot-news" content="index, follow">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Image Generation & Editing - AI Category Hub</title>
+    <title>Image Generation Editing - AI Category Hub</title>
     <meta name="description" content="Discover the best AI tools for image generation and editing. Compare top solutions for creating and enhancing images, artwork, and visual content for design, marketing, and creative projects.">
     <link rel="canonical" href="https://aicategoryhub.net/category/image-generation-editing/">
     
     <!-- Open Graph tags -->
-    <meta property="og:title" content="AI Image Generation & Editing Tools - AI Category Hub">
-    <meta property="og:description" content="Explore our curated collection of AI-powered image generation and editing tools to enhance your creative workflow and visual content creation.">
+    <meta property="og:title" content="Image Generation Editing Tools - AI Category Hub">
+    <meta property="og:description" content="Discover the best AI tools for image generation and editing. Compare top solutions for creating and enhancing images, artwork, and visual content for design, marketing, and creative projects.">
     <meta property="og:url" content="https://aicategoryhub.net/category/image-generation-editing/">
     <meta property="og:type" content="website">
+    <meta property="og:image" content="https://aicategoryhub.net/images/og-image.jpg">
+    
+    <!-- Additional meta tags for better indexing -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Image Generation Editing Tools - AI Category Hub">
+    <meta name="twitter:description" content="Discover the best AI tools for image generation and editing. Compare top solutions for creating and enhancing images, artwork, and visual content for design, marketing, and creative projects.">
     
     <!-- Preload the main page -->
     <link rel="preload" href="/" as="document">
     
     <script>
-    // Store the category to show
+    // Store the category to show (required for functionality)
     sessionStorage.setItem('requested_category', 'image-generation-editing');
-    // Bot detection to avoid redirecting search engines
-    var isBot = /bot|googlebot|crawler|spider|robot|crawling/i.test(navigator.userAgent);
-    if (!isBot) {
-        window.location.replace('/');
+    
+    // Advanced bot detection function to only redirect human visitors
+    function isCrawler() {
+        var botPattern = "(googlebot|bot|crawler|spider|robot|crawling|facebook|bing|yahoo|semrush|ahref|lighthouse|preview)";
+        var botRegex = new RegExp(botPattern, "i");
+        return botRegex.test(navigator.userAgent);
     }
     
-    
+    // Only redirect if not a crawler
+    if (!isCrawler()) {
+        window.location.replace('/');
+    }
     </script>
 </head>
 <body>
-    <h1>Image Generation & Editing AI Tools</h1>
-    <p>Discover the best AI tools for image generation and editing. This page helps you compare top AI solutions for creating and enhancing images, artwork, and visual content.</p>
+    <h1>Image Generation Editing Tools</h1>
+    <p>Discover the best AI tools for Image Generation Editing. This page helps you compare top AI solutions in this category.</p>
     
     <p>Redirecting to <a href="/">AI Category Hub</a>...</p>
     
-    <!-- Include basic content for search engines -->
-    <div style="display:block" class="seo-content">
-        <h2>Popular Image Generation & Editing AI Tools</h2>
-        <ul>
-            <li>Midjourney - AI image generator creating detailed art from text prompts</li>
-            <li>DALL-E - OpenAI's image generation model for creating realistic images from text</li>
-            <li>PhotoRoom - Background removal and image editing with AI</li>
-            <li>NightCafe Creator - AI art generator with multiple style options</li>
-            <li>Stable Diffusion - Open-source text-to-image AI model</li>
-            <li>Leonardo.AI - Creative AI platform for generating visual assets</li>
-        </ul>
-        
-        <h2>Common Use Cases</h2>
-        <ul>
-            <li>Product photography enhancement</li>
-            <li>Marketing visual creation</li>
-            <li>Digital art generation</li>
-            <li>Background removal and replacement</li>
-            <li>Style transfer and artistic effects</li>
-        </ul>
-        
-        <h2>Benefits of AI Image Generation & Editing</h2>
-        <p>AI image generation and editing tools are revolutionizing visual content creation. These powerful technologies allow users to create professional-quality images with minimal technical expertise, dramatically reducing the time and cost of visual asset production. From generating completely new images from text descriptions to enhancing existing photos with intelligent editing capabilities, AI image tools are essential for marketers, designers, content creators, and businesses of all sizes.</p>
-        
-        <h2>Key Features to Consider</h2>
-        <ul>
-            <li>Text-to-image generation quality</li>
-            <li>Editing capabilities (background removal, object removal, etc.)</li>
-            <li>Style customization options</li>
-            <li>Resolution and output quality</li>
-            <li>Integration with design software</li>
-            <li>Usage rights and licensing terms</li>
-        </ul>
+    <!-- Include basic content for search engines but make it accessible using proper markup -->
+    <div class="seo-content" aria-hidden="true">
+
     </div>
     
-    <!-- Structured data for search engines -->
+    <!-- Structured data for search engines with enhanced content -->
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
@@ -107,4 +90,4 @@
     }
     </script>
 </body>
-</html> 
+</html>

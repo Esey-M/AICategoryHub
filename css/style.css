@@ -1569,9 +1569,11 @@ body.dark-mode .notification-banner {
 
 body.dark-mode .notification-banner p {
     color: white !important;
-} 
-/* SEO content visibility - visible to crawlers but not to users */
+}
+
+/* SEO content visibility - properly visible to search engines but hidden for users */
 .seo-content {
+  /* Visually hide but keep accessible to screen readers and search engines */
   position: absolute;
   width: 1px;
   height: 1px;
@@ -1581,5 +1583,16 @@ body.dark-mode .notification-banner p {
   clip: rect(0, 0, 0, 0);
   white-space: nowrap;
   border: 0;
+}
+
+/* Make content visible in print view for better printing */
+@media print {
+  .seo-content {
+    position: static;
+    width: auto;
+    height: auto;
+    clip: auto;
+    white-space: normal;
+  }
 }
 
