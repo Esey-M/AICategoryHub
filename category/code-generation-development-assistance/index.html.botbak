@@ -31,16 +31,6 @@
     
     // Advanced bot detection function to only redirect human visitors
     function isCrawler() {
-        // Explicitly check for Googlebot and other major crawlers first
-        if(navigator.userAgent.indexOf("Googlebot") > -1 || 
-           navigator.userAgent.indexOf("Bingbot") > -1 || 
-           navigator.userAgent.indexOf("Slurp") > -1 || 
-           navigator.userAgent.indexOf("DuckDuckBot") > -1 || 
-           navigator.userAgent.indexOf("Baiduspider") > -1 || 
-           navigator.userAgent.indexOf("YandexBot") > -1 || 
-           navigator.userAgent.indexOf("Sogou") > -1) {
-            return true;
-        }
         var botPattern = "(googlebot|bot|crawler|spider|robot|crawling|facebook|bing|yahoo|semrush|ahref|lighthouse|preview)";
         var botRegex = new RegExp(botPattern, "i");
         return botRegex.test(navigator.userAgent);
@@ -53,15 +43,13 @@
     </script>
 </head>
 <body>
-    <!-- Signal to search engines that this page is indexable -->
-    <meta name="robots" content="index, follow">
     <h1>Code Generation Development Assistance Tools</h1>
     <p>Discover the best AI tools for Code Generation Development Assistance. This page helps you compare top AI solutions in this category.</p>
     
     <p>Redirecting to <a href="/">AI Category Hub</a>...</p>
     
     <!-- Include basic content for search engines but make it accessible using proper markup -->
-    <div class="seo-content">
+    <div class="seo-content" aria-hidden="true">
 
     </div>
     
