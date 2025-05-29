@@ -209,6 +209,31 @@
     "image": "https://www.logoai.com/favicon.ico",
     "link": "https://www.logoai.com"
   },
+
+  {
+    "id": "659",
+    "name": "Dzine.ai",
+    "description": "AI-powered image generator with layered composition, preset styles, and natural language prompt support",
+    "category": "Image Generation & Editing",
+    "image": "https://www.dzine.ai/favicon.ico",
+    "link": "https://www.dzine.ai"
+  },
+  {
+    "id": "660",
+    "name": "PicLumen",
+    "description": "Free AI image generator that transforms text or images into artworks with support for various styles, including tools like background removal, upscaling, and color correction",
+    "category": "Image Generation & Editing",
+    "image": "https://piclumen.com/favicon.ico",
+    "link": "https://piclumen.com/app/image-generator/create"
+  },
+  {
+    "id": "661",
+    "name": "Remaker.ai",
+    "description": "All-in-one AI platform for image and video editing with tools like face swap, background removal, upscaling, object removal, and AI portrait generation",
+    "category": "Image Generation & Editing",
+    "image": "https://remaker.ai/favicon.ico",
+    "link": "https://remaker.ai/"
+  },
     {
       "id": "13",
       "name": "Jasper",
@@ -630,7 +655,7 @@
       "description": "AI video generation platform with virtual presenters",
       "category": "Video Editing & Generation",
       "image": "https://assets-global.website-files.com/63b454a6cf2d95a15ce787e6/63b5877243445e780a101e11_heygen-logo-icon.svg",
-      "link": "https://www.heygen.com/?affiliate=aicategoryhub"
+      "link": "https://heygen.com/?sid=rewardful&via=simon-mhretab"
     },
   {
     "id": "584",
@@ -654,7 +679,7 @@
     "description": "Cloud-based video creation service with AI-driven templates for marketing videos",
     "category": "Video Editing & Generation",
     "image": "https://animoto.com/favicon.ico",
-    "link": "https://animoto.com/affiliate-program?ref=aicategoryhub"
+    "link": "https://ps.animoto.com/tc82k0a2sksj"
   },
 
   {
@@ -705,7 +730,7 @@
     "image": "https://www.neuralactors.com/favicon.ico",
     "link": "https://neuralactors.com"
   },
-      {
+     {
     "id": "579",
     "name": "Yepic AI",
     "description": "AI video creation tool with multilingual support and avatars",
@@ -713,7 +738,31 @@
     "image": "https://www.yepic.ai/favicon.ico",
     "link": "https://www.yepic.ai"
   },
-
+  {
+    "id": "580",
+    "name": "PixVerse",
+    "description": "AI video generator that transforms text and images into dynamic videos with trending effects like AI Hug and AI Kiss",
+    "category": "Video Editing & Generation",
+    "image": "https://app.pixverse.ai/favicon.ico",
+    "link": "https://app.pixverse.ai"
+  },
+  {
+    "id": "581",
+    "name": "DreamFace",
+    "description": "AI video generator that turns photos and text into realistic talking avatar videos with lip-sync and trending effects like AI Hug and AI Kiss",
+    "category": "Video Editing & Generation",
+    "image": "https://dreamfaceapp.com/favicon.ico",
+    "link": "https://dreamfaceapp.com"
+  },
+  {
+    "id": "582",
+    "name": "TopView.ai",
+    "description": "AI video editor that automatically converts links or media into viral marketing videos using avatars, voiceovers, and GPT-4o-generated scripts",
+    "category": "Video Editing & Generation",
+    "image": "https://www.topview.ai/favicon.ico",
+    "link": "https://www.topview.ai/"
+  },
+    
     {
       "id": "31",
       "name": "Surfer SEO",
